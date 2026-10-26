@@ -1,0 +1,75 @@
+@use "sass:math";
+@use "sass:color";
+
+@mixin flex($align: null, $justify: null, $direction: null, $gap: null) {
+	display: flex;
+	@if $align != null {
+		align-items: $align;
+	}
+	@if $justify != null {
+		justify-content: $justify;
+	}
+	@if $direction != null {
+		flex-direction: $direction;
+	}
+	@if $gap != null {
+		gap: $gap;
+	}
+}
+
+// grid mixin
+@mixin grid(
+	$mobile-cols: 1,
+	$desktop-cols: null,
+	$rows: auto,
+	$gap: null,
+	$mobile-areas: null,
+	$desktop-areas: null
+) {
+	display: grid;
+	@if $rows != null {
+		grid-template-rows: $rows;
+	}
+	@if $gap != null {
+		gap: $gap;
+	}
+	// mobile
+	grid-template-columns: repeat($mobile-cols, 1fr);
+	@if $mobile-areas != null {
+		grid-template-areas: $mobile-areas;
+	}
+	// desktop
+	@if $desktop-cols != null {
+		@media (min-width: 992px) {
+			grid-template-columns: repeat($desktop-cols, 1fr);
+			@if $desktop-areas != null {
+				grid-template-areas: $desktop-areas;
+			}
+		}
+	}
+}
+
+@function clamp-calc($min, $max, $min-vw: 32rem, $max-vw: 144rem) {
+	$slope: math.div($max - $min, $max-vw - $min-vw);
+	$intercept: $min - $slope * $min-vw;
+
+	@return clamp(#{$min}, calc(#{$intercept} + #{$slope * 100}vw), #{$max});
+}
+
+@mixin tablet {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media (min-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: 1280px) {
+		@content;
+	}
+}

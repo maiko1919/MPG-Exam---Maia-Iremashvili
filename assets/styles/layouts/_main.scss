@@ -1,0 +1,457 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+.app:has(.activity.open) {
+	@include laptop {
+		grid-template-columns: 26rem 1fr minmax(30rem, 34.8rem);
+		grid-template-areas:
+			"sidebar header header"
+			"sidebar main aside"
+			"sidebar player player";
+	}
+	.header {
+		grid-column: span 2;
+		padding-right: 1rem;
+	}
+}
+.app.light-mode {
+	background-color: $light-bg-main-color;
+	color: $light-color-primary;
+
+	a {
+		color: $light-color-primary;
+	}
+
+	.sidebar,
+	.header {
+		background-color: $light-bg-main-color;
+	}
+
+	.player {
+		background-color: $light-player-bg-color;
+	}
+	.theme-toggle {
+		background-color: $light-buttons-hover-color;
+	}
+
+	.main,
+	.artist-item {
+		border-color: $light-buttons-hover-color;
+	}
+
+	.section-title h2,
+	.card h3,
+	.activity h4,
+	.artists,
+	.artist-item .details-heading h2,
+	.description-wrapper .description-container .description h2,
+	.artist .about-description,
+	.artist .about-statistics .statistics-head,
+	.artist .about-statistics .statistics-text,
+	.artist .songs-history .song-author .song-name,
+	.artist .artist-heading .album-description,
+	.player .advanced-player .advanced-player-music-time-line p,
+	.player .player-wrapper .music-title-author-wrapper .scrolling-text,
+	.profile-page-content-wrapper
+		.profile-content.profile-details
+		.details
+		summary {
+		color: $light-color-primary;
+	}
+
+	.recent-wrapper .content-wrapper .section-content .artists .close i {
+		filter: none;
+	}
+	.library-wrapper .content-wrapper .tab .tab-content .content-wrapper .section-content .card .pin i {
+		filter: none;
+	}
+	.library-page .filters-wrapper .filters-nav i {
+		filter: brightness(0) saturate(100%) invert(42%) sepia(0%) saturate(0%)
+			hue-rotate(0deg) brightness(43%) contrast(100%);
+		&.icon-white {
+			filter: brightness(0) saturate(100%) invert(42%) sepia(0%) saturate(0%)
+			hue-rotate(0deg) brightness(43%) contrast(100%);
+		}
+	}
+
+	.card p,
+	.player .player-wrapper .music-title-author-wrapper .scrolling-text-band {
+		color: $light-color-secondary;
+	}
+
+	.filters-wrapper .filters-nav ul li,
+	.sidebar .sidebar-menu li:hover,
+	.sidebar .sidebar-menu li.active,
+	.header-wrapper .navigation a:hover,
+	.header-wrapper .navigation a.active,
+	.header-wrapper .navigation form:hover {
+		background-color: $light-buttons-hover-color;
+		color: $light-color-primary;
+	}
+
+	.header-wrapper .navigation {
+		a span {
+			color: $light-color-primary;
+		}
+	}
+
+	.sidebar {
+		.sidebar-menu li.active {
+			span {
+				color: $light-color-primary;
+			}
+			i {
+				filter: brightness(1) invert(0);
+			}
+		}
+	}
+
+	.description-wrapper .description-container .description {
+		p span {
+			color: $light-color-primary;
+		}
+
+		.genres li {
+			color: $light-color-primary;
+			border-color: $light-color-secondary;
+		}
+
+		.buttons .icon-btn {
+			color: $light-color-primary;
+		}
+	}
+
+	.tabs-section .tab .tab-title {
+		color: $light-color-primary;
+	}
+
+	.filters-nav .radio-nav-desk {
+		background-color: $light-bg-main-color;
+
+		ul li a {
+			color: $light-color-primary;
+		}
+	}
+
+	.music-wrapper {
+		.descriptions-wrapper {
+			.genres-wrapper span,
+			.description .song-info .info {
+				color: $light-color-third;
+
+				&:hover {
+					color: $light-buttons-hover-color;
+				}
+			}
+		}
+
+		.musicians-wrapper .musician .muscician-info span {
+			color: $light-color-third;
+		}
+	}
+
+	.details-wrapper .slider label {
+		color: $light-color-third;
+	}
+
+	.profile-page-content-wrapper {
+		.profile-content {
+			&.friends,
+			&.profile-details .details[open] ul {
+				background: linear-gradient(
+					to bottom,
+					#8a354a,
+					#2c191d,
+					#111111
+				);
+			}
+		}
+	}
+
+	.mobile-nav {
+		background: $light-header-bg-color;
+	}
+
+	/* icons */
+
+	i {
+		filter: brightness(0) saturate(100%) invert(42%) sepia(0%) saturate(0%)
+			hue-rotate(0deg) brightness(43%) contrast(100%);
+
+		&:hover {
+			filter: brightness(0) saturate(100%) invert(58%) sepia(0%)
+				saturate(0%) hue-rotate(0deg) brightness(58%) contrast(100%);
+		}
+	}
+
+	.icon-play-icon-green,
+	.icon-player_blue_icon,
+	.main-podcast i {
+		filter: none;
+
+		&:hover {
+			filter: none;
+		}
+	}
+
+	.icon-green-heart:hover {
+		filter: brightness(0) saturate(100%) invert(56%) sepia(83%)
+			saturate(600%) hue-rotate(95deg);
+	}
+
+	.header-wrapper .navigation a:hover i,
+	.header-wrapper .navigation a.active i,
+	.header-wrapper .navigation form:hover i,
+	.header-wrapper .side-nav li:not(:last-child) a:hover i {
+		filter: brightness(0) saturate(100%) invert(58%) sepia(0%) saturate(0%)
+			hue-rotate(0deg) brightness(58%) contrast(100%);
+	}
+
+	.episodes-wrapper .podcast-filter .filters .filter a {
+		color: $light-color-third;
+
+		&:hover {
+			color: $light-buttons-hover-color;
+		}
+	}
+	#home:checked ~ .artist-navigation label[for="home"],
+	#about:checked ~ .artist-navigation label[for="about"],
+	#albums:checked ~ .artist-navigation label[for="albums"],
+	.artist-navigation ul li:hover,
+	.artist-navigation ul li:active {
+		color: $light-color-primary;
+	}
+	.activity .activity-details .activity-summary .artist-information .album {
+		color: $light-color-primary;
+	}
+	.profile-page-content-wrapper .profile-content.my-profile article .profile-info p {
+		color: $light-color-secondary;
+	}
+	
+	.main-discover .main-inner .mobile-wrapper .content-wrapper .bottom-container .genre span {
+		color: $light-color-third;
+	}
+	
+	.main-discover .main-inner .mobile-wrapper .content-wrapper .right-fixed {
+		color: $light-color-third;
+		& i {
+			filter: none;
+		}
+	}
+	.sidebar:hover {
+		color: $light-color-primary;
+	}
+}
+.app {
+	height: 100dvh;
+	display: grid;
+	grid-template-rows: auto 1fr;
+	grid-template-columns: 1fr;
+	background-color: $color-bg-main;
+	overflow: hidden;
+	@include laptop {
+		grid-template-columns: 26rem 1fr;
+		grid-template-rows: 5.4rem 1fr 8.1rem;
+		padding: 1.5rem;
+		column-gap: 0rem;
+		row-gap: 1rem;
+
+		grid-template-areas:
+			"sidebar header header"
+			"sidebar main aside"
+			"sidebar player player";
+	}
+	@include desktop {
+		column-gap: 1rem;
+	}
+}
+
+// .app:has(.light-mode) {
+//   background-color: $light-bg-main-color;
+// }
+.main {
+	overflow-y: auto;
+	padding: 1.5rem;
+	padding-bottom: 17rem;
+	@include laptop {
+		grid-area: main;
+		padding-bottom: 2.4rem;
+		border: $main-section-border;
+		border-radius: $border-radius-default;
+	}
+
+	.section-wrapper {
+		@include flex(null, null, column, 2.8rem);
+	}
+	.library-wrapper {
+		@include flex(null, null, column, 0.8rem);
+	}
+	.recent-wrapper {
+		display: none;
+		@include tablet {
+			@include flex(null, null, column, 2.8rem);
+		}
+	}
+	&::-webkit-scrollbar {
+		width: 0;
+	}
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $scrollbar-bg;
+		border-radius: 3px;
+	}
+}
+
+.main-inner {
+	@include flex(null, null, column, 3rem);
+	width: 100%;
+	@include tablet {
+		padding: 2.4rem;
+	}
+}
+
+.content-wrapper {
+	@include flex(null, null, column, 2rem);
+}
+
+.section-content {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 17.1rem;
+	gap: 1.1rem;
+	height: max-content;
+	padding-bottom: 4rem;
+	overflow-x: auto;
+	overflow-y: hidden;
+	scroll-behavior: smooth;
+	scroll-snap-type: x mandatory;
+	&::-webkit-scrollbar {
+		height: 6px;
+	}
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $scrollbar-bg;
+		border-radius: 3px;
+	}
+}
+.filters-wrapper {
+	@include flex(center, space-between, null, null);
+	& a i:hover {
+		filter: brightness(0) invert(1);
+		transition: 0.3s ease;
+		cursor: pointer;
+	}
+	.filters-nav ul {
+		@include flex(center, null, row, 1rem);
+		li {
+			padding: 0.8rem 1rem;
+			background-color: $color-bg-primary;
+			border-radius: $border-radius-btn-mob;
+			color: $color-hover-text;
+
+			&:hover {
+				background-color: $color-hover-bg;
+				color: $color-hover-text;
+				cursor: pointer;
+			}
+		}
+		& .active {
+			background-color: $color-hover-text;
+			color: $color-bg-primary;
+			font-weight: 600;
+			font-size: 1.4rem;
+		}
+	}
+}
+
+.activity {
+	display: none;
+	.activity-content {
+		@include flex(flex-start, null, column, 2.4rem);
+	}
+	border: 1px solid #202020;
+	border-radius: 1rem;
+	grid-area: aside;
+	display: none;
+
+	@include laptop {
+		display: none;
+		//@include flex(null, null, row, 1rem);
+		min-width: 30rem;
+		max-width: 34.8rem;
+		width: 100%;
+	}
+
+	& h4 {
+		color: $color-hover-text;
+	}
+	.activity-details {
+		@include flex(center, space-between, null, 1rem);
+		.activity-summary {
+			@include flex(null, null, column, null);
+			.title {
+				font-size: 1.2rem;
+				line-height: 1.6rem;
+				letter-spacing: 0.03em;
+			}
+			.description {
+				@include flex(center, space-between, null, null);
+				.activity-time {
+					@include flex(center, null, null, null);
+					width: 3rem;
+					height: 3rem;
+				}
+			}
+			.artist-information {
+				font-size: 1.4rem;
+				line-height: 1.9rem;
+				letter-spacing: 0.03em;
+				.album {
+					color: $color-hover-text;
+				}
+				.artist::before {
+					content: "• ";
+				}
+			}
+		}
+	}
+	&.open {
+		display: flex;
+	}
+}
+
+// hiding unnecessary elements on mobile  responsive
+.hide-mob {
+	display: none;
+	@include laptop {
+		display: flex;
+	}
+}
+
+.theme-toggle {
+	position: relative;
+	width: 5rem;
+	height: 2.6rem;
+	background-color: $color-hover-bg;
+	border-radius: 5rem;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0.2rem;
+		left: 0.2rem;
+		width: 2.2rem;
+		height: 2.2rem;
+		background-color: $main-green-color;
+		border-radius: 50%;
+		transition: left 0.3s;
+	}
+
+	&.dark::after {
+		left: 2.6rem;
+	}
+}

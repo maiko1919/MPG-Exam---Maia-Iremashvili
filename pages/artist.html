@@ -1,0 +1,1515 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="MPG Team" />
+		<meta
+			name="description"
+			content="This is Georgian Spotify Template created by MPG Team"
+		/>
+		<link rel="stylesheet" href="../assets/styles/style.css" />
+		<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon" />
+		<title>Artist - Georgian Spotify - Project by MPG Team</title>
+	</head>
+	<body class="app">
+		<header class="header">
+			<div class="header-wrapper">
+				<!-- desktop -->
+				<nav class="navigation">
+					<ul class="top-nav-ul left-ul">
+						<li>
+							<a href="../index.html">
+								<div class="img-div">
+									<i class="icons icon-home"></i>
+								</div>
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="./discover.html">
+								<div class="img-div">
+									<i class="icons icon-discover"></i>
+								</div>
+
+								<span>Discover</span>
+							</a>
+						</li>
+						<li>
+							<form action="./search.html">
+								<div class="img-div search-wrapper">
+									<label for="search">
+										<i class="icons icon-search"></i>
+									</label>
+									<input
+										id="search"
+										type="search"
+										placeholder="Search"
+									/>
+								</div>
+							</form>
+						</li>
+					</ul>
+				</nav>
+				<nav class="side-nav top-nav">
+					<ul class="top-nav-ul">
+						<li>
+							<div
+								class="theme-toggle dark"
+								id="theme-toggle"
+							></div>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icons icon-notification"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icons icon-lock"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icons icon-users"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icons icon-settings"></i>
+							</a>
+						</li>
+						<li class="no-hover">
+							<a href="./profile.html">
+								<img
+									src="../assets/img/icons/user.svg"
+									alt="Profile"
+								/>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<!-- Mobile navigation -->
+			<nav class="mobile-nav">
+				<a href="../index.html">
+					<i class="icons icon-home-inactive icon-green"></i>
+					Home
+				</a>
+				<a href="./discover.html">
+					<i class="icons icon-discover icon-green"></i>
+					Discover
+				</a>
+				<a href="./search.html">
+					<i class="icons icon-search icon-green"></i>
+					Search
+				</a>
+				<a href="./library.html">
+					<i class="icons icon-library icon-green"></i>
+					Library
+				</a>
+				<a href="./profile.html">
+					<i class="icons icon-me icon-green"></i>
+					Me
+				</a>
+			</nav>
+		</header>
+		<aside class="sidebar">
+			<div class="sidebar-heading">
+				<a href="./library.html"
+					><i class="icons icon-library"></i> My Library</a
+				>
+			</div>
+			<nav class="sidebar-menu">
+				<ul>
+					<li>
+						<details class="nav__dropdown">
+							<summary class="nav__link">
+								<i class="icons icon-pin"></i>
+								Pins
+							</summary>
+							<ul class="nav__sub">
+								<li><a href="./album.html">Albums</a></li>
+								<li>
+									<a href="./artist.html">Artists</a>
+								</li>
+								<li>
+									<a href="./playlist.html">Playlists</a>
+								</li>
+							</ul>
+						</details>
+					</li>
+					<li>
+						<details class="nav__dropdown">
+							<summary class="nav__link">
+								<i class="icons icon-playlist"></i>
+								Playlists
+							</summary>
+							<ul class="nav__sub">
+								<li><a href="./album.html">Albums</a></li>
+								<li>
+									<a href="./artist.html">Artists</a>
+								</li>
+								<li>
+									<a href="./playlist.html">Playlists</a>
+								</li>
+							</ul>
+						</details>
+					</li>
+					<li>
+						<a href="./song.html">
+							<i class="icons icon-hearth"></i>
+							<span>Liked Songs</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="icons icon-bookmark"></i>
+							<span>Saves</span>
+						</a>
+					</li>
+					<li>
+						<a href="./album.html">
+							<i class="icons icon-album"></i>
+							<span>Albums</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="icons icon-folder"></i>
+							<span>Folders</span>
+						</a>
+					</li>
+					<li>
+						<a href="./podcast.html">
+							<i class="icons icon-podcast"></i>
+							<span>Podcasts</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="icons icon-audiobook"></i>
+							<span>Audiobooks</span>
+						</a>
+					</li>
+					<li class="active">
+						<a href="./artist.html">
+							<i class="icons icon-artists"></i>
+							<span>Artists</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</aside>
+		<main class="main artist">
+			<div class="main-inner artist">
+				<input type="radio" id="home" name="menu" checked />
+				<input type="radio" id="about" name="menu" />
+				<input type="radio" id="albums" name="menu" />
+				<input type="radio" id="list" name="layout" />
+				<input type="radio" id="grid" name="layout" checked />
+				<header class="artist-cover-wrapper">
+					<div class="artist-cover">
+						<img
+							src="../assets/img/artists/covers/cover_1.png"
+							alt="Artist cover"
+						/>
+					</div>
+					<div class="artist-details">
+						<div class="artist-heading">
+							<span class="artist-name">Daft Punk</span>
+							<span class="artist-listeners"
+								>20,795,080 monthly listeners</span
+							>
+						</div>
+						<div class="artist-options">
+							<span class="btn-green">
+								<i class="icons icon-play-black icon-sm"></i>
+							</span>
+							<span class="btn follow">Follow</span>
+							<span class="btn"
+								><i
+									class="icons icon-add-playlist icon-white"
+								></i
+							></span>
+							<span class="btn"
+								><i class="icons icon-queue icon-white"></i
+							></span>
+							<span class="btn"
+								><i class="icons icon-dots icon-white"></i
+							></span>
+						</div>
+					</div>
+				</header>
+				<nav class="artist-navigation">
+					<ul>
+						<li class="menu-item">
+							<label for="home">Home</label>
+						</li>
+						<li class="menu-item">
+							<label for="albums">Albums</label>
+						</li>
+						<li class="menu-item">Singles and EPs</li>
+						<li class="menu-item">Compilattions</li>
+						<li class="menu-item">Merch</li>
+						<li class="menu-item">
+							<label for="about">About</label>
+						</li>
+						<li class="menu-item">Features & More</li>
+						<li class="menu-item">
+							<a href="#"><i class="icons icon-search"></i></a>
+						</li>
+					</ul>
+					<ul class="layout">
+						<li>
+							<label for="list"
+								><i class="icons icon-sort-list"></i
+							></label>
+						</li>
+						<li>
+							<label for="grid"
+								><i class="icons icon-sort-grid"></i
+							></label>
+						</li>
+					</ul>
+				</nav>
+				<section class="section-wrapper home">
+					<div class="artist-wrapper">
+						<div class="artist-additional">
+							<div class="artist-section">
+								<div class="section-title">
+									<h2>Your most played</h2>
+								</div>
+								<div class="artist-list">
+									<div class="artist-songs-wrapper">
+										<div class="songs-history">
+											<span class="song-number">1</span>
+											<span class="song-cover"
+												><img
+													src="../assets/img/covers/cover_20.png"
+													alt=""
+											/></span>
+											<div class="song-author">
+												<span class="song-name"
+													>Get Lucky</span
+												>
+												<span class="song-artist"
+													>Daft Punk</span
+												>
+											</div>
+											<span class="song-duration"
+												>4:35</span
+											>
+											<span class="song-icon"
+												><i
+													class="icons icon-hearth"
+												></i
+											></span>
+										</div>
+										<div class="songs-history">
+											<span class="song-number">2</span>
+											<span class="song-cover"
+												><img
+													src="../assets/img/covers/cover_6.png"
+													alt=""
+											/></span>
+											<div class="song-author">
+												<span class="song-name"
+													>Get Lucky</span
+												>
+												<span class="song-artist"
+													>Daft Punk</span
+												>
+											</div>
+											<span class="song-duration"
+												>4:35</span
+											>
+											<span class="song-icon"
+												><i
+													class="icons icon-hearth"
+												></i
+											></span>
+										</div>
+										<div class="songs-history">
+											<span class="song-number">3</span>
+											<span class="song-cover"
+												><img
+													src="../assets/img/covers/small_cover.png"
+													alt=""
+											/></span>
+											<div class="song-author">
+												<span class="song-name"
+													>Get Lucky</span
+												>
+												<span class="song-artist"
+													>Daft Punk</span
+												>
+											</div>
+											<span class="song-duration"
+												>4:35</span
+											>
+											<span class="song-icon"
+												><i
+													class="icons icon-hearth"
+												></i
+											></span>
+										</div>
+										<div class="songs-history">
+											<span class="song-number">4</span>
+											<span class="song-cover"
+												><img
+													src="../assets/img/covers/cover_3.png"
+													alt=""
+											/></span>
+											<div class="song-author">
+												<span class="song-name"
+													>Get Lucky</span
+												>
+												<span class="song-artist"
+													>Daft Punk</span
+												>
+											</div>
+											<span class="song-duration"
+												>4:35</span
+											>
+											<span class="song-icon"
+												><i
+													class="icons icon-hearth"
+												></i
+											></span>
+										</div>
+										<div class="songs-history">
+											<span class="song-number">5</span>
+											<span class="song-cover"
+												><img
+													src="../assets/img/covers/cover_7.png"
+													alt=""
+											/></span>
+											<div class="song-author">
+												<span class="song-name"
+													>Get Lucky</span
+												>
+												<span class="song-artist"
+													>Daft Punk</span
+												>
+											</div>
+											<span class="song-duration"
+												>4:35</span
+											>
+											<span class="song-icon"
+												><i
+													class="icons icon-hearth"
+												></i
+											></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="artist-section">
+								<div class="section-title">
+									<h2>Popular</h2>
+								</div>
+								<div class="artist-list">
+									<div class="artist-songs-wrapper">
+										<div class="songs-history">
+											<span class="song-number">1</span>
+											<span class="song-cover"
+												><img
+													src="../assets/img/covers/cover_20.png"
+													alt=""
+											/></span>
+											<div class="song-author">
+												<span class="song-name"
+													>Get Lucky</span
+												>
+												<span class="song-artist"
+													>Daft Punk</span
+												>
+											</div>
+											<span class="song-duration"
+												>4:35</span
+											>
+											<span class="song-icon"
+												><i
+													class="icons icon-hearth"
+												></i
+											></span>
+										</div>
+										<div class="songs-history">
+											<span class="song-number">2</span>
+											<span class="song-cover"
+												><img
+													src="../assets/img/covers/cover_6.png"
+													alt=""
+											/></span>
+											<div class="song-author">
+												<span class="song-name"
+													>Get Lucky</span
+												>
+												<span class="song-artist"
+													>Daft Punk</span
+												>
+											</div>
+											<span class="song-duration"
+												>4:35</span
+											>
+											<span class="song-icon"
+												><i
+													class="icons icon-hearth"
+												></i
+											></span>
+										</div>
+										<div class="songs-history">
+											<span class="song-number">3</span>
+											<span class="song-cover"
+												><img
+													src="../assets/img/covers/small_cover.png"
+													alt=""
+											/></span>
+											<div class="song-author">
+												<span class="song-name"
+													>Get Lucky</span
+												>
+												<span class="song-artist"
+													>Daft Punk</span
+												>
+											</div>
+											<span class="song-duration"
+												>4:35</span
+											>
+											<span class="song-icon"
+												><i
+													class="icons icon-hearth"
+												></i
+											></span>
+										</div>
+										<div class="songs-history">
+											<span class="song-number">4</span>
+											<span class="song-cover"
+												><img
+													src="../assets/img/covers/cover_3.png"
+													alt=""
+											/></span>
+											<div class="song-author">
+												<span class="song-name"
+													>Get Lucky</span
+												>
+												<span class="song-artist"
+													>Daft Punk</span
+												>
+											</div>
+											<span class="song-duration"
+												>4:35</span
+											>
+											<span class="song-icon"
+												><i
+													class="icons icon-hearth"
+												></i
+											></span>
+										</div>
+										<div class="songs-history">
+											<span class="song-number">5</span>
+											<span class="song-cover"
+												><img
+													src="../assets/img/covers/cover_7.png"
+													alt=""
+											/></span>
+											<div class="song-author">
+												<span class="song-name"
+													>Get Lucky</span
+												>
+												<span class="song-artist"
+													>Daft Punk</span
+												>
+											</div>
+											<span class="song-duration"
+												>4:35</span
+											>
+											<span class="song-icon"
+												><i
+													class="icons icon-hearth"
+												></i
+											></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="artist-info">
+							<div class="artist-heading">
+								<div class="section-title">
+									<h2>Artist Pick</h2>
+								</div>
+								<div class="artist-album">
+									<div class="card-wide">
+										<figure>
+											<img
+												src="../assets/img/covers/cover_22.png"
+												class="card-image"
+												alt="Cover photo"
+											/>
+										</figure>
+										<h3>Listen to the Best of Daft Punk</h3>
+									</div>
+								</div>
+								<div class="about-album">
+									<img
+										src="../assets/img/covers/cover_21.png"
+										class="about-album-cover"
+										alt=""
+									/>
+									<p class="album-description">
+										As they evolved from '90s French house
+										pioneers to 2000s dance tastemakers to
+										mainstream heroes in the 2010s, Daft
+										Punk remained one of dance music's most
+										iconic acts...
+									</p>
+									<div class="album-tags">
+										<a href="#" class="tag">Funk</a>
+										<a href="#" class="tag"
+											>Electronic music</a
+										>
+										<a href="#" class="tag">Disco</a>
+										<a href="#" class="tag">Soft Rock</a>
+										<a href="#" class="tag"
+											>Progressive pop</a
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section-wrapper albums">
+					<div class="content-wrapper">
+						<div class="artist-content grid-content">
+							<article class="card stack">
+								<figure>
+									<img
+										src="../assets/img/covers/cover_2.png"
+										class="card-image"
+										alt="Cover image 1"
+									/>
+								</figure>
+								<h3>
+									Discrover weekly <span class="red">50</span>
+								</h3>
+								<p>Your weekly mixtape of fresh music.</p>
+							</article>
+							<article class="card stack">
+								<figure class="card__cover">
+									<img
+										src="../assets/img/covers/cover_1.png"
+										class="card-image"
+										alt="Cover image 1"
+									/>
+								</figure>
+								<h3>
+									Discover weekly <span class="red">50</span>
+								</h3>
+								<p>Your weekly mixtape of fresh music.</p>
+							</article>
+							<article class="card stack">
+								<figure>
+									<img
+										src="../assets/img/covers/cover_3.png"
+										class="card-image"
+										alt="Cover image 3"
+									/>
+								</figure>
+								<h3>
+									Discrover weekly <span class="red">50</span>
+								</h3>
+								<p>Your weekly mixtape of fresh music.</p>
+							</article>
+							<article class="card stack">
+								<figure class="card__cover">
+									<img
+										src="../assets/img/covers/cover_1.png"
+										class="card-image"
+										alt="Cover image 1"
+									/>
+								</figure>
+								<h3>
+									Discover weekly <span class="red">50</span>
+								</h3>
+								<p>Your weekly mixtape of fresh music.</p>
+							</article>
+							<article class="card stack">
+								<figure>
+									<img
+										src="../assets/img/covers/cover_2.png"
+										class="card-image"
+										alt="Cover image 1"
+									/>
+								</figure>
+								<h3>
+									Discrover weekly <span class="red">50</span>
+								</h3>
+								<p>Your weekly mixtape of fresh music.</p>
+							</article>
+							<article class="card stack">
+								<figure>
+									<img
+										src="../assets/img/covers/cover_3.png"
+										class="card-image"
+										alt="Cover image 3"
+									/>
+								</figure>
+								<h3>
+									Discrover weekly <span class="red">50</span>
+								</h3>
+								<p>Your weekly mixtape of fresh music.</p>
+							</article>
+							<article class="card stack">
+								<figure class="card__cover">
+									<img
+										src="../assets/img/covers/cover_1.png"
+										class="card-image"
+										alt="Cover image 1"
+									/>
+								</figure>
+								<h3>
+									Discover weekly <span class="red">50</span>
+								</h3>
+								<p>Your weekly mixtape of fresh music.</p>
+							</article>
+							<article class="card stack">
+								<figure>
+									<img
+										src="../assets/img/covers/cover_2.png"
+										class="card-image"
+										alt="Cover image 1"
+									/>
+								</figure>
+								<h3>
+									Discrover weekly <span class="red">50</span>
+								</h3>
+								<p>Your weekly mixtape of fresh music.</p>
+							</article>
+							<article class="card stack">
+								<figure>
+									<img
+										src="../assets/img/covers/cover_3.png"
+										class="card-image"
+										alt="Cover image 3"
+									/>
+								</figure>
+								<h3>
+									Discrover weekly <span class="red">50</span>
+								</h3>
+								<p>Your weekly mixtape of fresh music.</p>
+							</article>
+							<article class="card stack">
+								<figure class="card__cover">
+									<img
+										src="../assets/img/covers/cover_1.png"
+										class="card-image"
+										alt="Cover image 1"
+									/>
+								</figure>
+								<h3>
+									Discover weekly <span class="red">50</span>
+								</h3>
+								<p>Your weekly mixtape of fresh music.</p>
+							</article>
+							<article class="card stack">
+								<figure>
+									<img
+										src="../assets/img/covers/cover_2.png"
+										class="card-image"
+										alt="Cover image 1"
+									/>
+								</figure>
+								<h3>
+									Discrover weekly <span class="red">50</span>
+								</h3>
+								<p>Your weekly mixtape of fresh music.</p>
+							</article>
+							<article class="card stack">
+								<figure>
+									<img
+										src="../assets/img/covers/cover_3.png"
+										class="card-image"
+										alt="Cover image 3"
+									/>
+								</figure>
+								<h3>
+									Discrover weekly <span class="red">50</span>
+								</h3>
+								<p>Your weekly mixtape of fresh music.</p>
+							</article>
+						</div>
+
+						<div class="artist-content list-content">
+							<div class="artist-item">
+								<div class="card stack">
+									<figure class="card__cover">
+										<img
+											src="../assets/img/covers/cover_1.png"
+											class="card-image"
+											alt="Cover image 1"
+										/>
+									</figure>
+								</div>
+								<div class="card-details">
+									<div class="details-heading">
+										<h2>Random Access Memories</h2>
+										<i class="icons icon-arrow-right"></i>
+									</div>
+									<div class="details-timing">
+										<span class="songs-year">2023</span>
+										<span class="songs-count"
+											>22 songs</span
+										>
+										<span class="songs-duration"
+											>1 hr 14 min</span
+										>
+									</div>
+									<div class="details-actions">
+										<i
+											class="icons icon-play-green icon-xl"
+										></i>
+										<i class="icons icon-shuffle"></i>
+										<i class="icons icon-add-rounded"></i>
+										<i class="icons icon-add-playlist"></i>
+										<i
+											class="icons icon-download-rounded"
+										></i>
+										<i class="icons icon-upload"></i>
+										<i class="icons icon-dots"></i>
+									</div>
+								</div>
+							</div>
+							<div class="artist-item">
+								<div class="card stack">
+									<figure class="card__cover">
+										<img
+											src="../assets/img/covers/cover_2.png"
+											class="card-image"
+											alt="Cover image 1"
+										/>
+									</figure>
+								</div>
+								<div class="card-details">
+									<div class="details-heading">
+										<h2>Random Access Memories</h2>
+										<i class="icons icon-arrow-right"></i>
+									</div>
+									<div class="details-timing">
+										<span class="songs-year">2023</span>
+										<span class="songs-count"
+											>22 songs</span
+										>
+										<span class="songs-duration"
+											>1 hr 14 min</span
+										>
+									</div>
+									<div class="details-actions">
+										<i
+											class="icons icon-play-green icon-xl"
+										></i>
+										<i class="icons icon-shuffle"></i>
+										<i class="icons icon-add-rounded"></i>
+										<i class="icons icon-add-playlist"></i>
+										<i
+											class="icons icon-download-rounded"
+										></i>
+										<i class="icons icon-upload"></i>
+										<i class="icons icon-dots"></i>
+									</div>
+								</div>
+							</div>
+							<div class="artist-item">
+								<div class="card stack">
+									<figure class="card__cover">
+										<img
+											src="../assets/img/covers/cover_3.png"
+											class="card-image"
+											alt="Cover image 1"
+										/>
+									</figure>
+								</div>
+								<div class="card-details">
+									<div class="details-heading">
+										<h2>Random Access Memories</h2>
+										<i class="icons icon-arrow-right"></i>
+									</div>
+									<div class="details-timing">
+										<span class="songs-year">2023</span>
+										<span class="songs-count"
+											>22 songs</span
+										>
+										<span class="songs-duration"
+											>1 hr 14 min</span
+										>
+									</div>
+									<div class="details-actions">
+										<i
+											class="icons icon-play-green icon-xl"
+										></i>
+										<i class="icons icon-shuffle"></i>
+										<i class="icons icon-add-rounded"></i>
+										<i class="icons icon-add-playlist"></i>
+										<i
+											class="icons icon-download-rounded"
+										></i>
+										<i class="icons icon-upload"></i>
+										<i class="icons icon-dots"></i>
+									</div>
+								</div>
+							</div>
+							<div class="artist-item">
+								<div class="card stack">
+									<figure class="card__cover">
+										<img
+											src="../assets/img/covers/cover_4.png"
+											class="card-image"
+											alt="Cover image 1"
+										/>
+									</figure>
+								</div>
+								<div class="card-details">
+									<div class="details-heading">
+										<h2>Random Access Memories</h2>
+										<i class="icons icon-arrow-right"></i>
+									</div>
+									<div class="details-timing">
+										<span class="songs-year">2023</span>
+										<span class="songs-count"
+											>22 songs</span
+										>
+										<span class="songs-duration"
+											>1 hr 14 min</span
+										>
+									</div>
+									<div class="details-actions">
+										<i
+											class="icons icon-play-green icon-xl"
+										></i>
+										<i class="icons icon-shuffle"></i>
+										<i class="icons icon-add-rounded"></i>
+										<i class="icons icon-add-playlist"></i>
+										<i
+											class="icons icon-download-rounded"
+										></i>
+										<i class="icons icon-upload"></i>
+										<i class="icons icon-dots"></i>
+									</div>
+								</div>
+							</div>
+							<div class="artist-item">
+								<div class="card stack">
+									<figure class="card__cover">
+										<img
+											src="../assets/img/covers/cover_5.png"
+											class="card-image"
+											alt="Cover image 1"
+										/>
+									</figure>
+								</div>
+								<div class="card-details">
+									<div class="details-heading">
+										<h2>Random Access Memories</h2>
+										<i class="icons icon-arrow-right"></i>
+									</div>
+									<div class="details-timing">
+										<span class="songs-year">2023</span>
+										<span class="songs-count"
+											>22 songs</span
+										>
+										<span class="songs-duration"
+											>1 hr 14 min</span
+										>
+									</div>
+									<div class="details-actions">
+										<i
+											class="icons icon-play-green icon-xl"
+										></i>
+										<i class="icons icon-shuffle"></i>
+										<i class="icons icon-add-rounded"></i>
+										<i class="icons icon-add-playlist"></i>
+										<i
+											class="icons icon-download-rounded"
+										></i>
+										<i class="icons icon-upload"></i>
+										<i class="icons icon-dots"></i>
+									</div>
+								</div>
+							</div>
+							<div class="artist-item">
+								<div class="card stack">
+									<figure class="card__cover">
+										<img
+											src="../assets/img/covers/cover_6.png"
+											class="card-image"
+											alt="Cover image 1"
+										/>
+									</figure>
+								</div>
+								<div class="card-details">
+									<div class="details-heading">
+										<h2>Random Access Memories</h2>
+										<i class="icons icon-arrow-right"></i>
+									</div>
+									<div class="details-timing">
+										<span class="songs-year">2023</span>
+										<span class="songs-count"
+											>22 songs</span
+										>
+										<span class="songs-duration"
+											>1 hr 14 min</span
+										>
+									</div>
+									<div class="details-actions">
+										<i
+											class="icons icon-play-green icon-xl"
+										></i>
+										<i class="icons icon-shuffle"></i>
+										<i class="icons icon-add-rounded"></i>
+										<i class="icons icon-add-playlist"></i>
+										<i
+											class="icons icon-download-rounded"
+										></i>
+										<i class="icons icon-upload"></i>
+										<i class="icons icon-dots"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section-wrapper about">
+					<div class="content-wrapper">
+						<div class="about-content">
+							<div class="about-badge">
+								<div class="about-badge-covered">
+									<span class="about-badge-number">#292</span>
+									<span class="about-badge-description"
+										>in the world</span
+									>
+								</div>
+							</div>
+							<div class="about-description">
+								<p>
+									As they evolved from '90s French house
+									pioneers to 2000s dance tastemakers to
+									mainstream heroes in the 2010s, Daft Punk
+									remained one of dance music's most iconic
+									acts. With their early singles and 1997's
+									instant-classic debut album Homework,
+									Guy-Manuel de Homem-Christo and Thomas
+									Bangalter quickly won acclaim for their
+									skill at blending their beloved Chicago
+									house and Detroit techno with pop, funk,
+									indie rock, and hip-hop into nostalgic yet
+									futuristic forms. Not content to just widen
+									electronic music's popularity, on 2001's
+									Discovery they reinvented the
+									then-unfashionable sounds of mid-'80s soft
+									rock and R&B into stylish tracks that also
+									had a childlike wonder. Despite their
+									sizable popularity, Daft Punk were never
+									afraid to challenge their listeners, which
+									they did with 2005's cold and dystopic Human
+									After All. Even when they polarized their
+									audience, there was never any doubt that
+									they staged groundbreaking concerts, and the
+									tour captured on Alive 2007 helped pave the
+									way for arena-sized EDM, particularly in the
+									U.S. With 2013's Random Access Memories, the
+									duo once again looked to the past to create
+									the future, borrowing from prog, disco, and
+									a laid-back West Coast vibe that bucked the
+									predominant trends in electronic music but
+									still resonated with a wide audience. Daft
+									Punk's influence reached further into the
+									mainstream through collaborations with Kanye
+									West and the Weeknd, and the duo's music was
+									sampled by artists ranging from Missy
+									Elliott to the Fall. Though they reinvented
+									themselves continually, wherever Daft Punk
+									went, the rest of pop music followed.
+								</p>
+								<p>
+									After meeting in 1987 as students at Paris'
+									Lycée Carnot secondary school, Bangalter and
+									de Homem-Christo became friends and soon
+									started making music together. In 1992, they
+									formed the band Darlin'. Named after a Beach
+									Boys song, the group featured Bangalter on
+									bass, de Homem-Christo on guitar, and
+									additional guitarist Laurent Brancowitz.
+									Darlin's career was brief: The trio recorded
+									a cover of their namesake song that
+									appeared, along with an original song, on a
+									various artists EP released by Stereolab's
+									label Duophonic (the band also invited
+									Darlin' to play some U.K. shows with them).
+									Following a Melody Maker review that
+									described Darlin's music as "a daft punky
+									thrash," the band broke up. Bangalter and de
+									Homem-Christo began experimenting with
+									electronic music, taking their new project's
+									name from that review and drawing
+									inspiration from pioneers such as Todd
+									Edwards, Juan Atkins, Kraftwerk, Frankie
+									Knuckles, and many more.
+								</p>
+								<p>
+									By September 1993, Daft Punk had readied a
+									demo tape, which they gave
+									to Soma co-founder Stuart MacMillan at a
+									rave at EuroDisney. The label released the
+									duo's debut single, "The New Wave," in April
+									1994. Instantly hailed by the dance music
+									press as the work of a new breed of house
+									innovators, it was followed by May 1995's
+									"Da Funk," the band's first true hit (the
+									record sold 30,000 copies worldwide and saw
+									thorough rinsings by everyone from Kris
+									Needs to the Chemical Brothers). In 1996,
+									the buzz around Daft Punk led them to sign
+									with Virgin, and the label released the
+									single "Da Funk"/"Musique" that year.
+									Recorded and mixed at the duo's Paris studio
+									Daft House, January 1997's debut album
+									Homework -- named for Daft Punk's D.I.Y.
+									aesthetic -- was a critical and commercial
+									success. The album reached number three in
+									France and stayed on the chart for over a
+									year, while the singles "Da Funk," "Around
+									the World," "Burnin'," and "Revolution 909"
+									charted in France, the U.K., the U.S., and
+									Australia. The duo supported the record with
+									the Daftendirekt tour, while the Homework
+									video collection D.A.F.T.: A Story about
+									Dogs, Androids, Firemen and Tomatoes
+									followed in 1999 and featured clips directed
+									by Roman Coppola, Michel Gondry, and Spike
+									Jonze.
+								</p>
+								<p>
+									To follow their breakthrough debut album, de
+									Homem-Christo and Bangalter reached back to
+									their childhoods in the '70s and '80s and
+									sought to fuse technology with humanity.
+									Once again recorded at Daft House, March
+									2001's Discovery incorporated disco and
+									synth pop as well as house, garage, and R&B
+									into a sleek, retro-futuristic sound that
+									matched the robotic helmets and gloves the
+									duo introduced with the release of the
+									album. Featuring contributions from heroes
+									such as Romanthony, Edwards, and DJ Sneak,
+									Discovery was an even bigger hit than its
+									predecessor. The album peaked at number two
+									in France and the U.K., while the singles
+									"One More Time," "Digital Love," "Harder,
+									Faster, Better, Stronger," and "Face to
+									Face" also charted in the U.K. and the U.S.
+									That November saw the release of Alive 1997,
+									an edit of the duo's Birmingham, England
+									stop on the Daftendirekt tour. Daft Punk
+									capped the Discovery era in 2003 with
+									Interstella 5555: The 5tory of the 5ecret
+									5tar 5ystem, an animated film they produced
+									with anime and manga creator Leiji Matsumoto
+									that used the album as its soundtrack.
+								</p>
+								<p>
+									For Daft Punk's third album, the duo took a
+									drastically different approach. Created in
+									six weeks -- as opposed to the two years
+									they spent making Discovery -- with a
+									handful of gear that included an eight-track
+									machine, March 2005's Human After All was a
+									deliberately raw, stark set of songs
+									inspired by George Orwell's Nineteen
+									Eighty-Four. Though its cold, repetitive
+									feel drew polarized reactions, the album
+									fared well commercially: Human After All
+									reached number three in France, was a Top
+									Ten hit in the U.K., and hit number one on
+									the Billboard Top Dance/Electronic Albums
+									chart in the U.S. The set was also nominated
+									for Best Electronic/Dance Album at the 2006
+									Grammy Awards. Shortly after its release,
+									Human After All [Remixes] collected
+									reworkings by Soulwax, Digitalism, and Erol
+									Alkan among others.
+								</p>
+								<p>
+									April 2006 saw the arrival of Musique, Vol.
+									1: 1993-2005, a compilation of the duo's
+									best-known songs and remixes accompanied by
+									the videos for Human After All's singles.
+									That May, Daft Punk premiered their film
+									Electroma at the Director's Fortnight at
+									that year's Cannes Film Festival. An
+									experimental sci-fi film about a pair of
+									robots seeking to become human, it began as
+									the video for Human After All's title track
+									before expanding into a feature film (unlike
+									Interstella 5555, the movie did not feature
+									any of Daft Punk's music). Initially earning
+									mixed reviews, over time Electroma won a
+									cult audience. That year, the duo embarked
+									on the Alive tour, which lasted through 2007
+									and featured some of Daft Punk's most
+									ambitiously staged live sets. Appearing in
+									November 2007, Alive 2007 documented the
+									tour. Early in 2009, the album and its
+									single "Harder, Better, Faster, Stronger"
+									won Grammy Awards.
+								</p>
+								<p>
+									Daft Punk returned with new music in
+									November 2010 in the form of the score to
+									Joseph Kosinski's feature film Tron: Legacy.
+									A collaboration with Joseph Trapanese, who
+									arranged and orchestrated the pair's
+									compositions, it featured an 85-piece
+									orchestra as well as Daft Punk's signature
+									electronics. Bangalter and de Homem-Christo
+									also appeared in the film in a brief cameo.
+									The soundtrack eventually reached number
+									four on the Billboard 200 Albums chart in
+									the U.S. and was nominated for a Best Score
+									Soundtrack Album for Visual Media Grammy
+									Award. Also in 2010, the duo were admitted
+									into the Ordre des Arts et des Lettres, with
+									de Homem-Christo and Bangalter each
+									receiving the rank of Chevalier. The
+									following year saw the April release of the
+									remix album Tron: Legacy Reconfigured, while
+									that September's compilation Soma Records:
+									20 Years featured the track "Drive," an
+									early recording that was believed to be
+									lost.
+								</p>
+								<p>
+									For their fourth album, Daft Punk once again
+									took a different creative tack. Seeking a
+									breezy feel informed by Fleetwood Mac, the
+									Eagles, and Jean Michel Jarre, the duo
+									emphasized live instrumentation and
+									collaborated with artists including Nile
+									Rodgers, Paul Williams, Giorgio Moroder,
+									and Panda Bear. Pharrell Williams appeared
+									on the single "Get Lucky," which preceded
+									the release of the full-length Random Access
+									Memories in May 2013. Recorded in
+									California, New York City, and Paris and
+									spanning disco, prog, and indie influences,
+									the album became one of Daft Punk's biggest
+									successes. It topped the charts in over 20
+									countries including the U.S., where it
+									became the duo's first number one album and
+									was eventually certified platinum. It also
+									won Grammy Awards for Best Dance/Electronica
+									Album, Album of the Year, and Best
+									Engineered Album, Non-Classical. "Get Lucky"
+									hit number one in over 30 countries and
+									earned Grammys for Best Pop Duo/Group
+									Performance and Record of the Year. That
+									year, Daft Punk also co-produced Kanye
+									West's critically acclaimed album Yeezus,
+									and worked on tracks including the single
+									"Black Skinhead." In 2014, the duo appeared
+									on Pharrell's album G I R L and collaborated
+									with Jay-Z on the song "Computerized." A
+									2015 documentary titled Daft Punk Unchained
+									charted their history from the '90s into the
+									2010s, featuring interviews
+									with Rodgers, Pharrell, and West, among
+									others. In turn, the duo appeared in that
+									year's Rodgers documentary Nile Rodgers:
+									From Disco to Daft Punk.
+								</p>
+								<p>
+									During the latter half of the 2010s, Daft
+									Punk remained active. They teamed up
+									with the Weeknd's Abel Tesfaye on a pair of
+									songs from his 2016 album Starboy, including
+									the chart-topping title track. The following
+									year, the duo performed with the Weeknd at
+									the 59th Annual Grammy Awards; later in
+									2017, they co-wrote and produced Parcels'
+									"Overnight." During this time, Daft Punk's
+									members also worked on separate
+									projects. Bangalter co-produced Arcade
+									Fire's 2017 album Everything Now and
+									contributed pieces to the soundtrack to
+									Gaspar Noé's 2018 film Climax, while de
+									Homem-Christo co-wrote and produced tracks
+									for Charlotte Gainsbourg's 2017 album Rest
+									and the Weeknd's 2018 EP My Dear
+									Melancholy,. In 2019, Daft Punk were
+									featured in the Philharmonie de Paris'
+									exhibition Electro, which traced the history
+									of electronic music and its influence on
+									visual arts. In February 2021, the duo
+									disbanded, spreading the news with a YouTube
+									video that featured scenes from the end of
+									Electroma. To commemorate the tenth
+									anniversary of Random Access Memories in
+									2023, Daft Punk issued a pair of re-releases
+									of the album. In May, a deluxe edition of
+									the album featuring unreleased demos
+									(including "Infinity Repeating," which
+									featured Julian Casablancas & the Voidz),
+									outtakes and the version of "Touch" that
+									soundtracked the duo's breakup announcement
+									appeared. The reissue topped the Billboard
+									Dance/Electronic Albums Chart and reached
+									the Top Ten of the Billboard 200 Albums
+									Chart. That November saw the release of a
+									drumless version of the album. ~ Heather
+									Phares & Sean Cooper, Rovi
+								</p>
+							</div>
+							<div class="about-statistics">
+								<div class="statistics-item">
+									<span class="statistics-head"
+										>9,868,787</span
+									>
+									<span class="statistics-text"
+										>Followers</span
+									>
+								</div>
+								<div class="statistics-item">
+									<span class="statistics-head"
+										>22,430,353</span
+									>
+									<span class="statistics-text"
+										>Monthly Listeners</span
+									>
+								</div>
+								<div class="statistics-item">
+									<span class="statistics-head"
+										>Paris, FR</span
+									>
+									<span class="statistics-text"
+										>391,036 listeners</span
+									>
+								</div>
+								<div class="statistics-item">
+									<span class="statistics-head"
+										>Mexico City, MX</span
+									>
+									<span class="statistics-text"
+										>367,878 listeners</span
+									>
+								</div>
+								<div class="statistics-item">
+									<span class="statistics-head"
+										>Santiago, CL</span
+									>
+									<span class="statistics-text"
+										>327,816 listeners</span
+									>
+								</div>
+								<div class="statistics-item">
+									<span class="statistics-head"
+										>London, GB</span
+									>
+									<span class="statistics-text"
+										>274,515 listeners</span
+									>
+								</div>
+								<div class="statistics-item">
+									<span class="statistics-head"
+										>Bogotá, CO</span
+									>
+									<span class="statistics-text"
+										>251,175 listeners</span
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+		<aside class="activity">
+			<div class="main-inner">
+				<section class="section-wrapper">
+					<div class="content-wrapper">
+						<div class="section-title">
+							<h4>Friends Activity</h4>
+							<div class="slide-controls">
+								<a href="#"
+									><i class="icons icon-add-friend"></i
+								></a>
+								<a href="#"><i class="icons icon-close"></i></a>
+							</div>
+						</div>
+						<div class="activity-content">
+							<div class="activity-details">
+								<div class="activity-icon">
+									<img
+										src="../assets/img/users/user_1.png"
+										alt=""
+									/>
+								</div>
+								<div class="activity-summary">
+									<span class="title"
+										>FriendlyMusicListener</span
+									>
+									<div class="description">
+										<div class="activity-time now">
+											<span class="now-bar"></span>
+										</div>
+										<div class="artist-information">
+											<span class="album"
+												>Goosebumps
+											</span>
+											<span class="artist"
+												>Travis Scott</span
+											>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="activity-details">
+								<div class="activity-icon">
+									<img
+										src="../assets/img/users/user_2.png"
+										alt=""
+									/>
+								</div>
+								<div class="activity-summary">
+									<span class="title"
+										>AverageMusicEnjoyer</span
+									>
+									<div class="description">
+										<div class="activity-time now">
+											<span class="now-bar"></span>
+										</div>
+										<div class="artist-information">
+											<span class="album"
+												>Get Lucky
+											</span>
+											<span class="artist"
+												>Daft Punk</span
+											>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="activity-details">
+								<div class="activity-icon">
+									<img
+										src="../assets/img/users/user_3.png"
+										alt=""
+									/>
+								</div>
+								<div class="activity-summary">
+									<span class="title">MusicEnthusiast</span>
+									<div class="description">
+										<div class="activity-time">
+											<span>1h</span>
+										</div>
+										<div class="artist-information">
+											<span class="album">would he </span>
+											<span class="artist">joji</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="activity-details">
+								<div class="activity-icon">
+									<img
+										src="../assets/img/users/user_4.png"
+										alt=""
+									/>
+								</div>
+								<div class="activity-summary">
+									<span class="title">IListenToMusic56</span>
+									<div class="description">
+										<div class="activity-time">
+											<span>6h</span>
+										</div>
+										<div class="artist-information">
+											<span class="album">Rockstar </span>
+											<span class="artist"
+												>Post Malone</span
+											>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</aside>
+		<footer class="player">
+			<div class="player-wrapper">
+				<img src="../assets/img/albums/album_1.png" alt="Draft Punk" />
+
+				<div class="music-title-author-wrapper">
+					<a href="./now-playing-text.html" class="scrolling-text"
+						>Get Lucky (feat. Pharrell Williams and Nile Rodgers)</a
+					>
+					<a href="./now-playing.html" class="scrolling-text-band"
+						>Draft Punk</a
+					>
+				</div>
+			</div>
+
+			<div class="player-icons">
+				<i class="icons icon-add-playlist icon-sm"></i>
+				<img
+					src="../assets/img/icons/player/play.svg"
+					alt="play"
+					class="play"
+				/>
+			</div>
+
+			<div class="music-progress-bar"></div>
+
+			<div class="advanced-player">
+				<div class="advanced-player-wrapper">
+					<div class="stop-button-wrapper">
+						<img
+							src="../assets/img/icons/player/pause.svg"
+							alt="pause"
+							class="pause"
+						/>
+					</div>
+					<i class="icons icon-prev icon-sm"></i>
+					<i class="icons icon-next icon-sm"></i>
+					<i class="icons icon-shuffle icon-sm"></i>
+					<i class="icons icon-repeat icon-sm"></i>
+				</div>
+
+				<div class="advanced-player-music-time-line">
+					<p>2:23</p>
+					<div class="advanced-music-progress-bar"></div>
+					<p>4:46</p>
+				</div>
+
+				<i class="icons icon-volume"></i>
+			</div>
+
+			<div class="advanced-player-icons">
+				<div class="wrapper-icons">
+					<i class="icons icon-hearth"></i>
+					<i class="icons icon-add-playlist"></i>
+				</div>
+				<a href="./now-playing-music-section.html"
+					><i class="icons icon-list"></i
+				></a>
+				<i class="icons icon-devices"></i>
+				<i class="icons icon-dots"></i>
+				<hr />
+				<i class="icons icon-player_blue_icon icon-md"></i>
+				<i class="icons icon-order icon-sm"></i>
+			</div>
+		</footer>
+	</body>
+	<script src="../assets/js/main.js"></script>
+</html>

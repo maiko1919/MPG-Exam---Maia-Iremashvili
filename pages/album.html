@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="MPG Team" />
+    <meta name="description" content="This is Georgian Spotify Template created by MPG Team" />
+    <link rel="stylesheet" href="../assets/styles/style.css" />
+    <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <title>Albums - Georgian Spotify - Project by MPG Team</title>
+</head>
+
+<body class="app">
+    <header class="header">
+        <div class="header-wrapper">
+            <!-- desktop -->
+            <nav class="navigation">
+              <ul class="top-nav-ul left-ul">
+                <li>
+                  <a href="../index.html">
+                    <div class="img-div">
+                      <i class="icons icon-home"></i>
+                    </div>
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="./discover.html">
+                    <div class="img-div">
+                      <i class="icons icon-discover"></i>
+                    </div>
+
+                    <span>Discover</span>
+                  </a>
+                </li>
+                <li>
+                  <form action="./search.html">
+                    <div class="img-div search-wrapper">
+                      <label for="search">
+                        <i class="icons icon-search"></i>
+                      </label>
+                      <input id="search" type="search" placeholder="Search" />
+                    </div>
+                  </form>
+                </li>
+              </ul>
+            </nav>
+            <nav class="side-nav top-nav">
+              <ul class="top-nav-ul">
+                <li>
+                  <div class="theme-toggle dark" id="theme-toggle"></div>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="icons icon-notification"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="icons icon-lock"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="icons icon-users"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="icons icon-settings"></i>
+                  </a>
+                </li>
+                <li class="no-hover">
+                  <a href="./profile.html">
+                    <img src="../assets/img/icons/user.svg" alt="Profile" />
+                  </a>
+                </li>
+              </ul>
+            </nav>
+        </div>
+        <!-- Mobile navigation -->
+        <nav class="mobile-nav">
+          <a href="../index.html">
+            <i class="icons icon-home-inactive icon-green"></i>
+            Home
+          </a>
+          <a href="./discover.html">
+            <i class="icons icon-discover icon-green"></i>
+            Discover
+          </a>
+          <a href="./search.html">
+            <i class="icons icon-search icon-green"></i>
+            Search
+          </a>
+          <a href="./library.html">
+            <i class="icons icon-library icon-green"></i>
+            Library
+          </a>
+          <a href="./profile.html">
+            <i class="icons icon-me icon-green"></i>
+            Me
+          </a>
+        </nav>
+    </header>
+    <aside class="sidebar">
+      <div class="sidebar-heading">
+        <a href="./library.html"><i class="icons icon-library"></i> My Library</a>
+      </div>
+      <nav class="sidebar-menu">
+        <ul>
+          <li>
+            <details class="nav__dropdown">
+              <summary class="nav__link">
+                <i class="icons icon-pin"></i>
+                Pins
+              </summary>
+              <ul class="nav__sub">
+                <li><a href="./album.html">Albums</a></li>
+                <li><a href="./artist.html">Artists</a></li>
+                <li><a href="./playlist.html">Playlists</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details class="nav__dropdown">
+              <summary class="nav__link">
+                <i class="icons icon-playlist"></i>
+                Playlists
+              </summary>
+              <ul class="nav__sub">
+                <li><a href="./album.html">Albums</a></li>
+                <li><a href="./artist.html">Artists</a></li>
+                <li><a href="./playlist.html">Playlists</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <a href="./song.html">
+              <i class="icons icon-hearth"></i>
+              <span>Liked Songs</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="icons icon-bookmark"></i>
+              <span>Saves</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="./album.html">
+              <i class="icons icon-album"></i>
+              <span>Albums</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="icons icon-folder"></i>
+              <span>Folders</span>
+            </a>
+          </li>
+          <li>
+            <a href="./podcast.html">
+              <i class="icons icon-podcast"></i>
+              <span>Podcasts</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="icons icon-audiobook"></i>
+              <span>Audiobooks</span>
+            </a>
+          </li>
+          <li>
+            <a href="./artist.html">
+              <i class="icons icon-artists"></i>
+              <span>Artists</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main album-page">
+        <header class="ram-header">
+            <form>
+                <div class="img-div search-wrapper">
+                    <input id="search" type="search" placeholder="Search PlayList">
+                    <label for="search"> 
+                        <i class="icons icon-search"></i>
+                    </label>
+                </div>
+            </form>
+            <i class="icons icon-sort"></i>
+        </header>
+
+        <div class="main-inner album">
+
+            <!-- LEFT COLUMN -->
+            <div class="album-content">
+
+                <section class="random-access-memoriess">
+                    <div class="ram-tablet-img">
+                        <img src="../assets/img/albums/album_1.png" alt="Daft Punk">
+                    </div>
+                    <div class="ram-wrapper">
+
+                        <h1 class="ram-title">Random Access Memories</h1>
+
+                        <div class="ram-info-wrapper">
+                            <i class="icons icon-artists icon-sm"></i>
+                            <p>Daft Punk</p>
+                            <p>•</p>
+                            <p>2013</p>
+                            <p>•</p>
+                            <p>13 songs</p>
+                            <p>•</p>
+                            <p>1 hr 14 min</p>
+                        </div>
+
+                        <div class="ram-nav-icons">
+
+                            <div class="left-icons">
+                                <div class="play-icon-background">
+                                    <i class="icons icon-play-icon-green"></i>
+                                </div>
+                                <i class="icons icon-shuffle"></i>
+                                <i class="icons icon-add-music"></i>
+                                <i class="icons icon-add-playlist"></i>
+                                <i class="icons icon-download"></i>
+                                <i class="icons icon-upload"></i>
+                                <i class="icons icon-dots"></i>
+                            </div>
+
+                            <div class="right-icons">
+                                <i class="icons icon-search"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="mobile-ram-nav-icons">
+
+                            <div class="left-icons">
+                                <i class="icons icon-add-playlist"></i>
+                                <i class="icons icon-add-album"></i>
+                                <i class="icons icon-download"></i>
+                                <i class="icons icon-dots"></i>
+                            </div>
+
+                            <div class="right-icons">
+                                <i class="icons icon-shuffle"></i>
+
+                                <div class="play-btn-wrapper">
+                                    <i class="icons icon-play-green"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                </section>
+
+
+                <!-- TABLE -->
+                <section class="table-wrapper">
+                    <table class="table table-dark music-table">
+
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th>Duration</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="track-number">1</td>
+
+                                <td class="track-info">
+                                    <div class="info-wrapper">
+                                        <img src="../assets/img/albums/album_1.png" alt="cover" class="cover" />
+                                        <div class="text-wrapper">
+                                            <p class="title">Get Lucky</p>
+                                            <p class="artist">Daft Punk</p>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="duration">4:35</td>
+                                <td><i class="icons icon-hearth"></i></td>
+                                <td><i class="icons icon-dots icon-sm"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td class="track-number">2</td>
+
+                                <td class="track-info">
+                                    <div class="info-wrapper">
+                                        <img src="../assets/img/albums/album_1.png" alt="cover" class="cover" />
+                                        <div class="text-wrapper">
+                                            <p class="title">Instant Crush</p>
+                                            <p class="artist">Daft Punk, Julian Casablancas</p>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="duration">5:37</td>
+                                <td><i class="icons icon-hearth"></i></td>
+                                <td><i class="icons icon-dots icon-sm"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td class="track-number">3</td>
+
+                                <td class="track-info">
+                                    <div class="info-wrapper">
+                                        <img src="../assets/img/albums/on-melancholy-hill.png" alt="cover"
+                                            class="cover" />
+                                        <div class="text-wrapper">
+                                            <p class="title">on-melancholy-hill</p>
+                                            <p class="artist">Gorilaz</p>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="duration">3:33</td>
+                                <td><i class="icons icon-hearth"></i></td>
+                                <td><i class="icons icon-dots icon-sm"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td class="track-number">4</td>
+
+                                <td class="track-info">
+                                    <div class="info-wrapper">
+                                        <img src="../assets/img/albums/tainted-love.png" alt="cover" class="cover" />
+                                        <div class="text-wrapper">
+                                            <p class="title">tainted-love</p>
+                                            <p class="artist">Soft Cell</p>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="duration">2:33</td>
+                                <td><i class="icons icon-hearth"></i></td>
+                                <td><i class="icons icon-dots icon-sm"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td class="track-number">5</td>
+
+                                <td class="track-info">
+                                    <div class="info-wrapper">
+                                        <img src="../assets/img/albums/one-more-time.png" alt="cover" class="cover" />
+                                        <div class="text-wrapper">
+                                            <p class="title">one-more-time</p>
+                                            <p class="artist">Daft Punk</p>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="duration">5:20</td>
+                                <td><i class="icons icon-hearth"></i></td>
+                                <td><i class="icons icon-dots icon-sm"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td class="track-number">6</td>
+
+                                <td class="track-info">
+                                    <div class="info-wrapper">
+                                        <img src="../assets/img/albums/electric-feel.png" alt="cover" class="cover" />
+                                        <div class="text-wrapper">
+                                            <p class="title">electric-feel</p>
+                                            <p class="artist">MGMT</p>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="duration">3:49</td>
+                                <td><i class="icons icon-hearth"></i></td>
+                                <td><i class="icons icon-dots icon-sm"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td class="track-number">7</td>
+
+                                <td class="track-info">
+                                    <div class="info-wrapper">
+                                        <img src="../assets/img/albums/album_1.png" alt="cover" class="cover" />
+                                        <div class="text-wrapper">
+                                            <p class="title">Give Life Back to Music</p>
+                                            <p class="artist">Daft Punk</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                
+                                <td class="duration">4:35</td>
+                                <td><i class="icons icon-hearth"></i></td>
+                                <td><i class="icons icon-dots icon-sm"></i></td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </section>
+
+            </div>
+
+
+            <!-- RIGHT COLUMN -->
+            <section class="random-access-memories-band-info">
+                <img src="../assets/img/albums/album_1.png" alt="Daft Punk">
+                <div class="band-music-style-wrapper">
+                    <p>Funk</p>
+                    <p>Electronic Music</p>
+                    <p>Disco</p>
+                    <p>Soft Rock</p>
+                    <p>Progressive Pop</p>
+                </div>
+                <div class="band-colabs">
+
+                    <div class="band-colab-wrapper">
+                        <img src="../assets/img/artists/artist_2.png">
+                        <p>Daft Punk</p>
+                    </div>
+
+                    <div class="band-colab-wrapper">
+                        <img src="../assets/img/artists/pharrell-williams.png">
+                        <p>Pharrell Williams</p>
+                    </div>
+
+                    <div class="band-colab-wrapper">
+                        <img src="../assets/img/artists/nile-rodgers.png">
+                        <p>Nile Rodgers</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+    <aside class="activity">
+      <div class="main-inner">
+        <section class="section-wrapper">
+          <div class="content-wrapper">
+            <div class="section-title">
+              <h4>Friends Activity</h4>
+              <div class="slide-controls">
+                <a href="#"><i class="icons icon-add-friend"></i></a>
+                <a href="#"><i class="icons icon-close"></i></a>
+              </div>
+            </div>
+            <div class="activity-content">
+              <div class="activity-details">
+                <div class="activity-icon">
+                  <img src="../assets/img/users/user_1.png" alt="" />
+                </div>
+                <div class="activity-summary">
+                  <span class="title">FriendlyMusicListener</span>
+                  <div class="description">
+                    <div class="activity-time now">
+                      <span class="now-bar"></span>
+                    </div>
+                    <div class="artist-information">
+                      <span class="album">Goosebumps </span>
+                      <span class="artist">Travis Scott</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="activity-details">
+                <div class="activity-icon">
+                  <img src="../assets/img/users/user_2.png" alt="" />
+                </div>
+                <div class="activity-summary">
+                  <span class="title">AverageMusicEnjoyer</span>
+                  <div class="description">
+                    <div class="activity-time now">
+                      <span class="now-bar"></span>
+                    </div>
+                    <div class="artist-information">
+                      <span class="album">Get Lucky </span>
+                      <span class="artist">Daft Punk</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="activity-details">
+                <div class="activity-icon">
+                  <img src="../assets/img/users/user_3.png" alt="" />
+                </div>
+                <div class="activity-summary">
+                  <span class="title">MusicEnthusiast</span>
+                  <div class="description">
+                    <div class="activity-time">
+                      <span>1h</span>
+                    </div>
+                    <div class="artist-information">
+                      <span class="album">would he </span>
+                      <span class="artist">joji</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="activity-details">
+                <div class="activity-icon">
+                  <img src="../assets/img/users/user_4.png" alt="" />
+                </div>
+                <div class="activity-summary">
+                  <span class="title">IListenToMusic56</span>
+                  <div class="description">
+                    <div class="activity-time">
+                      <span>6h</span>
+                    </div>
+                    <div class="artist-information">
+                      <span class="album">Rockstar </span>
+                      <span class="artist">Post Malone</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </aside>
+    <footer class="player">
+      <div class="player-wrapper">
+        <img src="../assets/img/albums/album_1.png" alt="Draft Punk" />
+
+        <div class="music-title-author-wrapper">
+          <a href="./now-playing-text.html" class="scrolling-text"
+            >Get Lucky (feat. Pharrell Williams and Nile Rodgers)</a
+          >
+          <a href="./now-playing.html" class="scrolling-text-band">Draft Punk</a>
+        </div>
+      </div>
+
+      <div class="player-icons">
+        <i class="icons icon-add-playlist icon-sm"></i>
+        <img src="../assets/img/icons/player/play.svg" alt="play" class="play" />
+      </div>
+
+      <div class="music-progress-bar"></div>
+
+      <div class="advanced-player">
+        <div class="advanced-player-wrapper">
+          <div class="stop-button-wrapper">
+            <img
+              src="../assets/img/icons/player/pause.svg"
+              alt="pause"
+              class="pause"
+            />
+          </div>
+          <i class="icons icon-prev icon-sm"></i>
+          <i class="icons icon-next icon-sm"></i>
+          <i class="icons icon-shuffle icon-sm"></i>
+          <i class="icons icon-repeat icon-sm"></i>
+        </div>
+
+        <div class="advanced-player-music-time-line">
+          <p>2:23</p>
+          <div class="advanced-music-progress-bar"></div>
+          <p>4:46</p>
+        </div>
+
+        <i class="icons icon-volume"></i>
+      </div>
+
+      <div class="advanced-player-icons">
+        <div class="wrapper-icons">
+          <i class="icons icon-hearth"></i>
+          <i class="icons icon-add-playlist"></i>
+        </div>
+        <a href="./now-playing-music-section.html"><i class="icons icon-list"></i></a>
+        <i class="icons icon-devices"></i>
+        <i class="icons icon-dots"></i>
+        <hr />
+        <i class="icons icon-player_blue_icon icon-md"></i>
+        <i class="icons icon-order icon-sm"></i>
+      </div>
+    </footer>
+</body>
+<script src="../assets/js/main.js"></script>
+</html>

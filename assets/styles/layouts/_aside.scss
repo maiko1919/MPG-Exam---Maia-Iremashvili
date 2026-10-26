@@ -1,0 +1,115 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.sidebar {
+	display: none;
+	@include laptop {
+		@include flex(null, null, column, 2rem);
+		grid-area: sidebar;
+		background: $color-bg-main;
+		padding: 0.5rem 1.5rem;
+		border-radius: $border-radius-default;
+	}
+	a {
+		@include flex(center, center, row, 1rem);
+		&:hover {
+			color: $color-hover-text;
+		}
+	}
+	.sidebar-heading {
+		@include flex(center, null, row, 1rem);
+		padding: 1rem;
+		cursor: pointer;
+	}
+	.sidebar-menu {
+		@include flex(null, null, column, null);
+		ul {
+			@include flex(null, null, column, 1.5rem);
+		}
+		& li {
+			@include flex(center, null, null, 1.5rem);
+			font-size: 1.4rem;
+			line-height: 1.9rem;
+			letter-spacing: 0.03em;
+			position: relative;
+			cursor: pointer;
+			padding: 1rem;
+			&:hover {
+				background-color: $color-hover-bg;
+				border-radius: $border-radius-default;
+				color: $color-hover-text;
+			}
+			&.active {
+				background-color: $color-hover-bg;
+				border-radius: $border-radius-default;
+				color: $color-hover-text;
+				& span {
+					color: $color-hover-text;
+				}
+				& i {
+					filter: brightness(0) invert(1);
+				}
+			}
+		}
+
+		.nav__dropdown {
+			width: 100%;
+		}
+
+		.nav__dropdown summary {
+			@include flex(center, null, null, 1.5rem);
+			list-style: none;
+			cursor: pointer;
+			position: relative;
+		}
+
+		.nav__dropdown summary::-webkit-details-marker {
+			display: none;
+		}
+
+		.nav__dropdown summary::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 1rem;
+			transform: translateY(-50%) rotate(-45deg);
+			width: 8px;
+			height: 8px;
+			border-right: 2px solid currentColor;
+			border-bottom: 2px solid currentColor;
+			transition: transform 0.3s ease;
+		}
+		.nav__dropdown[open] summary::after {
+			transform: translateY(-50%) rotate(45deg);
+		}
+		.nav__sub {
+			margin-top: 0.5rem;
+			padding: 0.5rem 0;
+			list-style: none;
+			border-radius: 8px;
+			opacity: 0;
+			transform: translateY(-10px);
+			transition: 0.3s ease;
+			pointer-events: none;
+			display: flex;
+			gap: 0rem;
+		}
+
+		.nav__dropdown[open] .nav__sub {
+			opacity: 1;
+			transform: translateY(0);
+			pointer-events: auto;
+		}
+	}
+
+	.icon {
+		width: 2.2rem;
+		&:hover {
+			color: $color-hover-text;
+		}
+	}
+	&:hover {
+		background-color: $color-bg-primary;
+		color: rgba(137, 137, 137, 0.79);
+	}
+}

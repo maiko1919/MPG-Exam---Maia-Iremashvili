@@ -1,0 +1,225 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.header {
+	@include grid($desktop-cols: 2, $desktop-areas: "sidebar header");
+	width: 100%;
+	background-color: $color-bg-main;
+	z-index: 5;
+	grid-template-areas: "header";
+	@include flex(center, center, row);
+}
+@media (min-width: 992px) {
+	.header {
+		grid-template-columns: 1fr;
+		// grid-column: span 2;
+	}
+}
+
+.header-wrapper {
+	width: 100%;
+	display: none;
+	@include laptop {
+		@include flex(center, space-between, row);
+		.navigation {
+			& .top-nav-ul {
+				@include flex(center, flex-start, row, 1rem);
+				@include desktop {
+					@include flex(center, flex-start, row, 2rem);
+				}
+			}
+			& .img-div {
+				padding: 1rem;
+			}
+			& a {
+				padding: 0 2rem 0 1rem;
+				@include desktop {
+					padding: 0 10rem 0 1rem;
+				}
+				font-family: $font-satoshi;
+				font-size: 1.4rem;
+				color: $color-primary;
+				@include flex(center, flex-start, row);
+			}
+
+			& form {
+				@include flex(center, flex-start, row, 2rem);
+				padding: 1rem;
+				font-family: $font-satoshi;
+				font-size: 1.4rem;
+				color: $color-primary;
+
+				&:hover {
+					background-color: $color-bg-primary;
+					border-radius: $border-radius-default;
+					transition: 0.3s ease;
+					& i {
+						filter: brightness(0) invert(1);
+						transition: 0.3s ease;
+					}
+					&:focus-within {
+						background: $color-bg-primary;
+					}
+				}
+			}
+			& .search-wrapper {
+				position: relative;
+
+				& label,
+				& i {
+					position: absolute;
+					left: 1rem;
+					top: 50%;
+					transform: translateY(-50%);
+					cursor: pointer;
+				}
+			}
+			& input {
+				width: 100%;
+				border: none;
+				outline: none;
+				background: transparent;
+				padding: 0 1rem 0 4rem;
+				border-radius: $border-radius-default;
+				font-family: $font-satoshi, sans-serif;
+				font-size: 1.4rem;
+				font-weight: 500;
+				color: $color-primary;
+				// placeholder customization
+				&::placeholder {
+					font-family: $font-satoshi, sans-serif;
+					font-size: 14px;
+					font-weight: 500;
+					color: $color-primary;
+				}
+				// closing icon customization
+				&::-webkit-search-cancel-button {
+					-webkit-appearance: none;
+					width: 1rem;
+					height: 1rem;
+					cursor: pointer;
+					background:
+						linear-gradient(
+							45deg,
+							transparent 45%,
+							$color-primary 45%,
+							$color-primary 55%,
+							transparent 55%
+						),
+						linear-gradient(
+							-45deg,
+							transparent 45%,
+							$color-primary 45%,
+							$color-primary 55%,
+							transparent 55%
+						);
+					background-size: 100% 100%;
+				}
+			}
+		}
+	}
+
+	.side-nav ul {
+		@include flex(center, center, row, 1.3rem);
+		& a {
+			@include flex(center, center, row);
+			padding: 0.8rem;
+		}
+	}
+
+	// Hovers:
+	// top-left-navigation hover:
+	.navigation {
+		& a:hover {
+			background-color: $color-bg-primary;
+			border-radius: $border-radius-default;
+			transition: 0.3s ease;
+			& i {
+				filter: brightness(0) invert(1);
+				transition: 0.3s ease;
+			}
+
+			& span {
+				color: $color-secondary;
+				transition: 0.3s ease;
+			}
+		}
+		& a.active {
+			background-color: $color-bg-primary;
+			border-radius: $border-radius-default;
+			transition: 0.3s ease;
+			& i {
+				filter: brightness(0) invert(1);
+				transition: 0.3s ease;
+			}
+
+			& span {
+				color: $color-secondary;
+				transition: 0.3s ease;
+			}
+		}
+	}
+	//  right navigation hover
+	.side-nav {
+		& li:not(:last-child) a:hover i {
+			filter: brightness(0) invert(1);
+			transition: 0.3s ease;
+		}
+	}
+	// bottom  header fixed in bottom on mobile + tablet
+}
+
+.mobile-nav {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 1.6rem;
+	background: $mobile-nav-bg-color;
+	@include flex(center, space-around, row, 2.1rem);
+	& a {
+		@include flex(center, center, column, 0.8rem);
+		&:hover {
+			color: $main-green-color;
+		}
+		&.active {
+			font-weight: bold;
+			color: $main-green-color;
+			& i {
+				filter: brightness(0) saturate(100%) invert(56%) sepia(83%)
+					saturate(600%) hue-rotate(95deg);
+			}
+		}
+	}
+	& label {
+		@include flex(center, center, column, 1rem);
+		font-family: $font-satoshi;
+		font-size: 1.4rem;
+		color: $color-primary;
+		&:hover {
+			color: $color-secondary;
+			transition: 0.3s ease;
+			& i {
+				filter: brightness(0) invert(1);
+			}
+		}
+	}
+	& input[type="radio"]:checked + label {
+		color: $main-green-color;
+		& i {
+			filter: brightness(0) saturate(100%) invert(56%) sepia(83%)
+				saturate(600%) hue-rotate(95deg);
+			fill: $main-green-color;
+		}
+	}
+	& input {
+		display: none;
+	}
+	@include laptop {
+		display: none;
+	}
+	& .img-div {
+		padding: 1rem;
+		@include flex(center, flex-start, row);
+	}
+}
