@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Filter Bar Chips & Card Base Components
+   Filter Bar Chips & Album Cards with Hover Transitions
    ========================================================================== */
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
@@ -44,6 +44,7 @@
   cursor: pointer;
   @include smooth-transition;
 
+  // PRD B4 Criteria: Scale & Transform on hover
   &:hover {
     background-color: $color-bg-card-hover;
     transform: translateY(-4px);
