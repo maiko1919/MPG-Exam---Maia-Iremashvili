@@ -1,27 +1,21 @@
-@use "../abstracts/variables" as *;
-@use "../abstracts/mixins" as *;
+/* ==========================================================================
+   Made For You Section Grid
+   ========================================================================== */
+.showcase-section {
+  margin-bottom: 40px;
 
-.red {
-	color: $color-card-span-red;
-}
+  &__heading {
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+  }
 
-.section-title {
-	@include flex(center, space-between, null, null);
-	& h2 {
-		color: $color-hover-text;
-		font-weight: 600;
-		font-size: 2rem;
-	}
-}
-
-.slide-controls {
-	@include flex(center, center, null, 2rem);
-	& a {
-		@include flex(center, center, null, null);
-		& i:hover {
-			filter: brightness(0) invert(1);
-			transition: 0.3s ease;
-			cursor: pointer;
-		}
-	}
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 16px;
+    overflow-x: auto;
+    padding: 4px 2px;
+  }
 }
