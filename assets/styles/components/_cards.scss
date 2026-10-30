@@ -1,231 +1,88 @@
+/* ==========================================================================
+   Filter Bar Chips & Card Base Components
+   ========================================================================== */
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-.card {
-	@include flex(null, center, column, 0.8rem);
-	position: relative;
-	border-radius: $border-radius-btn-mob;
-	flex-shrink: 0;
-	cursor: pointer;
-	figure {
-		position: relative;
-		max-height: 18.1rem;
-		height: 100%;
-		width: 100%;
-		margin-top: 12px;
-	}
+.filter-bar {
+  @include flex-align(flex-start, center, 10px);
+  margin-bottom: 30px;
 
-	.card-image {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		border-radius: 0.8rem;
-		position: relative;
-		z-index: 3;
-	}
+  &__chip {
+    padding: 8px 18px;
+    border-radius: $radius-pill;
+    background-color: $color-bg-chip;
+    color: $color-text-sub;
+    font-size: 0.85rem;
+    font-weight: 600;
+    @include smooth-transition;
 
-	h3 {
-		@include flex(null, space-between, null, null);
-		font-size: 1.4rem;
-		color: $color-primary;
-	}
+    &:hover {
+      background-color: lighten($color-bg-chip, 5%);
+      color: $color-text-main;
+    }
 
-	p {
-		font-size: 1.2rem;
-		line-height: 1.6rem;
-		letter-spacing: 0.03em;
-	}
+    &--active {
+      background-color: $color-bg-chip-active;
+      color: #000000;
+      font-weight: 700;
 
-	&.stack {
-		& .card-image {
-			border-top: $main-section-border;
-		}
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			top: 0.15rem;
-			left: 0;
-			width: 100%;
-			height: 70%;
-			background-image: var(--img-stack);
-			background-size: cover;
-			background-position: center;
-			border-radius: 0.8rem;
-			z-index: 2;
-			filter: blur(0.05rem) brightness(0.6);
-			transform: scale(0.95);
-			border: $main-section-border;
-		}
-
-		&::after {
-			top: -0.8rem;
-			left: 0;
-			transform: scale(0.9);
-			z-index: 1;
-			border: $main-section-border;
-		}
-	}
-	&:hover {
-		transform: scale(1.01);
-		transition: transform 0.3s;
-	}
+      &:hover {
+        background-color: $color-bg-chip-active;
+        color: #000000;
+      }
+    }
+  }
 }
 
-.artists {
-	text-align: center;
-	color: $color-hover-text;
-	position: relative;
-	& .circle {
-		border-radius: 50%;
-	}
-}
-.albums {
-	position: relative;
-	& h3 {
-		@include flex(null, space-between, null, null);
-		font-size: 1.4rem;
-		color: $color-hover-text;
-		white-space: nowrap;
-		& span {
-			color: $color-primary;
-		}
-	}
-}
-.audiobooks {
-	position: relative;
-	& figure {
-		max-height: 22rem;
-	}
-}
+.album-card {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-bg-card;
+  padding: 12px;
+  border-radius: $radius-card;
+  cursor: pointer;
+  @include smooth-transition;
 
-.podcasts {
-	position: relative;
-	& .podcasts-title {
-		border-left: 0.3rem solid $color-hover-text;
-		border-radius: 0.3rem;
-		padding: 0.5rem;
-		background-color: $podcasts-title-bg;
-		& h3 {
-			color: $color-hover-text;
-			white-space: nowrap;
-			font-size: 1.6rem;
-			line-height: 2.1rem;
-			letter-spacing: 0.03em;
-		}
-		& p {
-			line-height: 1.8rem;
-			letter-spacing: 0.03em;
-			font-size: 1.3rem;
-			color: $color-primary;
-		}
-	}
-}
+  &:hover {
+    background-color: $color-bg-card-hover;
+    transform: translateY(-4px);
 
-.episodes {
-	position: relative;
-	& .episodes-title {
-		border-radius: 0.3rem;
-		background-color: $episodes-title-bg;
-		padding: 0.5rem;
-		& h3 {
-			@include flex(center, space-around, null, null);
-			color: $color-hover-text;
-			white-space: nowrap;
-			font-size: 1.6rem;
-			line-height: 2.1rem;
-			letter-spacing: 0.03em;
-		}
-		& p {
-			line-height: 1.8rem;
-			letter-spacing: 0.03em;
-			font-size: 1.3rem;
-			color: $color-primary;
-		}
-	}
-}
+    .album-card__cover {
+      transform: scale(1.03);
+    }
+  }
 
-.browse-card {
-	@include flex(null, null, column, 1rem);
-	width: 17rem;
-	height: 10rem;
-	position: relative;
-	overflow: hidden;
-	padding: 1rem;
-	border-radius: $border-radius-default;
-	color: $color-card-browse-heading;
+  &__image-wrap {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
 
-	@include tablet {
-		height: 17rem;
-	}
+  &__cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include smooth-transition(transform, 0.3s);
+  }
 
-	.browse-name {
-		padding: 0.5rem;
-		z-index: 1;
-		font-size: 2rem;
-		line-height: 2.7rem;
-		letter-spacing: 0.03em;
-	}
-	& figure {
-		position: absolute;
-		width: 10.4rem;
-		height: 10.4rem;
-		transform: rotate(30deg);
-		left: 8rem;
-		top: 3rem;
-		border-radius: $border-radius-crd;
-		@include tablet {
-			top: 8rem;
-		}
+  &__title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: $color-text-main;
+    margin-bottom: 6px;
+    @include truncate-text;
+  }
 
-		& img {
-			object-fit: cover;
-			width: 100%;
-			height: 100%;
-		}
-	}
-}
-
-.card-wide {
-	@include flex(null, center, null, 0.8rem);
-	position: relative;
-	border-radius: $border-radius-btn-mob;
-	flex-shrink: 0;
-	cursor: pointer;
-	figure {
-		max-height: 12rem;
-		max-width: 12rem;
-		height: 100%;
-		width: 100%;
-		&::before {
-			content: "";
-			position: absolute;
-			inset: 0;
-			background: #18191e;
-			border-radius: 0.8rem;
-			transform: translateY(-0.6rem);
-			left: 0.6rem;
-			z-index: 1;
-			width: 11rem;
-		}
-	}
-	.card-image {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		border-radius: 0.8rem;
-		position: relative;
-		z-index: 3;
-	}
-	h3 {
-		font-weight: 500;
-		font-size: 1.4rem;
-		line-height: 1.9rem;
-		letter-spacing: 0.03em;
-		color: $color-hover-text;
-	}
-	&:hover {
-		transform: scale(1.01);
-		transition: transform 0.3s;
-	}
+  &__description {
+    font-size: 0.75rem;
+    color: $color-text-sub;
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }
