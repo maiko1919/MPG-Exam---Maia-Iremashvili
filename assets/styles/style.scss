@@ -6,16 +6,16 @@
 @forward "./abstracts/variables";
 @forward "./abstracts/mixins";
 
-// 2. Base & Reset
+// 2. Base Styles & Global Reset
 @use "./base/fonts";
 @use "./base/reset";
 
-// 3. Layout Blocks
+// 3. Main Structural Layouts
 @use "./layouts/main";
-@use "./layouts/header";
 @use "./layouts/aside";
+@use "./layouts/header";
 @use "./layouts/player";
 
-// 4. Components & Showcase Sections
+// 4. Components & Content Sections
 @use "./components/cards";
 @use "./sections/made_for_you";
