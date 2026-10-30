@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Sidebar Aside Navigation
+   Sidebar Aside Navigation (Responsive Collapse at 1024px)
    ========================================================================== */
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
@@ -54,6 +54,7 @@
     }
   }
 
+  // PRD Requirement: Sidebar collapse on tablet breakpoint
   @media (max-width: $breakpoint-tablet) {
     width: $sidebar-collapsed-width;
     padding: 20px 8px;
