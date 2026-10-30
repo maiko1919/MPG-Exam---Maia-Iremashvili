@@ -1,1269 +1,271 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="author" content="MPG Team" />
-		<meta
-			name="description"
-			content="This is Georgian Spotify Template created by MPG Team"
-		/>
-		<link rel="stylesheet" href="assets/styles/style.css">
-		<link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
-		<title>Georgian Spotify - Project by MPG Team</title>
-	</head>
-	<body class="app">
-		<header class="header">
-			<div class="header-wrapper">
-				<!-- desktop -->
-				<nav class="navigation">
-					<ul class="top-nav-ul left-ul">
-						<li>
-							<a class="active" href="./index.html">
-								<div class="img-div">
-									<i class="icons icon-home"></i>
-								</div>
-								Home
-							</a>
-						</li>
-						<li>
-							<a href="./pages/discover.html">
-								<div class="img-div">
-									<i class="icons icon-discover"></i>
-								</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify - Web Player: Music for everyone</title>
+  <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body class="app">
 
-								<span>Discover</span>
-							</a>
-						</li>
-						<li>
-							<form action="./pages/search.html">
-								<div class="img-div search-wrapper">
-									<label for="search">
-										<i class="icons icon-search"></i>
-									</label>
-									<input
-										id="search"
-										type="search"
-										placeholder="Search"
-									/>
-								</div>
-							</form>
-						</li>
-					</ul>
-				</nav>
-				<nav class="side-nav top-nav">
-					<ul class="top-nav-ul">
-						<li>
-							<div
-								class="theme-toggle dark"
-								id="theme-toggle"
-							></div>
-						</li>
-						<li>
-							<a href="#">
-								<i class="icons icon-notification"></i>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="icons icon-lock"></i>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="icons icon-users"></i>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="icons icon-settings"></i>
-							</a>
-						</li>
-						<li class="no-hover">
-							<a href="./pages/profile.html">
-								<img
-									src="./assets/img/icons/user.svg"
-									alt="Profile"
-								/>
-							</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-			<!-- Mobile navigation -->
-			<nav class="mobile-nav">
-				<a class="active" href="./index.html">
-					<i class="icons icon-home-inactive icon-green"></i>
-					Home
-				</a>
-				<a href="./pages/discover.html">
-					<i class="icons icon-discover icon-green"></i>
-					Discover
-				</a>
-				<a href="./pages/search.html">
-					<i class="icons icon-search icon-green"></i>
-					Search
-				</a>
-				<a href="./pages/library.html">
-					<i class="icons icon-library icon-green"></i>
-					Library
-				</a>
-				<a href="./pages/profile.html">
-					<i class="icons icon-me icon-green"></i>
-					Me
-				</a>
-			</nav>
-		</header>
-		<aside class="sidebar">
-			<div class="sidebar-heading">
-				<a href="./pages/library.html"
-					><i class="icons icon-library"></i> My Library</a
-				>
-			</div>
-			<nav class="sidebar-menu">
-				<ul>
-					<li>
-						<details class="nav__dropdown">
-							<summary class="nav__link">
-								<i class="icons icon-pin"></i>
-								Pins
-							</summary>
-							<ul class="nav__sub">
-								<li><a href="./pages/album.html">Albums</a></li>
-								<li>
-									<a href="./pages/artist.html">Artists</a>
-								</li>
-								<li>
-									<a href="./pages/playlist.html">Playlists</a>
-								</li>
-							</ul>
-						</details>
-					</li>
-					<li>
-						<details class="nav__dropdown">
-							<summary class="nav__link">
-								<i class="icons icon-playlist"></i>
-								Playlists
-							</summary>
-							<ul class="nav__sub">
-								<li><a href="./pages/album.html">Albums</a></li>
-								<li>
-									<a href="./pages/artist.html">Artists</a>
-								</li>
-								<li>
-									<a href="./pages/playlist.html">Playlists</a>
-								</li>
-							</ul>
-						</details>
-					</li>
-					<li>
-						<a href="./pages/song.html">
-							<i class="icons icon-hearth"></i>
-							<span>Liked Songs</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="icons icon-bookmark"></i>
-							<span>Saves</span>
-						</a>
-					</li>
-					<li>
-						<a href="./pages/album.html">
-							<i class="icons icon-album"></i>
-							<span>Albums</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="icons icon-folder"></i>
-							<span>Folders</span>
-						</a>
-					</li>
-					<li>
-						<a href="./pages/podcast.html">
-							<i class="icons icon-podcast"></i>
-							<span>Podcasts</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="icons icon-audiobook"></i>
-							<span>Audiobooks</span>
-						</a>
-					</li>
-					<li>
-						<a href="./pages/artist.html">
-							<i class="icons icon-artists"></i>
-							<span>Artists</span>
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</aside>
-		<main class="main">
-			<div class="main-inner">
-				<header class="filters-wrapper">
-    <div class="filters-nav">
-        <nav aria-label="Browse content types">
-            <ul>
-                <li class="active" aria-current="page">All</li>
-                <li>Music</li>
-                <li><a href="./pages/podcast.html">Podcasts</a></li>
-                <li>Audiobooks</li>
-            </ul>
+  <!-- ======================================================================
+       Global Layout Container
+       ====================================================================== -->
+  <div class="spotify-container">
+
+    <!-- ======================================================================
+         1. Aside: Sidebar Navigation (Left)
+         ====================================================================== -->
+    <aside class="sidebar-panel">
+      <nav class="sidebar-panel__nav" aria-label="Main Navigation">
+        <ul class="sidebar-panel__nav-list">
+          <li class="sidebar-panel__nav-item sidebar-panel__nav-item--active">
+            <a href="#library">
+              <img src="assets/img/icons/library.svg" alt="" aria-hidden="true">
+              <span>My Library</span>
+            </a>
+          </li>
+          <li class="sidebar-panel__nav-item">
+            <a href="#pins">
+              <img src="assets/img/icons/pin.svg" alt="" aria-hidden="true">
+              <span>Pins</span>
+            </a>
+          </li>
+          <li class="sidebar-panel__nav-item">
+            <a href="#playlists">
+              <img src="assets/img/icons/playlist.svg" alt="" aria-hidden="true">
+              <span>Playlists</span>
+            </a>
+          </li>
+          <li class="sidebar-panel__nav-item">
+            <a href="#liked-songs">
+              <img src="assets/img/icons/hearth.svg" alt="" aria-hidden="true">
+              <span>Liked songs</span>
+            </a>
+          </li>
+          <li class="sidebar-panel__nav-item">
+            <a href="#saves">
+              <img src="assets/img/icons/bookmark.svg" alt="" aria-hidden="true">
+              <span>Saves</span>
+            </a>
+          </li>
+          <li class="sidebar-panel__nav-item">
+            <a href="#albums">
+              <img src="assets/img/icons/albom.svg" alt="" aria-hidden="true">
+              <span>Albums</span>
+            </a>
+          </li>
+          <li class="sidebar-panel__nav-item">
+            <a href="#folders">
+              <img src="assets/img/icons/folder.svg" alt="" aria-hidden="true">
+              <span>Folders</span>
+            </a>
+          </li>
+          <li class="sidebar-panel__nav-item">
+            <a href="#podcasts">
+              <img src="assets/img/icons/podcast.svg" alt="" aria-hidden="true">
+              <span>Podcasts</span>
+            </a>
+          </li>
+          <li class="sidebar-panel__nav-item">
+            <a href="#audiobooks">
+              <img src="assets/img/icons/audiobook.svg" alt="" aria-hidden="true">
+              <span>Audiobooks</span>
+            </a>
+          </li>
+          <li class="sidebar-panel__nav-item">
+            <a href="#artists">
+              <img src="assets/img/icons/artists.svg" alt="" aria-hidden="true">
+              <span>Artists</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ======================================================================
+         2. Main: Content Viewport
+         ====================================================================== -->
+    <main class="content-viewport">
+      
+      <!-- Top Navigation Header -->
+      <header class="main-header">
+        <nav class="main-header__tabs" aria-label="Browse Modes">
+          <a href="#home" class="main-header__tab-link main-header__tab-link--active">
+            <img src="assets/img/icons/home.svg" alt="" aria-hidden="true">
+            <span>Home</span>
+          </a>
+          <a href="#discover" class="main-header__tab-link">
+            <img src="assets/img/icons/discover.svg" alt="" aria-hidden="true">
+            <span>Discover</span>
+          </a>
+          <a href="#search" class="main-header__tab-link">
+            <img src="assets/img/icons/search.svg" alt="" aria-hidden="true">
+            <span>Search</span>
+          </a>
         </nav>
-    </div>
-</header>
-				<section class="section-wrapper">
-					<div class="content-wrapper">
-						<div class="section-title">
-							<h2>Made For You</h2>
-							<div class="slide-controls">
-								<a href="#"
-									><i
-										class="icons icon-arrow-left-big icon-sm"
-									></i
-								></a>
-								<a href="#"
-									><i
-										class="icons icon-arrow-right-big icon-sm"
-									></i
-								></a>
-								<a href="#"><i class="icons icon-dots"></i></a>
-							</div>
-						</div>
-						<div class="section-content">
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure class="card__cover">
-										<img
-											src="./assets/img/covers/cover_1.png"
-											class="card-image"
-											alt="Cover image 1"
-										/>
-									</figure>
-									<h3>
-										Discover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_2.png"
-											class="card-image"
-											alt="Cover image 1"
-										/>
-									</figure>
-									<h3>
-										Discover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_3.png"
-											class="card-image"
-											alt="Cover image 3"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_4.png"
-											class="card-image"
-											alt="Cover image 4"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_5.png"
-											class="card-image"
-											alt="Cover image 5"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_6.png"
-											class="card-image"
-											alt="Cover image 6"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_7.png"
-											class="card-image"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_8.png"
-											class="card-image"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_9.png"
-											class="card-image"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_10.png"
-											class="card-image"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_11.png"
-											class="card-image"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_12.png"
-											class="card-image"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_13.png"
-											class="card-image"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-						</div>
-					</div>
-				</section>
-				<section class="section-wrapper">
-					<div class="content-wrapper">
-						<div class="section-title">
-							<h2>Your top mixes</h2>
-							<div class="slide-controls">
-								<a href="#"
-									><i
-										class="icons icon-arrow-left-big icon-sm"
-									></i
-								></a>
-								<a href="#"
-									><i
-										class="icons icon-arrow-right-big icon-sm"
-									></i
-								></a>
-								<a href="#"><i class="icons icon-dots"></i></a>
-							</div>
-						</div>
-						<div class="section-content">
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_2.png"
-											class="card-image"
-											alt="Cover image 1"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure class="card__cover">
-										<img
-											src="./assets/img/covers/cover_1.png"
-											class="card-image"
-											alt="Cover image 1"
-										/>
-									</figure>
-									<h3>
-										Discover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_3.png"
-											class="card-image"
-											alt="Cover image 3"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_4.png"
-											class="card-image"
-											alt="Cover image 4"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_5.png"
-											class="card-image"
-											alt="Cover image 5"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_6.png"
-											class="card-image"
-											alt="Cover image 6"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_7.png"
-											class="card-image"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_8.png"
-											class="card-image"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_9.png"
-											class="card-image"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_10.png"
-											class="card-image"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_11.png"
-											class="card-image"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_12.png"
-											class="card-image"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-							<article class="card">
-								<a
-									href="./pages/playlist.html"
-									class="card stack"
-								>
-									<figure>
-										<img
-											src="./assets/img/covers/cover_13.png"
-											class="card-image"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<h3>
-										Discrover weekly
-										<span class="red">50</span>
-									</h3>
-									<p>Your weekly mixtape of fresh music.</p>
-								</a>
-							</article>
-						</div>
-					</div>
-				</section>
-				<section class="section-wrapper">
-					<div class="content-wrapper">
-						<div class="section-title">
-							<h2>Your favorite artists</h2>
-							<div class="slide-controls">
-								<a href="#"
-									><i
-										class="icons icon-arrow-left-big icon-sm"
-									></i
-								></a>
-								<a href="#"
-									><i
-										class="icons icon-arrow-right-big icon-sm"
-									></i
-								></a>
-								<a href="#"><i class="icons icon-dots"></i></a>
-							</div>
-						</div>
-						<div class="section-content">
-							<article class="card artists">
-								<a href="./pages/artist.html">
-									<figure>
-										<img
-											src="./assets/img/artists/artist_1.png"
-											class="card-image circle"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<span class="artist-name"
-										>Guns N’ Roses</span
-									>
-								</a>
-							</article>
-							<article class="card artists">
-								<a href="./pages/artist.html">
-									<figure>
-										<img
-											src="./assets/img/artists/artist_2.png"
-											class="card-image circle"
-											alt="Cover image 3"
-										/>
-									</figure>
-									<span class="artist-name">Daft Punk</span>
-								</a>
-							</article>
-							<article class="card artists">
-								<a href="./pages/artist.html">
-									<figure>
-										<img
-											src="./assets/img/artists/artist_3.png"
-											class="card-image circle"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<span class="artist-name">David Bowie</span>
-								</a>
-							</article>
-						</div>
-					</div>
-				</section>
-				<section class="section-wrapper">
-					<div class="content-wrapper">
-						<div class="section-title">
-							<h2>Albums for you</h2>
-							<div class="slide-controls">
-								<a href="#"
-									><i
-										class="icons icon-arrow-left-big icon-sm"
-									></i
-								></a>
-								<a href="#"
-									><i
-										class="icons icon-arrow-right-big icon-sm"
-									></i
-								></a>
-								<a href="#"><i class="icons icon-dots"></i></a>
-							</div>
-						</div>
-						<div class="section-content">
-							<article class="card albums">
-								<a href="./pages/album.html">
-									<figure>
-										<img
-											src="./assets/img/albums/album_1.png"
-											class="card-image"
-											alt="Cover image 6"
-										/>
-									</figure>
-									<h3>Meteora <span>13</span></h3>
-									<p>Linkin Park</p>
-								</a>
-							</article>
-							<article class="card albums">
-								<a href="./pages/album.html">
-									<figure>
-										<img
-											src="./assets/img/albums/album_2.png"
-											class="card-image"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<h3>Random Access... <span>13</span></h3>
-									<p>Daft Punk</p>
-								</a>
-							</article>
-							<article class="card albums">
-								<a href="./pages/album.html">
-									<figure>
-										<img
-											src="./assets/img/albums/album_3.png"
-											class="card-image"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<h3>Abbey Road <span>13</span></h3>
-									<p>The Beatles</p>
-								</a>
-							</article>
-							<article class="card albums">
-								<a href="./pages/album.html">
-									<figure>
-										<img
-											src="./assets/img/albums/album_4.png"
-											class="card-image"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<h3>Black Holes and... <span>13</span></h3>
-									<p>Muse</p>
-								</a>
-							</article>
-						</div>
-					</div>
-				</section>
-				<section class="section-wrapper">
-					<div class="content-wrapper">
-						<div class="section-title">
-							<h2>Audiobooks for you</h2>
-							<div class="slide-controls">
-								<a href="#"
-									><i
-										class="icons icon-arrow-left-big icon-sm"
-									></i
-								></a>
-								<a href="#"
-									><i
-										class="icons icon-arrow-right-big icon-sm"
-									></i
-								></a>
-								<a href="#"><i class="icons icon-dots"></i></a>
-							</div>
-						</div>
-						<div class="section-content">
-							<article class="card audiobooks">
-								<figure>
-									<img
-										src="./assets/img/audiobooks/audiobook_1.png"
-										class="card-image"
-										alt="Cover image 7"
-									/>
-								</figure>
-								<h3>Halo: The Flood</h3>
-								<p>William C. Dietz</p>
-							</article>
-							<article class="card audiobooks">
-								<figure>
-									<img
-										src="./assets/img/audiobooks/audiobook_2.png"
-										class="card-image"
-										alt="Cover image 7"
-									/>
-								</figure>
-								<h3>Halo: First Strike</h3>
-								<p>Eric Nylund</p>
-							</article>
-							<article class="card audiobooks">
-								<figure>
-									<img
-										src="./assets/img/audiobooks/audiobook_3.png"
-										class="card-image"
-										alt="Cover image 3"
-									/>
-								</figure>
-								<h3>Halo: Ghosts of Onyx</h3>
-								<p>Eric Nylund</p>
-							</article>
-						</div>
-					</div>
-				</section>
-				<section class="section-wrapper">
-					<div class="content-wrapper">
-						<div class="section-title">
-							<h2>Podcasts for you</h2>
-							<div class="slide-controls">
-								<a href="#"
-									><i
-										class="icons icon-arrow-left-big icon-sm"
-									></i
-								></a>
-								<a href="#"
-									><i
-										class="icons icon-arrow-right-big icon-sm"
-									></i
-								></a>
-								<a href="#"><i class="icons icon-dots"></i></a>
-							</div>
-						</div>
-						<div class="section-content">
-							<article class="card podcasts">
-								<a href="./pages/podcast.html">
-									<figure>
-										<img
-											src="./assets/img/podcasts/podcast_1.png"
-											class="card-image"
-											alt="Cover image 5"
-										/>
-									</figure>
-									<div class="podcasts-title">
-										<h3>anything goes...</h3>
-										<p>emma chamberlain</p>
-									</div>
-								</a>
-							</article>
-							<article class="card podcasts">
-								<a href="./pages/podcast.html">
-									<figure>
-										<img
-											src="./assets/img/podcasts/podcast_2.png"
-											class="card-image"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<div class="podcasts-title">
-										<h3>The Joe Rogan...</h3>
-										<p>Joe Rogan</p>
-									</div>
-								</a>
-							</article>
-							<article class="card podcasts">
-								<a href="./pages/podcast.html">
-									<figure>
-										<img
-											src="./assets/img/podcasts/podcast_3.png"
-											class="card-image"
-											alt="Cover image 3"
-										/>
-									</figure>
-									<div class="podcasts-title">
-										<h3>The Journal</h3>
-										<p>The Wall Street Journal</p>
-									</div>
-								</a>
-							</article>
-						</div>
-					</div>
-				</section>
-				<section class="section-wrapper">
-					<div class="content-wrapper">
-						<div class="section-title">
-							<h2>Episodes for you</h2>
-							<div class="slide-controls">
-								<a href="#"
-									><i
-										class="icons icon-arrow-left-big icon-sm"
-									></i
-								></a>
-								<a href="#"
-									><i
-										class="icons icon-arrow-right-big icon-sm"
-									></i
-								></a>
-								<a href="#"><i class="icons icon-dots"></i></a>
-							</div>
-						</div>
-						<div class="section-content">
-							<article class="card episodes">
-								<a href="./pages/episode.html">
-									<figure>
-										<img
-											src="./assets/img/episodes/episode_1.png"
-											class="card-image"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<div class="episodes-title">
-										<h3>
-											<img
-												src="./assets/img/icons/play_bordered.svg"
-												alt="Play icon"
-											/>anything goes...
-										</h3>
-										<p>emma chamberlain</p>
-									</div>
-								</a>
-							</article>
-							<article class="card episodes">
-								<a href="./pages/episode.html">
-									<figure>
-										<img
-											src="./assets/img/episodes/episode_2.png"
-											class="card-image"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<div class="episodes-title">
-										<h3>The Joe Rogan...</h3>
-										<p>Joe Rogan</p>
-									</div>
-								</a>
-							</article>
-							<article class="card episodes">
-								<a href="./pages/episode.html">
-									<figure>
-										<img
-											src="./assets/img/episodes/episode_3.png"
-											class="card-image"
-											alt="Cover image 7"
-										/>
-									</figure>
-									<div class="episodes-title">
-										<h3>The Journal</h3>
-										<p>The Wall Street Journal</p>
-									</div>
-								</a>
-							</article>
-						</div>
-					</div>
-				</section>
-			</div>
-		</main>
-		<aside class="activity">
-			<div class="main-inner">
-				<section class="section-wrapper">
-					<div class="content-wrapper">
-						<div class="section-title">
-							<h4>Friends Activity</h4>
-							<div class="slide-controls">
-								<a href="#"
-									><i class="icons icon-add-friend"></i
-								></a>
-								<a href="#"><i class="icons icon-close"></i></a>
-							</div>
-						</div>
-						<div class="activity-content">
-							<div class="activity-details">
-								<div class="activity-icon">
-									<img
-										src="./assets/img/users/user_1.png"
-										alt=""
-									/>
-								</div>
-								<div class="activity-summary">
-									<span class="title"
-										>FriendlyMusicListener</span
-									>
-									<div class="description">
-										<div class="activity-time now">
-											<span class="now-bar"></span>
-										</div>
-										<div class="artist-information">
-											<span class="album"
-												>Goosebumps
-											</span>
-											<span class="artist"
-												>Travis Scott</span
-											>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="activity-details">
-								<div class="activity-icon">
-									<img
-										src="./assets/img/users/user_2.png"
-										alt=""
-									/>
-								</div>
-								<div class="activity-summary">
-									<span class="title"
-										>AverageMusicEnjoyer</span
-									>
-									<div class="description">
-										<div class="activity-time now">
-											<span class="now-bar"></span>
-										</div>
-										<div class="artist-information">
-											<span class="album"
-												>Get Lucky
-											</span>
-											<span class="artist"
-												>Daft Punk</span
-											>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="activity-details">
-								<div class="activity-icon">
-									<img
-										src="./assets/img/users/user_3.png"
-										alt=""
-									/>
-								</div>
-								<div class="activity-summary">
-									<span class="title">MusicEnthusiast</span>
-									<div class="description">
-										<div class="activity-time">
-											<span>1h</span>
-										</div>
-										<div class="artist-information">
-											<span class="album">would he </span>
-											<span class="artist">joji</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="activity-details">
-								<div class="activity-icon">
-									<img
-										src="./assets/img/users/user_4.png"
-										alt=""
-									/>
-								</div>
-								<div class="activity-summary">
-									<span class="title">IListenToMusic56</span>
-									<div class="description">
-										<div class="activity-time">
-											<span>6h</span>
-										</div>
-										<div class="artist-information">
-											<span class="album">Rockstar </span>
-											<span class="artist"
-												>Post Malone</span
-											>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</div>
-		</aside>
-		<footer class="player">
-			<div class="player-wrapper">
-				<img src="./assets/img/albums/album_1.png" alt="Draft Punk" />
 
-				<div class="music-title-author-wrapper">
-					<a
-						href="./pages/now-playing-text.html"
-						class="scrolling-text"
-						>Get Lucky (feat. Pharrell Williams and Nile Rodgers)</a
-					>
-					<a
-						href="./pages/now-playing.html"
-						class="scrolling-text-band"
-						>Draft Punk</a
-					>
-				</div>
-			</div>
+        <!-- Right Header Action Icons -->
+        <div class="main-header__actions">
+          <button class="main-header__action-button" aria-label="Notifications">
+            <img src="assets/img/icons/notification.svg" alt="Notifications">
+          </button>
+          <button class="main-header__action-button" aria-label="Add Friends">
+            <img src="assets/img/icons/add_friend.svg" alt="Friends">
+          </button>
+          <button class="main-header__action-button" aria-label="User Profile">
+            <img src="assets/img/icons/me.svg" alt="Profile">
+          </button>
+        </div>
+      </header>
 
-			<div class="player-icons">
-				<i class="icons icon-add-playlist icon-sm"></i>
-				<img
-					src="./assets/img/icons/player/play.svg"
-					alt="play"
-					class="play"
-				/>
-			</div>
+      <!-- Horizontal Filter Chips Row -->
+      <nav class="filter-bar" aria-label="Category Filters">
+        <button class="filter-bar__chip filter-bar__chip--active">All</button>
+        <button class="filter-bar__chip">Music</button>
+        <button class="filter-bar__chip">Podcasts</button>
+        <button class="filter-bar__chip">Audiobooks</button>
+      </nav>
 
-			<div class="music-progress-bar"></div>
+      <!-- Section: Made For You -->
+      <section class="showcase-section" aria-labelledby="showcase-heading">
+        <h2 id="showcase-heading" class="showcase-section__heading">Made For You</h2>
 
-			<div class="advanced-player">
-				<div class="advanced-player-wrapper">
-					<div class="stop-button-wrapper">
-						<img
-							src="./assets/img/icons/player/pause.svg"
-							alt="pause"
-							class="pause"
-						/>
-					</div>
-					<i class="icons icon-prev icon-sm"></i>
-					<i class="icons icon-next icon-sm"></i>
-					<i class="icons icon-shuffle icon-sm"></i>
-					<i class="icons icon-repeat icon-sm"></i>
-				</div>
+        <div class="showcase-section__grid">
+          <!-- Card 1 -->
+          <a href="#mix1" class="album-card">
+            <div class="album-card__image-wrap">
+              <img src="assets/img/albums/album_1.png" alt="Discover Weekly Cover" class="album-card__cover">
+            </div>
+            <strong class="album-card__title">Discover Weekly</strong>
+            <p class="album-card__description">Your weekly mixtape of fresh music tailored for you.</p>
+          </a>
 
-				<div class="advanced-player-music-time-line">
-					<p>2:23</p>
-					<div class="advanced-music-progress-bar"></div>
-					<p>4:46</p>
-				</div>
+          <!-- Card 2 -->
+          <a href="#mix2" class="album-card">
+            <div class="album-card__image-wrap">
+              <img src="assets/img/albums/album_2.png" alt="Daily Mix 1 Cover" class="album-card__cover">
+            </div>
+            <strong class="album-card__title">Daily Mix 1</strong>
+            <p class="album-card__description">Linkin Park, System Of A Down, Coal Chamber and more.</p>
+          </a>
 
-				<i class="icons icon-volume"></i>
-			</div>
+          <!-- Card 3 -->
+          <a href="#mix3" class="album-card">
+            <div class="album-card__image-wrap">
+              <img src="assets/img/albums/album_3.png" alt="Daily Mix 2 Cover" class="album-card__cover">
+            </div>
+            <strong class="album-card__title">Daily Mix 2</strong>
+            <p class="album-card__description">Avril Lavigne, Lorde, Charli XCX and more.</p>
+          </a>
 
-			<div class="advanced-player-icons">
-				<div class="wrapper-icons">
-					<i class="icons icon-hearth"></i>
-					<i class="icons icon-add-playlist"></i>
-				</div>
-				<a href="./pages/now-playing-music-section.html"
-					><i class="icons icon-list"></i
-				></a>
-				<i class="icons icon-devices"></i>
-				<i class="icons icon-dots"></i>
-				<hr />
-				<i class="icons icon-player_blue_icon icon-md"></i>
-				<i class="icons icon-order icon-sm"></i>
-			</div>
-		</footer>
-	</body>
-	<script src="./assets/js/main.js"></script>
+          <!-- Card 4 -->
+          <a href="#mix4" class="album-card">
+            <div class="album-card__image-wrap">
+              <img src="assets/img/albums/album_4.png" alt="Daily Mix 3 Cover" class="album-card__cover">
+            </div>
+            <strong class="album-card__title">Daily Mix 3</strong>
+            <p class="album-card__description">The Strokes, Martin Garrix, MGMT and more.</p>
+          </a>
+
+          <!-- Card 5 -->
+          <a href="#mix5" class="album-card">
+            <div class="album-card__image-wrap">
+              <img src="assets/img/albums/album_5.png" alt="Daily Mix 4 Cover" class="album-card__cover">
+            </div>
+            <strong class="album-card__title">Daily Mix 4</strong>
+            <p class="album-card__description">Chuck Berry, Elvis Presley, Roy Orbison and more.</p>
+          </a>
+
+          <!-- Card 6 -->
+          <a href="#mix6" class="album-card">
+            <div class="album-card__image-wrap">
+              <img src="assets/img/albums/album_6.png" alt="Daily Mix 5 Cover" class="album-card__cover">
+            </div>
+            <strong class="album-card__title">Daily Mix 5</strong>
+            <p class="album-card__description">Frank Sinatra, Gerhard Trede, Dean Martin and more.</p>
+          </a>
+
+          <!-- Card 7 -->
+          <a href="#mix7" class="album-card">
+            <div class="album-card__image-wrap">
+              <img src="assets/img/albums/album_7.png" alt="Nirvana Radio Cover" class="album-card__cover">
+            </div>
+            <strong class="album-card__title">Nirvana Radio</strong>
+            <p class="album-card__description">With Foo Fighters, Soundgarden, Pearl Jam.</p>
+          </a>
+
+          <!-- Card 8 -->
+          <a href="#mix8" class="album-card">
+            <div class="album-card__image-wrap">
+              <img src="assets/img/albums/album_8.png" alt="Fall Out Boy Radio Cover" class="album-card__cover">
+            </div>
+            <strong class="album-card__title">Fall Out Boy Radio</strong>
+            <p class="album-card__description">With Panic! At The Disco, The All-American Rejects.</p>
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ======================================================================
+         3. Footer: Fixed Bottom Audio Player
+         ====================================================================== -->
+    <footer class="bottom-player-bar" aria-label="Playback Controller">
+      
+      <!-- Player Left: Track Details -->
+      <div class="player-left">
+        <img src="assets/img/covers/small_cover.png" alt="Now Playing Track Cover" class="player-left__art">
+        <div class="player-left__info">
+          <span class="player-left__song-title">Get Lucky (feat. Pharrell Williams)</span>
+          <span class="player-left__artist-name">Daft Punk, Pharrell Williams</span>
+        </div>
+      </div>
+
+      <!-- Player Center: Playback Controls & Scrubber -->
+      <div class="player-center">
+        <div class="player-center__buttons">
+          <button class="player-center__control-btn" aria-label="Previous Track">
+            <img src="assets/img/icons/player/prev.svg" alt="Previous">
+          </button>
+          <button class="player-center__control-btn player-center__control-btn--play" aria-label="Play or Pause">
+            <img src="assets/img/icons/player/play-black.svg" alt="Play">
+          </button>
+          <button class="player-center__control-btn" aria-label="Next Track">
+            <img src="assets/img/icons/player/next.svg" alt="Next">
+          </button>
+        </div>
+        <div class="player-center__scrubber">
+          <span class="player-center__time">2:23</span>
+          <div class="player-center__progress-track">
+            <div class="player-center__progress-fill"></div>
+          </div>
+          <span class="player-center__time">4:45</span>
+        </div>
+      </div>
+
+      <!-- Player Right: Utilities & Volume -->
+      <div class="player-right">
+        <button class="player-right__action-btn" aria-label="Lyrics">
+          <img src="assets/img/icons/mic.svg" alt="Lyrics">
+        </button>
+        <button class="player-right__action-btn" aria-label="Queue">
+          <img src="assets/img/icons/queue.svg" alt="Queue">
+        </button>
+        <div class="player-right__volume-group">
+          <button class="player-right__action-btn" aria-label="Mute Volume">
+            <img src="assets/img/icons/player/volume.svg" alt="Volume">
+          </button>
+          <div class="player-right__volume-track">
+            <div class="player-right__volume-fill"></div>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+
+  </div>
+
+</body>
 </html>
