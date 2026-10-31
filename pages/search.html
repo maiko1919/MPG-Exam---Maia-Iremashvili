@@ -83,7 +83,7 @@
     <main class="content-viewport">
       
       <!-- Top Header -->
-      <header class="main-header">
+      <header class="main-header top-nav">
         <nav class="main-header__tabs" aria-label="Browse Modes">
           <a href="../index.html" class="main-header__tab-link">
             <img src="../assets/img/icons/home.svg" alt="" aria-hidden="true">
@@ -108,12 +108,12 @@
             <img src="../assets/img/icons/Group%20101.png" alt="Group 101" onerror="this.style.display='none'">
           </button>
 
-          <button class="main-header__action-button" aria-label="Icons Big">
-            <img src="../assets/img/icons/icons%20big.png" alt="Big Icon" onerror="this.style.display='none'">
+          <button class="main-header__action-button icon-users" aria-label="Friend Activity">
+            <img src="../assets/img/icons/icons%20big.png" alt="Friends" onerror="this.style.display='none'">
           </button>
 
-          <button class="main-header__action-button icon-users" aria-label="Friend Activity">
-            <img src="../assets/img/icons/icons%20big%20(1).png" alt="Friends" onerror="this.src='../assets/img/icons/add_friend.svg'">
+          <button class="main-header__action-button" aria-label="Settings">
+            <img src="../assets/img/icons/settings.svg" alt="Settings" onerror="this.style.display='none'">
           </button>
 
           <button class="main-header__action-button" aria-label="Sprite Menu">
@@ -131,10 +131,10 @@
       </div>
 
       <!-- Recent Searches Section -->
-      <section class="showcase-section" style="margin-bottom: 40px;">
-        <h2 class="showcase-section__heading">Recent searches</h2>
-        <div class="showcase-section__grid">
-          <article class="album-card stack">
+      <section style="margin-bottom: 35px;">
+        <h2 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 16px; color: #fff;">Recent searches</h2>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <article class="album-card stack" style="width: 180px;">
             <a href="artist.html" class="album-card__link">
               <div class="album-card__image-wrap">
                 <img src="../assets/img/artists/artist_3.png" alt="Daft Punk" class="album-card__cover card-image">
@@ -143,7 +143,7 @@
               <p class="album-card__description">Artist</p>
             </a>
           </article>
-          <article class="album-card stack">
+          <article class="album-card stack" style="width: 180px;">
             <a href="artist.html" class="album-card__link">
               <div class="album-card__image-wrap">
                 <img src="../assets/img/artists/artist_2.png" alt="David Bowie" class="album-card__cover card-image">
@@ -152,7 +152,7 @@
               <p class="album-card__description">Artist</p>
             </a>
           </article>
-          <article class="album-card stack">
+          <article class="album-card stack" style="width: 180px;">
             <a href="album.html" class="album-card__link">
               <div class="album-card__image-wrap">
                 <img src="../assets/img/albums/album_13.png" alt="Black Holes" class="album-card__cover card-image">
@@ -164,33 +164,73 @@
         </div>
       </section>
 
-      <!-- Browse All Section -->
-      <section class="showcase-section">
-        <h2 class="showcase-section__heading">Browse all</h2>
-        <div class="showcase-section__grid" style="grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));">
-          <div style="background-color: #dc143c; height: 110px; border-radius: 8px; padding: 16px; font-weight: 700; font-size: 1.2rem; position: relative; overflow: hidden; cursor: pointer;">
+      <!-- 1. Browse All Section (Colored Grid) -->
+      <section style="margin-bottom: 35px;">
+        <h2 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 16px; color: #fff;">Browse all</h2>
+		<h2 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 16px; color: #fff;">Discover</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px;">
+          <div style="background-color: #dc143c; height: 110px; border-radius: 8px; padding: 16px; font-weight: 700; font-size: 1.1rem; position: relative; overflow: hidden; cursor: pointer;">
             <span>Made For You</span>
+            <img src="../assets/img/albums/album_1.png" alt="" style="position: absolute; right: -10px; bottom: -10px; width: 75px; height: 75px; transform: rotate(25deg); border-radius: 4px; box-shadow: -2px -2px 10px rgba(0,0,0,0.3);">
           </div>
-          <div style="background-color: #e1118c; height: 110px; border-radius: 8px; padding: 16px; font-weight: 700; font-size: 1.2rem; position: relative; overflow: hidden; cursor: pointer;">
+          <div style="background-color: #e1118c; height: 110px; border-radius: 8px; padding: 16px; font-weight: 700; font-size: 1.1rem; position: relative; overflow: hidden; cursor: pointer;">
             <span>New Releases</span>
+            <img src="../assets/img/albums/album_2.png" alt="" style="position: absolute; right: -10px; bottom: -10px; width: 75px; height: 75px; transform: rotate(25deg); border-radius: 4px; box-shadow: -2px -2px 10px rgba(0,0,0,0.3);">
           </div>
-          <div style="background-color: #1e3264; height: 110px; border-radius: 8px; padding: 16px; font-weight: 700; font-size: 1.2rem; position: relative; overflow: hidden; cursor: pointer;">
+          <div style="background-color: #1e3264; height: 110px; border-radius: 8px; padding: 16px; font-weight: 700; font-size: 1.1rem; position: relative; overflow: hidden; cursor: pointer;">
             <span>Spotify Classics</span>
+            <img src="../assets/img/albums/album_3.png" alt="" style="position: absolute; right: -10px; bottom: -10px; width: 75px; height: 75px; transform: rotate(25deg); border-radius: 4px; box-shadow: -2px -2px 10px rgba(0,0,0,0.3);">
           </div>
-          <div style="background-color: #8c67ac; height: 110px; border-radius: 8px; padding: 16px; font-weight: 700; font-size: 1.2rem; position: relative; overflow: hidden; cursor: pointer;">
+          <div style="background-color: #8c67ac; height: 110px; border-radius: 8px; padding: 16px; font-weight: 700; font-size: 1.1rem; position: relative; overflow: hidden; cursor: pointer;">
             <span>Charts</span>
+            <img src="../assets/img/albums/album_4.png" alt="" style="position: absolute; right: -10px; bottom: -10px; width: 75px; height: 75px; transform: rotate(25deg); border-radius: 4px; box-shadow: -2px -2px 10px rgba(0,0,0,0.3);">
           </div>
-          <div style="background-color: #e61e32; height: 110px; border-radius: 8px; padding: 16px; font-weight: 700; font-size: 1.2rem; position: relative; overflow: hidden; cursor: pointer;">
+          <div style="background-color: #e61e32; height: 110px; border-radius: 8px; padding: 16px; font-weight: 700; font-size: 1.1rem; position: relative; overflow: hidden; cursor: pointer;">
             <span>Trending</span>
+            <img src="../assets/img/episodes/episode_1.png" alt="" style="position: absolute; right: -10px; bottom: -10px; width: 75px; height: 75px; transform: rotate(25deg); border-radius: 4px; box-shadow: -2px -2px 10px rgba(0,0,0,0.3);">
           </div>
-          <div style="background-color: #7358ff; height: 110px; border-radius: 8px; padding: 16px; font-weight: 700; font-size: 1.2rem; position: relative; overflow: hidden; cursor: pointer;">
-            <span>Discover</span>
+        </div>
+      </section>
+
+      <section style="margin-bottom: 35px;">
+        
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <article class="album-card stack" style="width: 180px;">
+            <a href="playlist.html" class="album-card__link">
+              <div class="album-card__image-wrap">
+                <img src="../assets/img/episodes/episode_1.png" alt="Liked songs" class="album-card__cover card-image">
+              </div>
+              <strong class="album-card__title">Liked songs</strong>
+              <p class="album-card__description">Numb, Crawling, In the End</p>
+            </a>
+          </article>
+          <article class="album-card stack" style="width: 180px;">
+            <a href="playlist.html" class="album-card__link">
+              <div class="album-card__image-wrap">
+                <img src="../assets/img/episodes/episode_2.png" alt="Chill Stuff" class="album-card__cover card-image">
+              </div>
+              <strong class="album-card__title">Chill Stuff</strong>
+              <p class="album-card__description">Simon and Garfunkel</p>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3. Genres Section (Colored Grid) -->
+      <section style="margin-bottom: 35px;">
+        <h2 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 16px; color: #fff;">Genres</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px;">
+          <div style="background-color: #148a08; height: 110px; border-radius: 8px; padding: 16px; font-weight: 700; font-size: 1.1rem; position: relative; overflow: hidden; cursor: pointer;">
+            <span>Pop</span>
+            <img src="../assets/img/albums/album_1.png" alt="" style="position: absolute; right: -10px; bottom: -10px; width: 75px; height: 75px; transform: rotate(25deg); border-radius: 4px; box-shadow: -2px -2px 10px rgba(0,0,0,0.3);">
           </div>
-          <div style="background-color: #ba5d07; height: 110px; border-radius: 8px; padding: 16px; font-weight: 700; font-size: 1.2rem; position: relative; overflow: hidden; cursor: pointer;">
-            <span>Spotify Singles</span>
+          <div style="background-color: #e1118c; height: 110px; border-radius: 8px; padding: 16px; font-weight: 700; font-size: 1.1rem; position: relative; overflow: hidden; cursor: pointer;">
+            <span>Rock</span>
+            <img src="../assets/img/albums/album_2.png" alt="" style="position: absolute; right: -10px; bottom: -10px; width: 75px; height: 75px; transform: rotate(25deg); border-radius: 4px; box-shadow: -2px -2px 10px rgba(0,0,0,0.3);">
           </div>
-          <div style="background-color: #e8115b; height: 110px; border-radius: 8px; padding: 16px; font-weight: 700; font-size: 1.2rem; position: relative; overflow: hidden; cursor: pointer;">
-            <span>Decades</span>
+          <div style="background-color: #dc143c; height: 110px; border-radius: 8px; padding: 16px; font-weight: 700; font-size: 1.1rem; position: relative; overflow: hidden; cursor: pointer;">
+            <span>Hip-Hop</span>
+            <img src="../assets/img/albums/album_3.png" alt="" style="position: absolute; right: -10px; bottom: -10px; width: 75px; height: 75px; transform: rotate(25deg); border-radius: 4px; box-shadow: -2px -2px 10px rgba(0,0,0,0.3);">
           </div>
         </div>
       </section>
