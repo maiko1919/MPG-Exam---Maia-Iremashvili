@@ -589,3 +589,16 @@ ul {
     padding: 16px 16px 32px;
   }
 }
+/* ==========================================================================
+   Additional Polish & Smooth Transitions (Commit 22)
+   ========================================================================== */
+.album-card, 
+.sidebar-panel__nav-item a, 
+.filter-bar__chip, 
+.main-header__action-button {
+  transition: all 0.25s ease-in-out;
+}
+
+.content-viewport {
+  scroll-behavior: smooth;
+}
