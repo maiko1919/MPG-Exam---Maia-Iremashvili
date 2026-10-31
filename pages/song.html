@@ -80,10 +80,10 @@
     </aside>
 
     <!-- Main Content Viewport -->
-    <main class="content-viewport">
+    <main class="content-viewport" style="padding: 24px 32px;">
       
       <!-- Top Header -->
-      <header class="main-header top-nav">
+      <header class="main-header top-nav" style="margin-bottom: 24px;">
         <nav class="main-header__tabs" aria-label="Browse Modes">
           <a href="../index.html" class="main-header__tab-link">
             <img src="../assets/img/icons/home.svg" alt="" aria-hidden="true">
@@ -122,86 +122,93 @@
         </div>
       </header>
 
-      <!-- Song Details Hero Section -->
-      <section style="display: flex; gap: 32px; align-items: flex-end; margin-bottom: 30px; padding: 10px 0;">
-        <img src="../assets/img/covers/small_cover.png" alt="Album Art" style="width: 230px; height: 230px; border-radius: 8px; box-shadow: 0 8px 40px rgba(0,0,0,0.6); object-fit: cover;">
-        <div>
-          <p style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 8px; color: #fff;">SONG</p>
-          <h1 style="font-size: 2.5rem; font-weight: 900; line-height: 1.15; margin-bottom: 16px; color: #fff;">Get Lucky (feat. Pharrell Williams and Nile Rodgers)</h1>
-          <div style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #b3b3b3;">
-            <img src="../assets/img/artists/artist_3.png" alt="" style="width: 24px; height: 24px; border-radius: 50%;">
+      <!-- Main Song Layout: Image on Left, Everything else on Right (Figma Exact Match) -->
+      <div style="display: flex; gap: 32px; align-items: flex-start; margin-bottom: 35px;">
+        
+        <!-- Left: Album Cover -->
+        <img src="../assets/img/covers/small_cover.png" alt="Album Art" style="width: 230px; height: 230px; border-radius: 6px; box-shadow: 0 8px 30px rgba(0,0,0,0.5); object-fit: cover; flex-shrink: 0;">
+
+        <!-- Right: Title, Meta, Actions, Genres, Artists -->
+        <div style="display: flex; flex-direction: column; flex-grow: 1;">
+          
+          <!-- Title -->
+          <h1 style="font-size: 1.9rem; font-weight: 800; line-height: 1.2; margin-bottom: 12px; color: #fff;">Get Lucky (feat. Pharrell Williams and Nile Rodgers)</h1>
+          
+          <!-- Metadata -->
+          <div style="display: flex; align-items: center; gap: 8px; font-size: 0.8rem; color: #b3b3b3; margin-bottom: 18px;">
+            <img src="../assets/img/artists/artist_3.png" alt="" style="width: 20px; height: 20px; border-radius: 50%;">
             <span style="color: #fff; font-weight: 500;">Daft Punk</span> • 
             <span>Random Access Memories</span> • 
             <span>2013</span> • 
             <span>6:09</span> • 
             <span>489,691,133</span>
           </div>
-        </div>
-      </section>
 
-      <!-- Action Buttons Bar (Figma Exact Match) -->
-      <div style="display: flex; align-items: center; gap: 24px; margin-bottom: 24px;">
-        <button style="width: 50px; height: 50px; border-radius: 50%; background-color: #1db954; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer;">
-          <img src="../assets/img/icons/player/play-black.svg" alt="Play" style="width: 20px; height: 20px;">
-        </button>
-        <button style="background: none; border: none; cursor: pointer;" aria-label="Like"><img src="../assets/img/icons/hearth.svg" alt="" style="width: 24px; height: 24px; filter: invert(1); opacity: 0.7;"></button>
-        <button style="background: none; border: none; cursor: pointer;" aria-label="Add to Playlist"><img src="../assets/img/icons/playlist.svg" alt="" style="width: 22px; height: 22px; filter: invert(1); opacity: 0.7;"></button>
-        <button style="background: none; border: none; cursor: pointer;" aria-label="Save"><img src="../assets/img/icons/pin.svg" alt="" style="width: 22px; height: 22px; filter: invert(1); opacity: 0.7;"></button>
-        <button style="background: none; border: none; cursor: pointer;" aria-label="Download"><img src="../assets/img/icons/folder.svg" alt="" style="width: 20px; height: 20px; filter: invert(1); opacity: 0.7;"></button>
-        <button style="background: none; border: none; cursor: pointer;" aria-label="More"><img src="../assets/img/icons/settings.svg" alt="" style="width: 20px; height: 20px; filter: invert(1); opacity: 0.7;"></button>
-      </div>
+          <!-- Action Buttons Bar -->
+          <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 20px;">
+            <button style="width: 42px; height: 42px; border-radius: 50%; background-color: #1db954; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+              <img src="../assets/img/icons/player/play-black.svg" alt="Play" style="width: 16px; height: 16px;">
+            </button>
+            <button style="background: none; border: none; cursor: pointer;" aria-label="Like"><img src="../assets/img/icons/hearth.svg" alt="" style="width: 20px; height: 20px; filter: invert(1); opacity: 0.7;"></button>
+            <button style="background: none; border: none; cursor: pointer;" aria-label="Add"><img src="../assets/img/icons/playlist.svg" alt="" style="width: 18px; height: 18px; filter: invert(1); opacity: 0.7;"></button>
+            <button style="background: none; border: none; cursor: pointer;" aria-label="Save"><img src="../assets/img/icons/pin.svg" alt="" style="width: 18px; height: 18px; filter: invert(1); opacity: 0.7;"></button>
+            <button style="background: none; border: none; cursor: pointer;" aria-label="Download"><img src="../assets/img/icons/folder.svg" alt="" style="width: 18px; height: 18px; filter: invert(1); opacity: 0.7;"></button>
+            <button style="background: none; border: none; cursor: pointer;" aria-label="More"><img src="../assets/img/icons/settings.svg" alt="" style="width: 18px; height: 18px; filter: invert(1); opacity: 0.7;"></button>
+          </div>
 
-      <!-- Genre Pills -->
-      <div style="display: flex; gap: 10px; margin-bottom: 35px; flex-wrap: wrap;">
-        <span style="background-color: #242424; color: #fff; padding: 6px 16px; border-radius: 500px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.1);">Funk</span>
-        <span style="background-color: #242424; color: #fff; padding: 6px 16px; border-radius: 500px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.1);">Electronic music</span>
-        <span style="background-color: #242424; color: #fff; padding: 6px 16px; border-radius: 500px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.1);">Disco</span>
-        <span style="background-color: #242424; color: #fff; padding: 6px 16px; border-radius: 500px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.1);">Soft Rock</span>
-        <span style="background-color: #242424; color: #fff; padding: 6px 16px; border-radius: 500px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.1);">Progressive pop</span>
-      </div>
+          <!-- Genre Pills -->
+          <div style="display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap;">
+            <span style="background-color: transparent; color: #fff; padding: 5px 14px; border-radius: 500px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.2);">Funk</span>
+            <span style="background-color: transparent; color: #fff; padding: 5px 14px; border-radius: 500px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.2);">Electronic music</span>
+            <span style="background-color: transparent; color: #fff; padding: 5px 14px; border-radius: 500px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.2);">Disco</span>
+            <span style="background-color: transparent; color: #fff; padding: 5px 14px; border-radius: 500px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.2);">Soft Rock</span>
+            <span style="background-color: transparent; color: #fff; padding: 5px 14px; border-radius: 500px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.2);">Progressive pop</span>
+          </div>
 
-      <!-- Artists List -->
-      <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; max-width: 450px;">
-        <div style="display: flex; align-items: center; gap: 14px;">
-          <img src="../assets/img/artists/artist_3.png" alt="Daft Punk" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
-          <div>
-            <div style="color: #fff; font-weight: 600; font-size: 0.95rem;">Daft Punk</div>
-            <div style="color: #b3b3b3; font-size: 0.8rem;">Main artist</div>
+          <!-- Artists List -->
+          <div style="display: flex; flex-direction: column; gap: 14px; max-width: 450px;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <img src="../assets/img/artists/artist_3.png" alt="Daft Punk" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+              <div>
+                <div style="color: #fff; font-weight: 600; font-size: 0.9rem;">Daft Punk</div>
+                <div style="color: #b3b3b3; font-size: 0.75rem;">Main artist</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <img src="../assets/img/artists/artist_2.png" alt="Pharrell Williams" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+              <div>
+                <div style="color: #fff; font-weight: 600; font-size: 0.9rem;">Pharrell Williams</div>
+                <div style="color: #b3b3b3; font-size: 0.75rem;">Main artist, Composer, Lyricist</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <img src="../assets/img/artists/artist_1.png" alt="Nile Rodgers" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+              <div>
+                <div style="color: #fff; font-weight: 600; font-size: 0.9rem;">Nile Rodgers</div>
+                <div style="color: #b3b3b3; font-size: 0.75rem;">Main artist, Composer, Lyricist</div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div style="display: flex; align-items: center; gap: 14px;">
-          <img src="../assets/img/artists/artist_2.png" alt="Pharrell Williams" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
-          <div>
-            <div style="color: #fff; font-weight: 600; font-size: 0.95rem;">Pharrell Williams</div>
-            <div style="color: #b3b3b3; font-size: 0.8rem;">Main artist, Composer, Lyricist</div>
-          </div>
-        </div>
-        <div style="display: flex; align-items: center; gap: 14px;">
-          <img src="../assets/img/artists/artist_1.png" alt="Nile Rodgers" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
-          <div>
-            <div style="color: #fff; font-weight: 600; font-size: 0.95rem;">Nile Rodgers</div>
-            <div style="color: #b3b3b3; font-size: 0.8rem;">Main artist, Composer, Lyricist</div>
-          </div>
+
         </div>
       </div>
 
       <!-- Tabs (Lyrics, Credits, More like this) -->
-      <div style="display: flex; gap: 24px; border-bottom: 1px solid #282828; margin-bottom: 30px; font-size: 0.9rem; font-weight: 600;">
-        <span style="color: #fff; padding-bottom: 12px; border-bottom: 2px solid #1db954; cursor: pointer;">Lyrics</span>
-        <span style="color: #b3b3b3; padding-bottom: 12px; cursor: pointer;">Credits</span>
-        <span style="color: #b3b3b3; padding-bottom: 12px; cursor: pointer;">More like this</span>
+      <div style="display: flex; gap: 24px; border-bottom: 1px solid #282828; margin-bottom: 24px; font-size: 0.9rem; font-weight: 600;">
+        <span style="color: #fff; padding-bottom: 10px; border-bottom: 2px solid #1db954; cursor: pointer;">Lyrics</span>
+        <span style="color: #b3b3b3; padding-bottom: 10px; cursor: pointer;">Credits</span>
+        <span style="color: #b3b3b3; padding-bottom: 10px; cursor: pointer;">More like this</span>
       </div>
 
       <!-- Lyrics Section -->
-      <div style="background: linear-gradient(135deg, #1e3264 0%, #121212 100%); padding: 36px; border-radius: 12px; margin-bottom: 40px; position: relative;">
-        <!-- Control Icons on left side of lyrics -->
-        <div style="position: absolute; left: 16px; top: 36px; display: flex; flex-direction: column; gap: 20px; opacity: 0.6;">
-          <span style="cursor: pointer; font-size: 1.1rem;">⏱️</span>
-          <span style="cursor: pointer; font-size: 1.1rem;">🌐</span>
-          <span style="cursor: pointer; font-size: 1.1rem;">💬</span>
-          <span style="cursor: pointer; font-size: 1.1rem;">🔤</span>
+      <div style="background: linear-gradient(135deg, #1e3264 0%, #121212 100%); padding: 32px; border-radius: 12px; margin-bottom: 30px; position: relative;">
+        <div style="position: absolute; left: 16px; top: 32px; display: flex; flex-direction: column; gap: 20px; opacity: 0.6;">
+          <span style="cursor: pointer; font-size: 1rem;">⏱️</span>
+          <span style="cursor: pointer; font-size: 1rem;">🌐</span>
+          <span style="cursor: pointer; font-size: 1rem;">💬</span>
+          <span style="cursor: pointer; font-size: 1rem;">🔤</span>
         </div>
-        <div style="margin-left: 36px; display: flex; flex-direction: column; gap: 24px; font-size: 1.4rem; font-weight: 700; color: #fff;">
+        <div style="margin-left: 36px; display: flex; flex-direction: column; gap: 20px; font-size: 1.25rem; font-weight: 700; color: #fff;">
           <p style="opacity: 0.5;">Like the legend of the phoenix, huh</p>
           <p style="opacity: 0.7;">All ends with beginnings</p>
           <p style="color: #fff;">What keeps the planet spinning, ah</p>
