@@ -34,7 +34,7 @@
             </a>
           </li>
           <li class="sidebar-panel__nav-item">
-            <a href="song.html">
+            <a href="liked-songs.html">
               <img src="../assets/img/icons/hearth.svg" alt="" aria-hidden="true">
               <span>Liked songs</span>
             </a>
@@ -122,11 +122,11 @@
         </div>
       </header>
 
-      <!-- Library Controls Bar (Matching Figma) -->
+      <!-- Library Controls Bar -->
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding: 0 8px;">
         <div style="display: flex; gap: 12px; align-items: center;">
-          <button style="background: none; border: none; cursor: pointer; opacity: 0.7;" aria-label="List View"><img src="../assets/img/icons/playlist.svg" alt="" style="width: 20px; height: 20px; filter: invert(1);"></button>
-          <button style="background: none; border: none; cursor: pointer;" aria-label="Grid View"><img src="../assets/img/icons/albom.svg" alt="" style="width: 20px; height: 20px; filter: invert(1);"></button>
+          <a href="liked-songs.html" style="background: none; border: none; cursor: pointer; opacity: 0.6;" aria-label="List View"><img src="../assets/img/icons/playlist.svg" alt="" style="width: 20px; height: 20px; filter: invert(1);"></a>
+          <a href="library.html" style="background: none; border: none; cursor: pointer;" aria-label="Grid View"><img src="../assets/img/icons/albom.svg" alt="" style="width: 20px; height: 20px; filter: invert(1);"></a>
           <span style="color: #b3b3b3; font-size: 0.85rem; margin-left: 12px;">⇅ Recent</span>
         </div>
         <div style="display: flex; gap: 16px; align-items: center;">
@@ -136,96 +136,188 @@
         </div>
       </div>
 
-      <!-- Library Grid Section (Figma Exact Match) -->
+      <!-- Library Grid Section (Compact columns to fit multiple items per row) -->
       <section class="showcase-section">
-        <div class="showcase-section__grid">
+        <div class="showcase-section__grid" style="grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px;">
           
-          <article class="album-card stack" style="position: relative;">
-            <a href="song.html" class="album-card__link">
-              <div class="album-card__image-wrap" style="background-color: #148a08; display: flex; align-items: center; justify-content: center; height: 160px; border-radius: 6px;">
-                <img src="../assets/img/icons/hearth.svg" alt="" style="width: 48px; height: 48px; filter: invert(1);">
+          <!-- 1 -->
+          <article class="album-card stack" style="position: relative; padding: 8px;">
+            <a href="liked-songs.html" class="album-card__link">
+              <div class="album-card__image-wrap" style="background-color: #148a08; display: flex; align-items: center; justify-content: center; height: 110px; border-radius: 6px;">
+                <img src="../assets/img/icons/hearth.svg" alt="" style="width: 32px; height: 32px; filter: invert(1);">
               </div>
-              <strong class="album-card__title">Liked songs</strong>
-              <p class="album-card__description">Numb, Crawling, In the End, and more</p>
+              <strong class="album-card__title" style="font-size: 0.85rem;">Liked songs</strong>
             </a>
-            <button type="button" class="pin is-pinned" aria-label="Pin" style="position: absolute; right: 12px; top: 12px; background: none; border: none; cursor: pointer;"><img src="../assets/img/icons/pin-green.svg" alt=""></button>
           </article>
 
-          <article class="album-card stack" style="position: relative;">
+          <!-- 2 -->
+          <article class="album-card stack" style="position: relative; padding: 8px;">
             <a href="artist.html" class="album-card__link">
-              <div class="album-card__image-wrap">
-                <img src="../assets/img/artists/artist_2.png" alt="David Bowie" class="album-card__cover card-image">
+              <div class="album-card__image-wrap" style="height: 110px;">
+                <img src="../assets/img/artists/artist_2.png" alt="David Bowie" class="album-card__cover card-image" style="height: 110px; object-fit: cover;">
               </div>
-              <strong class="album-card__title">David Bowie</strong>
-              <p class="album-card__description">Artist</p>
+              <strong class="album-card__title" style="font-size: 0.85rem;">David Bowie</strong>
             </a>
-            <button type="button" class="pin is-pinned" aria-label="Pin" style="position: absolute; right: 12px; top: 12px; background: none; border: none; cursor: pointer;"><img src="../assets/img/icons/pin-green.svg" alt=""></button>
           </article>
 
-          <article class="album-card stack" style="position: relative;">
+          <!-- 3 -->
+          <article class="album-card stack" style="position: relative; padding: 8px;">
             <a href="artist.html" class="album-card__link">
-              <div class="album-card__image-wrap">
-                <img src="../assets/img/artists/artist_3.png" alt="Daft Punk" class="album-card__cover card-image">
+              <div class="album-card__image-wrap" style="height: 110px;">
+                <img src="../assets/img/artists/artist_3.png" alt="Daft Punk" class="album-card__cover card-image" style="height: 110px; object-fit: cover;">
               </div>
-              <strong class="album-card__title">Daft Punk</strong>
-              <p class="album-card__description">Artist</p>
+              <strong class="album-card__title" style="font-size: 0.85rem;">Daft Punk</strong>
             </a>
-            <button type="button" class="pin is-pinned" aria-label="Pin" style="position: absolute; right: 12px; top: 12px; background: none; border: none; cursor: pointer;"><img src="../assets/img/icons/pin-green.svg" alt=""></button>
           </article>
 
-          <article class="album-card stack" style="position: relative;">
+          <!-- 4 -->
+          <article class="album-card stack" style="position: relative; padding: 8px;">
             <a href="playlist.html" class="album-card__link">
-              <div class="album-card__image-wrap" style="background-color: #242424; display: flex; align-items: center; justify-content: center; height: 160px; border-radius: 6px;">
-                <img src="../assets/img/icons/playlist.svg" alt="" style="width: 48px; height: 48px; filter: invert(0.5);">
+              <div class="album-card__image-wrap" style="background-color: #242424; display: flex; align-items: center; justify-content: center; height: 110px; border-radius: 6px;">
+                <img src="../assets/img/icons/playlist.svg" alt="" style="width: 32px; height: 32px; filter: invert(0.5);">
               </div>
-              <strong class="album-card__title">Chill Stuff</strong>
-              <p class="album-card__description">Simon and Garfunkel, Daft Punk, and more</p>
+              <strong class="album-card__title" style="font-size: 0.85rem;">Chill Stuff</strong>
             </a>
-            <button type="button" class="pin is-pinned" aria-label="Pin" style="position: absolute; right: 12px; top: 12px; background: none; border: none; cursor: pointer;"><img src="../assets/img/icons/pin-green.svg" alt=""></button>
           </article>
 
-          <article class="album-card stack" style="position: relative;">
+          <!-- 5 -->
+          <article class="album-card stack" style="position: relative; padding: 8px;">
             <a href="playlist.html" class="album-card__link">
-              <div class="album-card__image-wrap" style="background-color: #242424; display: flex; align-items: center; justify-content: center; height: 160px; border-radius: 6px;">
-                <img src="../assets/img/icons/playlist.svg" alt="" style="width: 48px; height: 48px; filter: invert(0.5);">
+              <div class="album-card__image-wrap" style="background-color: #242424; display: flex; align-items: center; justify-content: center; height: 110px; border-radius: 6px;">
+                <img src="../assets/img/icons/playlist.svg" alt="" style="width: 32px; height: 32px; filter: invert(0.5);">
               </div>
-              <strong class="album-card__title">The Jux Box</strong>
-              <p class="album-card__description">Simon and Garfunkel, Daft Punk, and more</p>
+              <strong class="album-card__title" style="font-size: 0.85rem;">The Jux Box</strong>
             </a>
-            <button type="button" class="pin is-pinned" aria-label="Pin" style="position: absolute; right: 12px; top: 12px; background: none; border: none; cursor: pointer;"><img src="../assets/img/icons/pin-green.svg" alt=""></button>
           </article>
 
-          <article class="album-card stack" style="position: relative;">
+          <!-- 6 -->
+          <article class="album-card stack" style="position: relative; padding: 8px;">
             <a href="playlist.html" class="album-card__link">
-              <div class="album-card__image-wrap" style="background-color: #242424; display: flex; align-items: center; justify-content: center; height: 160px; border-radius: 6px;">
-                <img src="../assets/img/icons/playlist.svg" alt="" style="width: 48px; height: 48px; filter: invert(0.5);">
+              <div class="album-card__image-wrap" style="background-color: #242424; display: flex; align-items: center; justify-content: center; height: 110px; border-radius: 6px;">
+                <img src="../assets/img/icons/playlist.svg" alt="" style="width: 32px; height: 32px; filter: invert(0.5);">
               </div>
-              <strong class="album-card__title">Vibe</strong>
-              <p class="album-card__description">Blue Skies, No Heaven</p>
+              <strong class="album-card__title" style="font-size: 0.85rem;">Vibe</strong>
             </a>
-            <button type="button" class="pin is-pinned" aria-label="Pin" style="position: absolute; right: 12px; top: 12px; background: none; border: none; cursor: pointer;"><img src="../assets/img/icons/pin-green.svg" alt=""></button>
           </article>
 
-          <article class="album-card stack" style="position: relative;">
+          <!-- 7 -->
+          <article class="album-card stack" style="position: relative; padding: 8px;">
             <a href="playlist.html" class="album-card__link">
-              <div class="album-card__image-wrap" style="background-color: #242424; display: flex; align-items: center; justify-content: center; height: 160px; border-radius: 6px;">
-                <img src="../assets/img/icons/playlist.svg" alt="" style="width: 48px; height: 48px; filter: invert(0.5);">
+              <div class="album-card__image-wrap" style="background-color: #242424; display: flex; align-items: center; justify-content: center; height: 110px; border-radius: 6px;">
+                <img src="../assets/img/icons/playlist.svg" alt="" style="width: 32px; height: 32px; filter: invert(0.5);">
               </div>
-              <strong class="album-card__title">Selected Linkin...</strong>
-              <p class="album-card__description">Numb, Crawling, In the End, and more</p>
+              <strong class="album-card__title" style="font-size: 0.85rem;">Selected...</strong>
             </a>
-            <button type="button" class="pin is-pinned" aria-label="Pin" style="position: absolute; right: 12px; top: 12px; background: none; border: none; cursor: pointer;"><img src="../assets/img/icons/pin-green.svg" alt=""></button>
           </article>
 
-          <article class="album-card stack" style="position: relative;">
+          <!-- 8 -->
+          <article class="album-card stack" style="position: relative; padding: 8px;">
             <a href="playlist.html" class="album-card__link">
-              <div class="album-card__image-wrap" style="background-color: #242424; display: flex; align-items: center; justify-content: center; height: 160px; border-radius: 6px;">
-                <img src="../assets/img/icons/folder.svg" alt="" style="width: 48px; height: 48px; filter: invert(0.5);">
+              <div class="album-card__image-wrap" style="background-color: #242424; display: flex; align-items: center; justify-content: center; height: 110px; border-radius: 6px;">
+                <img src="../assets/img/icons/folder.svg" alt="" style="width: 32px; height: 32px; filter: invert(0.5);">
               </div>
-              <strong class="album-card__title">Fav bands</strong>
-              <p class="album-card__description">Linkin Park, Muse, and more</p>
+              <strong class="album-card__title" style="font-size: 0.85rem;">Fav bands</strong>
             </a>
-            <button type="button" class="pin is-pinned" aria-label="Pin" style="position: absolute; right: 12px; top: 12px; background: none; border: none; cursor: pointer;"><img src="../assets/img/icons/pin-green.svg" alt=""></button>
+          </article>
+
+          <!-- 9 -->
+          <article class="album-card stack" style="position: relative; padding: 8px;">
+            <a href="album.html" class="album-card__link">
+              <div class="album-card__image-wrap" style="height: 110px;">
+                <img src="../assets/img/albums/album_1.png" alt="Rock Mix" class="album-card__cover card-image" style="height: 110px; object-fit: cover;">
+              </div>
+              <strong class="album-card__title" style="font-size: 0.85rem;">Rock Mix</strong>
+            </a>
+          </article>
+
+          <!-- 10 -->
+          <article class="album-card stack" style="position: relative; padding: 8px;">
+            <a href="album.html" class="album-card__link">
+              <div class="album-card__image-wrap" style="height: 110px;">
+                <img src="../assets/img/albums/album_2.png" alt="Chill Mix" class="album-card__cover card-image" style="height: 110px; object-fit: cover;">
+              </div>
+              <strong class="album-card__title" style="font-size: 0.85rem;">Chill Mix</strong>
+            </a>
+          </article>
+
+          <!-- 11 -->
+          <article class="album-card stack" style="position: relative; padding: 8px;">
+            <a href="album.html" class="album-card__link">
+              <div class="album-card__image-wrap" style="height: 110px;">
+                <img src="../assets/img/albums/album_3.png" alt="Pop Mix" class="album-card__cover card-image" style="height: 110px; object-fit: cover;">
+              </div>
+              <strong class="album-card__title" style="font-size: 0.85rem;">Pop Mix</strong>
+            </a>
+          </article>
+
+          <!-- 12 -->
+          <article class="album-card stack" style="position: relative; padding: 8px;">
+            <a href="album.html" class="album-card__link">
+              <div class="album-card__image-wrap" style="height: 110px;">
+                <img src="../assets/img/albums/album_4.png" alt="Daft Punk Mix" class="album-card__cover card-image" style="height: 110px; object-fit: cover;">
+              </div>
+              <strong class="album-card__title" style="font-size: 0.85rem;">Daft Punk Mix</strong>
+            </a>
+          </article>
+
+          <!-- 13 -->
+          <article class="album-card stack" style="position: relative; padding: 8px;">
+            <a href="album.html" class="album-card__link">
+              <div class="album-card__image-wrap" style="height: 110px;">
+                <img src="../assets/img/albums/album_13.png" alt="RAM" class="album-card__cover card-image" style="height: 110px; object-fit: cover;">
+              </div>
+              <strong class="album-card__title" style="font-size: 0.85rem;">Random Access</strong>
+            </a>
+          </article>
+
+          <!-- 14 -->
+          <article class="album-card stack" style="position: relative; padding: 8px;">
+            <a href="album.html" class="album-card__link">
+              <div class="album-card__image-wrap" style="height: 110px;">
+                <img src="../assets/img/episodes/episode_3.png" alt="Meteora" class="album-card__cover card-image" style="height: 110px; object-fit: cover;">
+              </div>
+              <strong class="album-card__title" style="font-size: 0.85rem;">Meteora</strong>
+            </a>
+          </article>
+
+          <!-- 15 -->
+          <article class="album-card stack" style="position: relative; padding: 8px;">
+            <a href="album.html" class="album-card__link">
+              <div class="album-card__image-wrap" style="height: 110px;">
+                <img src="../assets/img/artists/artist_1.png" alt="Artist" class="album-card__cover card-image" style="height: 110px; object-fit: cover;">
+              </div>
+              <strong class="album-card__title" style="font-size: 0.85rem;">Artist Mix</strong>
+            </a>
+          </article>
+
+          <!-- 16 -->
+          <article class="album-card stack" style="position: relative; padding: 8px;">
+            <a href="album.html" class="album-card__link">
+              <div class="album-card__image-wrap" style="height: 110px;">
+                <img src="../assets/img/episodes/episode_1.png" alt="Episode 1" class="album-card__cover card-image" style="height: 110px; object-fit: cover;">
+              </div>
+              <strong class="album-card__title" style="font-size: 0.85rem;">Podcast Ep 1</strong>
+            </a>
+          </article>
+
+          <!-- 17 -->
+          <article class="album-card stack" style="position: relative; padding: 8px;">
+            <a href="album.html" class="album-card__link">
+              <div class="album-card__image-wrap" style="height: 110px;">
+                <img src="../assets/img/episodes/episode_2.png" alt="Episode 2" class="album-card__cover card-image" style="height: 110px; object-fit: cover;">
+              </div>
+              <strong class="album-card__title" style="font-size: 0.85rem;">Talk Show</strong>
+            </a>
+          </article>
+
+          <!-- 18 -->
+          <article class="album-card stack" style="position: relative; padding: 8px;">
+            <a href="album.html" class="album-card__link">
+              <div class="album-card__image-wrap" style="background-color: #1e3264; display: flex; align-items: center; justify-content: center; height: 110px; border-radius: 6px;">
+                <img src="../assets/img/icons/albom.svg" alt="" style="width: 32px; height: 32px; filter: invert(1);">
+              </div>
+              <strong class="album-card__title" style="font-size: 0.85rem;">Classic Hits</strong>
+            </a>
           </article>
 
         </div>
