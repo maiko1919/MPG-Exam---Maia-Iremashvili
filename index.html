@@ -9,73 +9,68 @@
 </head>
 <body class="app">
 
-  <!-- ======================================================================
-       Global Layout Container (Flexbox Wrapper)
-       ====================================================================== -->
   <div class="spotify-container">
 
-    <!-- ======================================================================
-         1. Aside: Sidebar Navigation (Left)
-         ====================================================================== -->
+    <!-- Sidebar -->
     <aside class="sidebar-panel">
       <nav class="sidebar-panel__nav" aria-label="Main Navigation">
         <ul class="sidebar-panel__nav-list">
           <li class="sidebar-panel__nav-item sidebar-panel__nav-item--active">
-            <a href="#library">
+            <a href="pages/library.html">
               <img src="assets/img/icons/library.svg" alt="" aria-hidden="true">
               <span>My Library</span>
             </a>
           </li>
           <li class="sidebar-panel__nav-item">
-            <a href="#pins">
+            <a href="pages/playlist.html">
               <img src="assets/img/icons/pin.svg" alt="" aria-hidden="true">
               <span>Pins</span>
             </a>
           </li>
           <li class="sidebar-panel__nav-item">
-            <a href="#playlists">
+            <a href="pages/playlist.html">
               <img src="assets/img/icons/playlist.svg" alt="" aria-hidden="true">
               <span>Playlists</span>
             </a>
           </li>
           <li class="sidebar-panel__nav-item">
-            <a href="#liked-songs">
+            <a href="pages/song.html">
               <img src="assets/img/icons/hearth.svg" alt="" aria-hidden="true">
               <span>Liked songs</span>
             </a>
           </li>
           <li class="sidebar-panel__nav-item">
-            <a href="#saves">
+            <a href="pages/library.html">
               <img src="assets/img/icons/bookmark.svg" alt="" aria-hidden="true">
               <span>Saves</span>
             </a>
           </li>
           <li class="sidebar-panel__nav-item">
-            <a href="#albums">
+            <a href="pages/album.html">
               <img src="assets/img/icons/albom.svg" alt="" aria-hidden="true">
               <span>Albums</span>
             </a>
           </li>
           <li class="sidebar-panel__nav-item">
-            <a href="#folders">
+            <a href="pages/library.html">
               <img src="assets/img/icons/folder.svg" alt="" aria-hidden="true">
               <span>Folders</span>
             </a>
           </li>
           <li class="sidebar-panel__nav-item">
-            <a href="#podcasts">
+            <a href="pages/podcast.html">
               <img src="assets/img/icons/podcast.svg" alt="" aria-hidden="true">
               <span>Podcasts</span>
             </a>
           </li>
           <li class="sidebar-panel__nav-item">
-            <a href="#audiobooks">
+            <a href="pages/podcast.html">
               <img src="assets/img/icons/audiobook.svg" alt="" aria-hidden="true">
               <span>Audiobooks</span>
             </a>
           </li>
           <li class="sidebar-panel__nav-item">
-            <a href="#artists">
+            <a href="pages/artist.html">
               <img src="assets/img/icons/artists.svg" alt="" aria-hidden="true">
               <span>Artists</span>
             </a>
@@ -84,29 +79,24 @@
       </nav>
     </aside>
 
-    <!-- ======================================================================
-         2. Main: Content Viewport
-         ====================================================================== -->
+    <!-- Main Content -->
     <main class="content-viewport">
-      
-      <!-- Top Navigation Header -->
       <header class="main-header">
         <nav class="main-header__tabs" aria-label="Browse Modes">
-          <a href="#home" class="main-header__tab-link main-header__tab-link--active">
+          <a href="index.html" class="main-header__tab-link main-header__tab-link--active">
             <img src="assets/img/icons/home.svg" alt="" aria-hidden="true">
             <span>Home</span>
           </a>
-          <a href="#discover" class="main-header__tab-link">
+          <a href="pages/discover.html" class="main-header__tab-link">
             <img src="assets/img/icons/discover.svg" alt="" aria-hidden="true">
             <span>Discover</span>
           </a>
-          <a href="#search" class="main-header__tab-link">
+          <a href="pages/search.html" class="main-header__tab-link">
             <img src="assets/img/icons/search.svg" alt="" aria-hidden="true">
             <span>Search</span>
           </a>
         </nav>
 
-        <!-- Right Header Action Icons -->
         <div class="main-header__actions">
           <button class="main-header__action-button" aria-label="Notifications">
             <img src="assets/img/icons/notification.svg" alt="Notifications">
@@ -114,13 +104,12 @@
           <button class="main-header__action-button" aria-label="Add Friends">
             <img src="assets/img/icons/add_friend.svg" alt="Friends">
           </button>
-          <button class="main-header__action-button" aria-label="User Profile">
+          <a href="pages/profile.html" class="main-header__action-button" aria-label="User Profile">
             <img src="assets/img/icons/me.svg" alt="Profile">
-          </button>
+          </a>
         </div>
       </header>
 
-      <!-- Horizontal Filter Chips Row -->
       <nav class="filter-bar" aria-label="Category Filters">
         <button class="filter-bar__chip filter-bar__chip--active">All</button>
         <button class="filter-bar__chip">Music</button>
@@ -128,142 +117,126 @@
         <button class="filter-bar__chip">Audiobooks</button>
       </nav>
 
-      <!-- Section: Made For You -->
       <section class="showcase-section" aria-labelledby="showcase-heading">
         <h2 id="showcase-heading" class="showcase-section__heading">Made For You</h2>
 
         <div class="showcase-section__grid">
-          <!-- Card 1 -->
-          <article class="album-card">
-            <a href="#mix1" class="album-card__link">
+          <article class="album-card stack">
+            <a href="pages/playlist.html" class="album-card__link">
               <div class="album-card__image-wrap">
-                <img src="assets/img/covers/cover_1.png" alt="Discover Weekly Cover" class="album-card__cover">
+                <img src="assets/img/episodes/episode_1.png" alt="Liked songs" class="album-card__cover card-image">
               </div>
-              <strong class="album-card__title">Discover Weekly</strong>
-              <p class="album-card__description">Your weekly mixtape of fresh music tailored for you.</p>
+              <strong class="album-card__title">Liked songs</strong>
+              <p class="album-card__description">Numb, Crawling, In the End, and more</p>
             </a>
-            <button type="button" class="pin" aria-label="Pin Discover Weekly" aria-pressed="false">
+            <button type="button" class="pin" aria-label="Pin Liked songs" aria-pressed="false">
               <img src="assets/img/icons/pin-green.svg" alt="">
             </button>
           </article>
 
-          <!-- Card 2 -->
-          <article class="album-card">
-            <a href="#mix2" class="album-card__link">
+          <article class="album-card stack">
+            <a href="pages/artist.html" class="album-card__link">
               <div class="album-card__image-wrap">
-                <img src="assets/img/covers/cover_2.png" alt="Daily Mix 1 Cover" class="album-card__cover">
+                <img src="assets/img/artists/artist_2.png" alt="David Bowie" class="album-card__cover card-image">
               </div>
-              <strong class="album-card__title">Daily Mix 1</strong>
-              <p class="album-card__description">Linkin Park, System Of A Down, Coal Chamber and more.</p>
+              <strong class="album-card__title">David Bowie</strong>
+              <p class="album-card__description">Artist</p>
             </a>
-            <button type="button" class="pin" aria-label="Pin Daily Mix 1" aria-pressed="false">
+            <button type="button" class="pin" aria-label="Pin David Bowie" aria-pressed="false">
               <img src="assets/img/icons/pin-green.svg" alt="">
             </button>
           </article>
 
-          <!-- Card 3 -->
-          <article class="album-card">
-            <a href="#mix3" class="album-card__link">
+          <article class="album-card stack">
+            <a href="pages/artist.html" class="album-card__link">
               <div class="album-card__image-wrap">
-                <img src="assets/img/covers/cover_3.png" alt="Daily Mix 2 Cover" class="album-card__cover">
+                <img src="assets/img/artists/artist_3.png" alt="Daft Punk" class="album-card__cover card-image">
               </div>
-              <strong class="album-card__title">Daily Mix 2</strong>
-              <p class="album-card__description">Avril Lavigne, Lorde, Charli XCX and more.</p>
+              <strong class="album-card__title">Daft Punk</strong>
+              <p class="album-card__description">Artist</p>
             </a>
-            <button type="button" class="pin" aria-label="Pin Daily Mix 2" aria-pressed="false">
+            <button type="button" class="pin" aria-label="Pin Daft Punk" aria-pressed="false">
               <img src="assets/img/icons/pin-green.svg" alt="">
             </button>
           </article>
 
-          <!-- Card 4 -->
-          <article class="album-card">
-            <a href="#mix4" class="album-card__link">
+          <article class="album-card stack">
+            <a href="pages/playlist.html" class="album-card__link">
               <div class="album-card__image-wrap">
-                <img src="assets/img/covers/cover_4.png" alt="Daily Mix 3 Cover" class="album-card__cover">
+                <img src="assets/img/episodes/episode_2.png" alt="Chill Stuff" class="album-card__cover card-image">
               </div>
-              <strong class="album-card__title">Daily Mix 3</strong>
-              <p class="album-card__description">The Strokes, Martin Garrix, MGMT and more.</p>
+              <strong class="album-card__title">Chill Stuff</strong>
+              <p class="album-card__description">Simon and Garfunkel, Daft Punk, and more</p>
             </a>
-            <button type="button" class="pin" aria-label="Pin Daily Mix 3" aria-pressed="false">
+            <button type="button" class="pin" aria-label="Pin Chill Stuff" aria-pressed="false">
               <img src="assets/img/icons/pin-green.svg" alt="">
             </button>
           </article>
 
-          <!-- Card 5 -->
-          <article class="album-card">
-            <a href="#mix5" class="album-card__link">
+          <article class="album-card stack">
+            <a href="pages/album.html" class="album-card__link">
               <div class="album-card__image-wrap">
-                <img src="assets/img/covers/cover_5.png" alt="Daily Mix 4 Cover" class="album-card__cover">
+                <img src="assets/img/episodes/episode_3.png" alt="Meteora" class="album-card__cover card-image">
               </div>
-              <strong class="album-card__title">Daily Mix 4</strong>
-              <p class="album-card__description">Chuck Berry, Elvis Presley, Roy Orbison and more.</p>
+              <strong class="album-card__title">Meteora</strong>
+              <p class="album-card__description">Linkin Park</p>
             </a>
-            <button type="button" class="pin" aria-label="Pin Daily Mix 4" aria-pressed="false">
+            <button type="button" class="pin" aria-label="Pin Meteora" aria-pressed="false">
               <img src="assets/img/icons/pin-green.svg" alt="">
             </button>
           </article>
 
-          <!-- Card 6 -->
-          <article class="album-card">
-            <a href="#mix6" class="album-card__link">
+          <article class="album-card stack">
+            <a href="pages/album.html" class="album-card__link">
               <div class="album-card__image-wrap">
-                <img src="assets/img/covers/cover_6.png" alt="Daily Mix 5 Cover" class="album-card__cover">
+                <img src="assets/img/albums/album_13.png" alt="Random Access Memories" class="album-card__cover card-image">
               </div>
-              <strong class="album-card__title">Daily Mix 5</strong>
-              <p class="album-card__description">Frank Sinatra, Gerhard Trede, Dean Martin and more.</p>
+              <strong class="album-card__title">Random Access...</strong>
+              <p class="album-card__description">Daft Punk</p>
             </a>
-            <button type="button" class="pin" aria-label="Pin Daily Mix 5" aria-pressed="false">
+            <button type="button" class="pin" aria-label="Pin Random Access" aria-pressed="false">
               <img src="assets/img/icons/pin-green.svg" alt="">
             </button>
           </article>
 
-          <!-- Card 7 -->
-          <article class="album-card">
-            <a href="#mix7" class="album-card__link">
+          <article class="album-card stack">
+            <a href="pages/album.html" class="album-card__link">
               <div class="album-card__image-wrap">
-                <img src="assets/img/covers/cover_7.png" alt="Nirvana Radio Cover" class="album-card__cover">
+                <img src="assets/img/albums/album_14.png" alt="Abbey Road" class="album-card__cover card-image">
               </div>
-              <strong class="album-card__title">Nirvana Radio</strong>
-              <p class="album-card__description">With Foo Fighters, Soundgarden, Pearl Jam.</p>
+              <strong class="album-card__title">Abbey Road</strong>
+              <p class="album-card__description">The Beatles</p>
             </a>
-            <button type="button" class="pin" aria-label="Pin Nirvana Radio" aria-pressed="false">
+            <button type="button" class="pin" aria-label="Pin Abbey Road" aria-pressed="false">
               <img src="assets/img/icons/pin-green.svg" alt="">
             </button>
           </article>
 
-          <!-- Card 8 -->
-          <article class="album-card">
-            <a href="#mix8" class="album-card__link">
+          <article class="album-card stack">
+            <a href="pages/album.html" class="album-card__link">
               <div class="album-card__image-wrap">
-                <img src="assets/img/covers/cover_8.png" alt="Fall Out Boy Radio Cover" class="album-card__cover">
+                <img src="assets/img/albums/album_15.png" alt="Black Holes" class="album-card__cover card-image">
               </div>
-              <strong class="album-card__title">Fall Out Boy Radio</strong>
-              <p class="album-card__description">With Panic! At The Disco, The All-American Rejects.</p>
+              <strong class="album-card__title">Black Holes and...</strong>
+              <p class="album-card__description">Muse</p>
             </a>
-            <button type="button" class="pin" aria-label="Pin Fall Out Boy Radio" aria-pressed="false">
+            <button type="button" class="pin" aria-label="Pin Black Holes" aria-pressed="false">
               <img src="assets/img/icons/pin-green.svg" alt="">
             </button>
           </article>
         </div>
       </section>
-
     </main>
 
-    <!-- ======================================================================
-         3. Footer: Fixed Bottom Audio Player
-         ====================================================================== -->
     <footer class="bottom-player-bar" aria-label="Playback Controller">
-      
-      <!-- Player Left: Track Details -->
       <div class="player-left">
         <img src="assets/img/covers/small_cover.png" alt="Now Playing Track Cover" class="player-left__art">
         <div class="player-left__info">
-          <span class="player-left__song-title">Get Lucky (feat. Pharrell Williams)</span>
-          <span class="player-left__artist-name">Daft Punk, Pharrell Williams</span>
+          <a href="pages/now-playing-text.html" class="player-left__song-title">Get Lucky (feat. Pharrell Williams)</a>
+          <a href="pages/artist.html" class="player-left__artist-name">Daft Punk, Pharrell Williams</a>
         </div>
       </div>
 
-      <!-- Player Center: Playback Controls & Scrubber -->
       <div class="player-center">
         <div class="player-center__buttons">
           <button class="player-center__control-btn" aria-label="Previous Track">
@@ -285,14 +258,13 @@
         </div>
       </div>
 
-      <!-- Player Right: Utilities & Volume -->
       <div class="player-right">
-        <button class="player-right__action-btn" aria-label="Lyrics">
+        <a href="pages/song.html" class="player-right__action-btn" aria-label="Lyrics">
           <img src="assets/img/icons/mic.svg" alt="Lyrics">
-        </button>
-        <button class="player-right__action-btn" aria-label="Queue">
+        </a>
+        <a href="pages/now-playing-music-section.html" class="player-right__action-btn" aria-label="Queue">
           <img src="assets/img/icons/queue.svg" alt="Queue">
-        </button>
+        </a>
         <div class="player-right__volume-group">
           <button class="player-right__action-btn" aria-label="Mute Volume">
             <img src="assets/img/icons/player/volume.svg" alt="Volume">
@@ -302,11 +274,10 @@
           </div>
         </div>
       </div>
-
     </footer>
 
   </div>
 
-  <script src="assets/js/home.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
