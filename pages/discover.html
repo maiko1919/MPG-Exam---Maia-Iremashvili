@@ -1,1231 +1,235 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="author" content="MPG Team" />
-		<meta
-			name="description"
-			content="This is Georgian Spotify Template created by MPG Team"
-		/>
-		<link rel="stylesheet" href="../assets/styles/style.css" />
-		<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon" />
-		<title>Discover - Georgian Spotify - Project by MPG Team</title>
-	</head>
-	<body class="app discover">
-		<header class="header">
-			<div class="header-wrapper">
-				<!-- desktop -->
-				<nav class="navigation">
-					<ul class="top-nav-ul left-ul">
-						<li>
-							<a href="../index.html">
-								<div class="img-div">
-									<i class="icons icon-home"></i>
-								</div>
-								Home
-							</a>
-						</li>
-						<li>
-							<a class="active" href="./discover.html">
-								<div class="img-div">
-									<i class="icons icon-discover"></i>
-								</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover - Spotify Web Clone</title>
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../assets/styles/style.css">
+</head>
+<body class="app">
 
-								<span>Discover</span>
-							</a>
-						</li>
-						<li>
-							<form action="./search.html">
-								<div class="img-div search-wrapper">
-									<label for="search">
-										<i class="icons icon-search"></i>
-									</label>
-									<input
-										id="search"
-										type="search"
-										placeholder="Search"
-									/>
-								</div>
-							</form>
-						</li>
-					</ul>
-				</nav>
-				<nav class="side-nav top-nav">
-					<ul class="top-nav-ul">
-						<li>
-							<div
-								class="theme-toggle dark"
-								id="theme-toggle"
-							></div>
-						</li>
-						<li>
-							<a href="#">
-								<i class="icons icon-notification"></i>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="icons icon-lock"></i>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="icons icon-users"></i>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="icons icon-settings"></i>
-							</a>
-						</li>
-						<li class="no-hover">
-							<a href="./profile.html">
-								<img
-									src="../assets/img/icons/user.svg"
-									alt="Profile"
-								/>
-							</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-			<!-- Mobile navigation -->
-			<nav class="mobile-nav">
-				<a href="../index.html">
-					<i class="icons icon-home-inactive icon-green"></i>
-					Home
-				</a>
-				<a class="active" href="./discover.html">
-					<i class="icons icon-discover icon-green"></i>
-					Discover
-				</a>
-				<a href="./search.html">
-					<i class="icons icon-search icon-green"></i>
-					Search
-				</a>
-				<a href="./library.html">
-					<i class="icons icon-library icon-green"></i>
-					Library
-				</a>
-				<a href="./profile.html">
-					<i class="icons icon-me icon-green"></i>
-					Me
-				</a>
-			</nav>
-		</header>
-		<aside class="sidebar">
-			<div class="sidebar-heading">
-				<a href="./library.html"
-					><i class="icons icon-library"></i> My Library</a
-				>
-			</div>
-			<nav class="sidebar-menu">
-				<ul>
-					<li>
-						<details class="nav__dropdown">
-							<summary class="nav__link">
-								<i class="icons icon-pin"></i>
-								Pins
-							</summary>
-							<ul class="nav__sub">
-								<li><a href="./album.html">Albums</a></li>
-								<li>
-									<a href="./artist.html">Artists</a>
-								</li>
-								<li>
-									<a href="./playlist.html">Playlists</a>
-								</li>
-							</ul>
-						</details>
-					</li>
-					<li>
-						<details class="nav__dropdown">
-							<summary class="nav__link">
-								<i class="icons icon-playlist"></i>
-								Playlists
-							</summary>
-							<ul class="nav__sub">
-								<li><a href="./album.html">Albums</a></li>
-								<li>
-									<a href="./artist.html">Artists</a>
-								</li>
-								<li>
-									<a href="./playlist.html">Playlists</a>
-								</li>
-							</ul>
-						</details>
-					</li>
-					<li>
-						<a href="./song.html">
-							<i class="icons icon-hearth"></i>
-							<span>Liked Songs</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="icons icon-bookmark"></i>
-							<span>Saves</span>
-						</a>
-					</li>
-					<li>
-						<a href="./album.html">
-							<i class="icons icon-album"></i>
-							<span>Albums</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="icons icon-folder"></i>
-							<span>Folders</span>
-						</a>
-					</li>
-					<li>
-						<a href="./podcast.html">
-							<i class="icons icon-podcast"></i>
-							<span>Podcasts</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="icons icon-audiobook"></i>
-							<span>Audiobooks</span>
-						</a>
-					</li>
-					<li>
-						<a href="./artist.html">
-							<i class="icons icon-artists"></i>
-							<span>Artists</span>
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</aside>
-		<main class="main main-discover no-pd">
-			<div class="main-inner no-pd">
-				<header class="discover-filters-wrapper">
-					<!-- Discover Desktop nav bar -->
-					<div class="filters-nav hide-mob">
-						<nav class="radio-nav-desk">
-							<ul>
-								<li><a href="#" class="active">Music</a></li>
-								<li><a href="#">EDM</a></li>
-								<li><a href="#">Indie</a></li>
-								<li><a href="#">Pop</a></li>
-								<li><a href="#">Rock</a></li>
-								<li><a href="#">Alt Rock</a></li>
-								<li><a href="#">Country</a></li>
-								<li><a href="#">R&B</a></li>
-								<li><a href="#">Hip-Hop</a></li>
-								<li><a href="#">Podcast</a></li>
-								<li><a href="#">Audio Books</a></li>
-							</ul>
-						</nav>
-					</div>
-					<!-- Discover page Mobile Navbar -->
-					<div class="mobile-filters">
-						<div class="radio-nav">
-							<input type="radio" name="genre" id="audioBooks" />
-							<label for="audioBooks">Audio Books</label>
+  <div class="spotify-container">
 
-							<input type="radio" name="genre" id="podcast" />
-							<label for="podcast">Podcast</label>
+    <!-- Sidebar -->
+    <aside class="sidebar-panel">
+      <nav class="sidebar-panel__nav" aria-label="Main Navigation">
+        <ul class="sidebar-panel__nav-list">
+          <li class="sidebar-panel__nav-item">
+            <a href="library.html">
+              <img src="../assets/img/icons/library.svg" alt="" aria-hidden="true">
+              <span>My Library</span>
+            </a>
+          </li>
+          <li class="sidebar-panel__nav-item">
+            <a href="playlist.html">
+              <img src="../assets/img/icons/pin.svg" alt="" aria-hidden="true">
+              <span>Pins</span>
+            </a>
+          </li>
+          <li class="sidebar-panel__nav-item">
+            <a href="playlist.html">
+              <img src="../assets/img/icons/playlist.svg" alt="" aria-hidden="true">
+              <span>Playlists</span>
+            </a>
+          </li>
+          <li class="sidebar-panel__nav-item">
+            <a href="liked-songs.html">
+              <img src="../assets/img/icons/hearth.svg" alt="" aria-hidden="true">
+              <span>Liked songs</span>
+            </a>
+          </li>
+          <li class="sidebar-panel__nav-item">
+            <a href="library.html">
+              <img src="../assets/img/icons/bookmark.svg" alt="" aria-hidden="true">
+              <span>Saves</span>
+            </a>
+          </li>
+          <li class="sidebar-panel__nav-item">
+            <a href="album.html">
+              <img src="../assets/img/icons/albom.svg" alt="" aria-hidden="true">
+              <span>Albums</span>
+            </a>
+          </li>
+          <li class="sidebar-panel__nav-item">
+            <a href="library.html">
+              <img src="../assets/img/icons/folder.svg" alt="" aria-hidden="true">
+              <span>Folders</span>
+            </a>
+          </li>
+          <li class="sidebar-panel__nav-item">
+            <a href="podcast.html">
+              <img src="../assets/img/icons/podcast.svg" alt="" aria-hidden="true">
+              <span>Podcasts</span>
+            </a>
+          </li>
+          <li class="sidebar-panel__nav-item">
+            <a href="podcast.html">
+              <img src="../assets/img/icons/audiobook.svg" alt="" aria-hidden="true">
+              <span>Audiobooks</span>
+            </a>
+          </li>
+          <li class="sidebar-panel__nav-item">
+            <a href="artist.html">
+              <img src="../assets/img/icons/artists.svg" alt="" aria-hidden="true">
+              <span>Artists</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
 
-							<input type="radio" name="genre" id="music" />
-							<label for="music">Music</label>
+    <!-- Main Content Viewport -->
+    <main class="content-viewport" style="padding: 24px 32px; background-color: #121212;">
+      
+      <!-- Top Header -->
+      <header class="main-header top-nav" style="margin-bottom: 24px;">
+        <nav class="main-header__tabs" aria-label="Browse Modes">
+          <a href="../index.html" class="main-header__tab-link">
+            <img src="../assets/img/icons/home.svg" alt="" aria-hidden="true">
+            <span>Home</span>
+          </a>
+          <a href="discover.html" class="main-header__tab-link main-header__tab-link--active" style="color: #fff;">
+            <img src="../assets/img/icons/discover.svg" alt="" aria-hidden="true">
+            <span>Discover</span>
+          </a>
+          <a href="search.html" class="main-header__tab-link">
+            <img src="../assets/img/icons/search.svg" alt="" aria-hidden="true">
+            <span>Search</span>
+          </a>
+        </nav>
 
-							<input type="radio" name="genre" id="edm" />
-							<label for="edm">EDM</label>
+        <div class="main-header__actions">
+          <button class="main-header__action-button" aria-label="Notifications">
+            <img src="../assets/img/icons/notification.svg" alt="Notifications">
+          </button>
+          <button class="main-header__action-button" aria-label="Settings">
+            <img src="../assets/img/icons/settings.svg" alt="Settings" onerror="this.style.display='none'">
+          </button>
+        </div>
+      </header>
 
-							<input type="radio" name="genre" id="indie" />
-							<label for="indie">Indie</label>
+      <!-- Genre Filter Pills Bar -->
+      <div style="display: flex; gap: 10px; margin-bottom: 35px; flex-wrap: wrap; align-items: center;">
+        <span style="background-color: #fff; color: #000; padding: 6px 16px; border-radius: 500px; font-size: 0.8rem; font-weight: 600; cursor: pointer;">Music</span>
+        <span style="background-color: #242424; color: #fff; padding: 6px 16px; border-radius: 500px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.1); cursor: pointer;">EDM</span>
+        <span style="background-color: #242424; color: #fff; padding: 6px 16px; border-radius: 500px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.1); cursor: pointer;">Indie</span>
+        <span style="background-color: #242424; color: #fff; padding: 6px 16px; border-radius: 500px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.1); cursor: pointer;">Pop</span>
+        <span style="background-color: #242424; color: #fff; padding: 6px 16px; border-radius: 500px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.1); cursor: pointer;">Rock</span>
+        <span style="background-color: #242424; color: #fff; padding: 6px 16px; border-radius: 500px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.1); cursor: pointer;">Alt Rock</span>
+        <span style="background-color: #242424; color: #fff; padding: 6px 16px; border-radius: 500px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.1); cursor: pointer;">Country</span>
+        <span style="background-color: #242424; color: #fff; padding: 6px 16px; border-radius: 500px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.1); cursor: pointer;">R&B</span>
+        <span style="background-color: #242424; color: #fff; padding: 6px 16px; border-radius: 500px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.1); cursor: pointer;">Hip-Hop</span>
+        <span style="background-color: #242424; color: #fff; padding: 6px 16px; border-radius: 500px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.1); cursor: pointer;">Podcast</span>
+        <span style="background-color: #242424; color: #fff; padding: 6px 16px; border-radius: 500px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.1); cursor: pointer;">Audiobooks</span>
+      </div>
 
-							<input type="radio" name="genre" id="pop" />
-							<label for="pop">Pop</label>
+      <!-- Discover Main Section: Vertical Story Banner & Featured Playlist Card -->
+      <div style="display: flex; gap: 40px; align-items: center; justify-content: center; padding-top: 10px;">
+        
+        <!-- Left: Vertical Story / Visual Banner Card -->
+        <div style="position: relative; width: 280px; height: 440px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.6); background-color: #181818;">
+          <img src="../assets/img/covers/small_cover.png" alt="Discover Story" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='../assets/img/episodes/episode_1.png'">
+          
+          <!-- Top Progress Bars -->
+          <div style="position: absolute; top: 16px; left: 16px; right: 16px; display: flex; gap: 4px;">
+            <div style="flex: 1; height: 2px; background-color: rgba(255,255,255,0.8); border-radius: 2px;"></div>
+            <div style="flex: 1; height: 2px; background-color: rgba(255,255,255,0.3); border-radius: 2px;"></div>
+            <div style="flex: 1; height: 2px; background-color: rgba(255,255,255,0.3); border-radius: 2px;"></div>
+            <div style="flex: 1; height: 2px; background-color: rgba(255,255,255,0.3); border-radius: 2px;"></div>
+          </div>
 
-							<input type="radio" name="genre" id="rock" />
-							<label for="rock">Rock</label>
+          <!-- Bottom Story Progress Indicator -->
+          <div style="position: absolute; bottom: 16px; left: 16px; right: 16px; display: flex; gap: 4px;">
+            <div style="flex: 1; height: 3px; background-color: #fff; border-radius: 2px;"></div>
+            <div style="flex: 1; height: 3px; background-color: rgba(255,255,255,0.3); border-radius: 2px;"></div>
+            <div style="flex: 1; height: 3px; background-color: rgba(255,255,255,0.3); border-radius: 2px;"></div>
+            <div style="flex: 1; height: 3px; background-color: rgba(255,255,255,0.3); border-radius: 2px;"></div>
+          </div>
+        </div>
 
-							<input type="radio" name="genre" id="altRock" />
-							<label for="altRock">Alt Rock</label>
+        <!-- Right: Linkin Park Mix Featured Card -->
+        <div style="display: flex; gap: 24px; align-items: center; background: linear-gradient(135deg, #1b3a34 0%, #121212 100%); padding: 24px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.5); max-width: 500px;">
+          <img src="../assets/img/albums/album_1.png" alt="Linkin Park Mix" style="width: 150px; height: 150px; border-radius: 8px; object-fit: cover;" onerror="this.src='../assets/img/covers/small_cover.png'">
+          
+          <div style="display: flex; flex-direction: column;">
+            <h2 style="font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 8px;">Linkin Park Mix</h2>
+            <p style="color: #b3b3b3; font-size: 0.8rem; margin-bottom: 16px;">By <span style="color: #fff; font-weight: 600;">Spotify</span> • 2023 • 22 songs • 1 hr 14 min</p>
+            
+            <!-- Actions & Genre Pills -->
+            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+              <button style="width: 40px; height: 40px; border-radius: 50%; background-color: #1db954; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                <img src="../assets/img/icons/player/play-black.svg" alt="Play" style="width: 14px; height: 14px;">
+              </button>
+              <span style="color: #b3b3b3; font-size: 0.85rem;">🔖 500K</span>
+              <span style="color: #b3b3b3; cursor: pointer;">+</span>
+              <span style="color: #b3b3b3; cursor: pointer;">⬇</span>
+              <span style="color: #b3b3b3; cursor: pointer;">•••</span>
+            </div>
 
-							<input type="radio" name="genre" id="country" />
-							<label for="country">Country</label>
+            <div style="display: flex; gap: 8px;">
+              <span style="background-color: transparent; color: #fff; padding: 4px 12px; border-radius: 500px; font-size: 0.75rem; border: 1px solid rgba(255,255,255,0.2);">Rock</span>
+              <span style="background-color: transparent; color: #fff; padding: 4px 12px; border-radius: 500px; font-size: 0.75rem; border: 1px solid rgba(255,255,255,0.2);">Alt Rock</span>
+            </div>
+          </div>
+        </div>
 
-							<input type="radio" name="genre" id="rb" />
-							<label for="rb">R&B</label>
+      </div>
 
-							<input type="radio" name="genre" id="hiphop" />
-							<label for="hiphop">Hip-Hop</label>
-						</div>
-					</div>
-				</header>
+    </main>
 
-				<!-- Desktop wrapper -->
-				<section class="section-wrapper-discover">
-					<div class="content-container">
-						<div class="song-container">
-							<a class="scroll-left" href="#">
-								<i class="icons icon-arrow-left"></i>
-							</a>
-							<img
-								class="main-img"
-								src="../assets/img/discover/Linkin-Park-Mix.jpg"
-								alt="Linkin Park Mix"
-							/>
-							<a class="scroll-right" href="#">
-								<i class="icons icon-arrow-right-big"></i>
-							</a>
-							<div class="scrolls-desktop">
-								<div class="scroll-bar"></div>
-								<div class="scroll-bar"></div>
-								<div class="scroll-bar"></div>
-								<div class="scroll-bar"></div>
-							</div>
-						</div>
-						<div class="description-wrapper">
-							<article class="description-container">
-								<figure>
-									<img
-										class="song-img"
-										src="../assets/img/covers/cover_2.png"
-										alt="Linkin Park Mix"
-									/>
-								</figure>
-								<div class="description">
-									<h2>Linkin Park Mix</h2>
-									<p>
-										By <span>Spotify</span> 2023 &middot; 22
-										songs &middot; 1h 14m
-									</p>
-									<ul class="buttons">
-										<li>
-											<button class="play-btn">
-												<i
-													class="icons icon-play-black icon-sm"
-												></i>
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i
-													class="icons icon-bookmark"
-												></i>
-												500 K
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i
-													class="icons icon-add-playlist"
-												></i>
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i
-													class="icons icon-add-album"
-												></i>
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i
-													class="icons icon-upload"
-												></i>
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i class="icons icon-dots"></i>
-											</button>
-										</li>
-									</ul>
-									<ul class="genres">
-										<li>Rock</li>
-										<li>Alt Rock</li>
-									</ul>
-								</div>
-							</article>
-						</div>
-					</div>
-					<div class="content-container">
-						<div class="song-container">
-							<a class="scroll-left" href="#">
-								<i class="icons icon-arrow-left"></i>
-							</a>
+    <!-- Friends Activity Sidebar -->
+    <aside class="activity" aria-label="Friend Activity">
+      <div class="slide-controls" style="display: flex; justify-content: space-between; align-items: center; padding: 16px;">
+        <h3 style="font-size: 0.95rem;">Friend Activity</h3>
+        <a href="#" class="icon-close" aria-label="Close Activity">✕</a>
+      </div>
+      <ul style="padding: 0 16px; display: flex; flex-direction: column; gap: 16px; font-size: 0.85rem;">
+        <li style="display: flex; gap: 10px; align-items: center;">
+          <img src="../assets/img/artists/artist_1.png" alt="" style="width: 32px; height: 32px; border-radius: 50%;">
+          <div>
+            <strong>FriendlyMusicListener</strong>
+            <p style="color: #b3b3b3; font-size: 0.75rem;">🎵 Goosebumps • Travis Scott</p>
+          </div>
+        </li>
+      </ul>
+    </aside>
 
-							<img
-								class="main-img"
-								src="../assets/img/discover/get-Lucky.jpg"
-								alt="Duft-punk Mix"
-							/>
-							<a class="scroll-right" href="#">
-								<i class="icons icon-arrow-right-big"></i>
-							</a>
-							<div class="scrolls-desktop">
-								<div class="scroll-bar"></div>
-								<div class="scroll-bar"></div>
-								<div class="scroll-bar"></div>
-							</div>
-						</div>
-						<div class="description-wrapper">
-							<article class="description-container">
-								<figure>
-									<img
-										class="song-img"
-										src="../assets/img/covers/cover_12.png"
-										alt="Daft Punk Mix"
-									/>
-								</figure>
-								<div class="description">
-									<h2>Daft Punk Mix</h2>
-									<p>
-										By <span>Daft Punk</span> 2013 &middot;
-										6:05
-									</p>
-									<ul class="buttons">
-										<li>
-											<button class="play-btn">
-												<i
-													class="icons icon-play-black icon-sm"
-												></i>
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i
-													class="icons icon-bookmark"
-												></i>
-												500 K
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i
-													class="icons icon-add-playlist"
-												></i>
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i
-													class="icons icon-add-album"
-												></i>
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i
-													class="icons icon-upload"
-												></i>
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i class="icons icon-dots"></i>
-											</button>
-										</li>
-									</ul>
-									<ul class="genres">
-										<li>Rock</li>
-										<li>Alt Rock</li>
-									</ul>
-								</div>
-							</article>
-						</div>
-					</div>
-					<div class="content-container">
-						<div class="song-container">
-							<a class="scroll-left" href="#">
-								<i class="icons icon-arrow-left"></i>
-							</a>
+    <!-- Footer Player -->
+    <footer class="bottom-player-bar" aria-label="Playback Controller">
+      <div class="player-left">
+        <img src="../assets/img/covers/small_cover.png" alt="Cover" class="player-left__art">
+        <div class="player-left__info">
+          <a href="song.html" class="player-left__song-title">Get Lucky (feat. Pharrell Williams)</a>
+          <a href="artist.html" class="player-left__artist-name">Daft Punk, Pharrell Williams</a>
+        </div>
+      </div>
 
-							<img
-								class="main-img"
-								src="../assets/img/discover/get-Lucky.jpg"
-								alt="Duft-punk Mix"
-							/>
-							<a class="scroll-right" href="#">
-								<i class="icons icon-arrow-right-big"></i>
-							</a>
-							<div class="scrolls-desktop">
-								<div class="scroll-bar"></div>
-								<div class="scroll-bar"></div>
-								<div class="scroll-bar"></div>
-							</div>
-						</div>
-						<div class="description-wrapper">
-							<article class="description-container">
-								<figure>
-									<img
-										class="song-img"
-										src="../assets/img/covers/cover_12.png"
-										alt="Daft Punk Mix"
-									/>
-								</figure>
-								<div class="description">
-									<h2>Daft Punk Mix</h2>
-									<p>
-										By <span>Daft Punk</span> 2013 &middot;
-										6:05
-									</p>
-									<ul class="buttons">
-										<li>
-											<button class="play-btn">
-												<i
-													class="icons icon-play-black icon-sm"
-												></i>
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i
-													class="icons icon-bookmark"
-												></i>
-												500 K
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i
-													class="icons icon-add-playlist"
-												></i>
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i
-													class="icons icon-add-album"
-												></i>
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i
-													class="icons icon-upload"
-												></i>
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i class="icons icon-dots"></i>
-											</button>
-										</li>
-									</ul>
-									<ul class="genres">
-										<li>Rock</li>
-										<li>Alt Rock</li>
-									</ul>
-								</div>
-							</article>
-						</div>
-					</div>
-					<div class="content-container">
-						<div class="song-container">
-							<a class="scroll-left" href="#">
-								<i class="icons icon-arrow-left"></i>
-							</a>
-							<img
-								class="main-img"
-								src="../assets/img/discover/Linkin-Park-Mix.jpg"
-								alt="Linkin Park Mix"
-							/>
-							<a class="scroll-right" href="#">
-								<i class="icons icon-arrow-right-big"></i>
-							</a>
-							<div class="scrolls-desktop">
-								<div class="scroll-bar"></div>
-							</div>
-						</div>
-						<div class="description-wrapper">
-							<article class="description-container">
-								<figure>
-									<img
-										class="song-img"
-										src="../assets/img/covers/cover_2.png"
-										alt="Linkin Park Mix"
-									/>
-								</figure>
-								<div class="description">
-									<h2>Linkin Park Mix</h2>
-									<p>
-										By <span>Spotify</span> 2023 &middot; 22
-										songs &middot; 1h 14m
-									</p>
-									<ul class="buttons">
-										<li>
-											<button class="play-btn">
-												<i
-													class="icons icon-play-black icon-sm"
-												></i>
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i
-													class="icons icon-bookmark"
-												></i>
-												500 K
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i
-													class="icons icon-add-playlist"
-												></i>
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i
-													class="icons icon-add-album"
-												></i>
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i
-													class="icons icon-upload"
-												></i>
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i class="icons icon-dots"></i>
-											</button>
-										</li>
-									</ul>
-									<ul class="genres">
-										<li>Rock</li>
-										<li>Alt Rock</li>
-									</ul>
-								</div>
-							</article>
-						</div>
-					</div>
-					<div class="content-container">
-						<div class="song-container">
-							<a class="scroll-left" href="#">
-								<i class="icons icon-arrow-left"></i>
-							</a>
+      <div class="player-center">
+        <div class="player-center__buttons">
+          <button class="player-center__control-btn" aria-label="Prev"><img src="../assets/img/icons/player/prev.svg" alt=""></button>
+          <button class="player-center__control-btn player-center__control-btn--play" aria-label="Play"><img src="../assets/img/icons/player/play-black.svg" alt=""></button>
+          <button class="player-center__control-btn" aria-label="Next"><img src="../assets/img/icons/player/next.svg" alt=""></button>
+        </div>
+        <div class="player-center__scrubber">
+          <span class="player-center__time">2:23</span>
+          <div class="player-center__progress-track"><div class="player-center__progress-fill"></div></div>
+          <span class="player-center__time">4:45</span>
+        </div>
+      </div>
 
-							<img
-								class="main-img"
-								src="../assets/img/discover/get-Lucky.jpg"
-								alt="Duft-punk Mix"
-							/>
-							<a class="scroll-right" href="#">
-								<i class="icons icon-arrow-right-big"></i>
-							</a>
-							<div class="scrolls-desktop">
-								<div class="scroll-bar"></div>
-								<div class="scroll-bar"></div>
-							</div>
-						</div>
-						<div class="description-wrapper">
-							<article class="description-container">
-								<figure>
-									<img
-										class="song-img"
-										src="../assets/img/covers/cover_12.png"
-										alt="Daft Punk Mix"
-									/>
-								</figure>
-								<div class="description">
-									<h2>Daft Punk Mix</h2>
-									<p>
-										By <span>Daft Punk</span> 2013 &middot;
-										6:05
-									</p>
-									<ul class="buttons">
-										<li>
-											<button class="play-btn">
-												<i
-													class="icons icon-play-black icon-sm"
-												></i>
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i
-													class="icons icon-bookmark"
-												></i>
-												500 K
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i
-													class="icons icon-add-playlist"
-												></i>
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i
-													class="icons icon-add-album"
-												></i>
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i
-													class="icons icon-upload"
-												></i>
-											</button>
-										</li>
-										<li>
-											<button class="icon-btn">
-												<i class="icons icon-dots"></i>
-											</button>
-										</li>
-									</ul>
-									<ul class="genres">
-										<li>Rock</li>
-										<li>Alt Rock</li>
-									</ul>
-								</div>
-							</article>
-						</div>
-					</div>
-				</section>
-				<!-- Mobile container for -->
-				<section class="mobile-wrapper">
-					<div class="content-wrapper">
-						<aside class="right-fixed">
-							<div class="block relative">
-								<img
-									class="main-img"
-									src="../assets/img/discover/grn-img.svg"
-									alt="Album img"
-								/>
-								<a class="add-symbol" href="#">
-									<i class="icons icon-plus icon-xxxs"></i>
-								</a>
-								<span>8 M</span>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-bookmark"></i>
-								</a>
-								<span>500 K</span>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-add-music"></i>
-								</a>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-upload"></i>
-								</a>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-dots"></i>
-								</a>
-							</div>
-						</aside>
-						<div class="bottom-container">
-							<div class="genre">
-								<span>Rock</span>
-								<span>Alt Rock</span>
-							</div>
-							<div class="music">
-								<a href="#">
-									<img
-										src="../assets/img/covers/cover_2.png"
-										alt="Album"
-									/>
-								</a>
-								<div class="description">
-									<h6>Linkin Park Mix</h6>
-									<span>Spotify</span>
-								</div>
-							</div>
-							<div class="scrolls">
-								<div class="scroll-bar"></div>
-								<div class="scroll-bar"></div>
-							</div>
-						</div>
-					</div>
-					<div class="content-wrapper">
-						<aside class="right-fixed">
-							<div class="block relative">
-								<img
-									class="main-img"
-									src="../assets/img/discover/daft-punk.svg"
-									alt="Album img"
-								/>
-								<a class="add-symbol" href="#">
-									<i class="icons icon-plus icon-xxxs"></i>
-								</a>
-								<span>8 M</span>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-bookmark"></i>
-								</a>
-								<span>500 K</span>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-add-music"></i>
-								</a>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-upload"></i>
-								</a>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-dots"></i>
-								</a>
-							</div>
-						</aside>
-						<div class="bottom-container">
-							<div class="genre">
-								<span>Rock</span>
-								<span>Alt Rock</span>
-							</div>
-							<div class="music">
-								<a href="#">
-									<img
-										src="../assets/img/covers/small_cover.png"
-										alt="Album"
-									/>
-								</a>
-								<div class="description">
-									<h6>Get Lucky</h6>
-									<span>Duft Punk</span>
-								</div>
-							</div>
-							<div class="scrolls">
-								<div class="scroll-bar"></div>
-								<div class="scroll-bar"></div>
-								<div class="scroll-bar"></div>
-							</div>
-						</div>
-					</div>
-					<div class="content-wrapper">
-						<aside class="right-fixed">
-							<div class="block relative">
-								<img
-									class="main-img"
-									src="../assets/img/discover/daft-punk.svg"
-									alt="Album img"
-								/>
-								<a class="add-symbol" href="#">
-									<i class="icons icon-plus icon-xxxs"></i>
-								</a>
-								<span>8 M</span>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-bookmark"></i>
-								</a>
-								<span>500 K</span>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-add-music"></i>
-								</a>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-upload"></i>
-								</a>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-dots"></i>
-								</a>
-							</div>
-						</aside>
-						<div class="bottom-container">
-							<div class="genre">
-								<span>Rock</span>
-								<span>Alt Rock</span>
-							</div>
-							<div class="music">
-								<a href="#">
-									<img
-										src="../assets/img/covers/cover_12.png"
-										alt="Album"
-									/>
-								</a>
-								<div class="description">
-									<h6>Duft Punk Mix</h6>
-									<span>Spotify</span>
-								</div>
-							</div>
-							<div class="scrolls">
-								<div class="scroll-bar"></div>
-								<div class="scroll-bar"></div>
-								<div class="scroll-bar"></div>
-								<div class="scroll-bar"></div>
-							</div>
-						</div>
-					</div>
-					<div class="content-wrapper">
-						<aside class="right-fixed">
-							<div class="block relative">
-								<img
-									class="main-img"
-									src="../assets/img/discover/grn-img.svg"
-									alt="Album img"
-								/>
-								<a class="add-symbol" href="#">
-									<i class="icons icon-plus icon-xxxs"></i>
-								</a>
-								<span>8 M</span>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-bookmark"></i>
-								</a>
-								<span>500 K</span>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-add-music"></i>
-								</a>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-upload"></i>
-								</a>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-dots"></i>
-								</a>
-							</div>
-						</aside>
-						<div class="bottom-container">
-							<div class="genre">
-								<span>Rock</span>
-								<span>Alt Rock</span>
-							</div>
-							<div class="music">
-								<a href="#">
-									<img
-										src="../assets/img/covers/cover_2.png"
-										alt="Album"
-									/>
-								</a>
-								<div class="description">
-									<h6>Linkin Park Mix</h6>
-									<span>Spotify</span>
-								</div>
-							</div>
-							<div class="scrolls">
-								<div class="scroll-bar"></div>
-								<div class="scroll-bar"></div>
-							</div>
-						</div>
-					</div>
-					<div class="content-wrapper">
-						<aside class="right-fixed">
-							<div class="block relative">
-								<img
-									class="main-img"
-									src="../assets/img/discover/grn-img.svg"
-									alt="Album img"
-								/>
-								<a class="add-symbol" href="#">
-									<i class="icons icon-plus icon-xxxs"></i>
-								</a>
-								<span>8 M</span>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-bookmark"></i>
-								</a>
-								<span>500 K</span>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-add-music"></i>
-								</a>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-upload"></i>
-								</a>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-dots"></i>
-								</a>
-							</div>
-						</aside>
-						<div class="bottom-container">
-							<div class="genre">
-								<span>Rock</span>
-								<span>Alt Rock</span>
-							</div>
-							<div class="music">
-								<a href="#">
-									<img
-										src="../assets/img/covers/cover_2.png"
-										alt="Album"
-									/>
-								</a>
-								<div class="description">
-									<h6>Linkin Park Mix</h6>
-									<span>Spotify</span>
-								</div>
-							</div>
-							<div class="scrolls">
-								<div class="scroll-bar"></div>
-								<div class="scroll-bar"></div>
-								<div class="scroll-bar"></div>
-								<div class="scroll-bar"></div>
-							</div>
-						</div>
-					</div>
-					<div class="content-wrapper">
-						<aside class="right-fixed">
-							<div class="block relative">
-								<img
-									class="main-img"
-									src="../assets/img/discover/grn-img.svg"
-									alt="Album img"
-								/>
-								<a class="add-symbol" href="#">
-									<i class="icons icon-plus icon-xxxs"></i>
-								</a>
-								<span>8 M</span>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-bookmark"></i>
-								</a>
-								<span>500 K</span>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-add-music"></i>
-								</a>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-upload"></i>
-								</a>
-							</div>
-							<div class="block">
-								<a href="#" class="icon-parent">
-									<i class="icons icon-dots"></i>
-								</a>
-							</div>
-						</aside>
-						<div class="bottom-container">
-							<div class="genre">
-								<span>Rock</span>
-								<span>Alt Rock</span>
-							</div>
-							<div class="music">
-								<a href="#">
-									<img
-										src="../assets/img/covers/cover_2.png"
-										alt="Album"
-									/>
-								</a>
-								<div class="description">
-									<h6>Linkin Park Mix</h6>
-									<span>Spotify</span>
-								</div>
-							</div>
-							<div class="scrolls">
-								<div class="scroll-bar"></div>
-								<div class="scroll-bar"></div>
-								<div class="scroll-bar"></div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</div>
-		</main>
-		<aside class="activity">
-			<div class="main-inner">
-				<section class="section-wrapper">
-					<div class="content-wrapper">
-						<div class="section-title">
-							<h4>Friends Activity</h4>
-							<div class="slide-controls">
-								<a href="#"
-									><i class="icons icon-add-friend"></i
-								></a>
-								<a href="#"><i class="icons icon-close"></i></a>
-							</div>
-						</div>
-						<div class="activity-content">
-							<div class="activity-details">
-								<div class="activity-icon">
-									<img
-										src="../assets/img/users/user_1.png"
-										alt=""
-									/>
-								</div>
-								<div class="activity-summary">
-									<span class="title"
-										>FriendlyMusicListener</span
-									>
-									<div class="description">
-										<div class="activity-time now">
-											<span class="now-bar"></span>
-										</div>
-										<div class="artist-information">
-											<span class="album"
-												>Goosebumps
-											</span>
-											<span class="artist"
-												>Travis Scott</span
-											>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="activity-details">
-								<div class="activity-icon">
-									<img
-										src="../assets/img/users/user_2.png"
-										alt=""
-									/>
-								</div>
-								<div class="activity-summary">
-									<span class="title"
-										>AverageMusicEnjoyer</span
-									>
-									<div class="description">
-										<div class="activity-time now">
-											<span class="now-bar"></span>
-										</div>
-										<div class="artist-information">
-											<span class="album"
-												>Get Lucky
-											</span>
-											<span class="artist"
-												>Daft Punk</span
-											>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="activity-details">
-								<div class="activity-icon">
-									<img
-										src="../assets/img/users/user_3.png"
-										alt=""
-									/>
-								</div>
-								<div class="activity-summary">
-									<span class="title">MusicEnthusiast</span>
-									<div class="description">
-										<div class="activity-time">
-											<span>1h</span>
-										</div>
-										<div class="artist-information">
-											<span class="album">would he </span>
-											<span class="artist">joji</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="activity-details">
-								<div class="activity-icon">
-									<img
-										src="../assets/img/users/user_4.png"
-										alt=""
-									/>
-								</div>
-								<div class="activity-summary">
-									<span class="title">IListenToMusic56</span>
-									<div class="description">
-										<div class="activity-time">
-											<span>6h</span>
-										</div>
-										<div class="artist-information">
-											<span class="album">Rockstar </span>
-											<span class="artist"
-												>Post Malone</span
-											>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</div>
-		</aside>
-		<footer class="player hide-mob discovery-footer">
-			<div class="player-wrapper">
-				<img src="../assets/img/albums/album_1.png" alt="Draft Punk" />
+      <div class="player-right">
+        <a href="song.html" class="player-right__action-btn" aria-label="Lyrics"><img src="../assets/img/icons/mic.svg" alt=""></a>
+        <a href="now-playing-music-section.html" class="player-right__action-btn" aria-label="Queue"><img src="../assets/img/icons/queue.svg" alt=""></a>
+        <div class="player-right__volume-group">
+          <button class="player-right__action-btn" aria-label="Volume"><img src="../assets/img/icons/player/volume.svg" alt=""></button>
+          <div class="player-right__volume-track"><div class="player-right__volume-fill"></div></div>
+        </div>
+      </div>
+    </footer>
 
-				<div class="music-title-author-wrapper">
-					<a href="./now-playing-text.html" class="scrolling-text"
-						>Get Lucky (feat. Pharrell Williams and Nile Rodgers)</a
-					>
-					<a href="./now-playing.html" class="scrolling-text-band"
-						>Draft Punk</a
-					>
-				</div>
-			</div>
+  </div>
 
-			<div class="player-icons">
-				<i class="icons icon-add-playlist icon-sm"></i>
-				<img
-					src="../assets/img/icons/player/play.svg"
-					alt="play"
-					class="play"
-				/>
-			</div>
-
-			<div class="music-progress-bar"></div>
-
-			<div class="advanced-player">
-				<div class="advanced-player-wrapper">
-					<div class="stop-button-wrapper">
-						<img
-							src="../assets/img/icons/player/pause.svg"
-							alt="pause"
-							class="pause"
-						/>
-					</div>
-					<i class="icons icon-prev icon-sm"></i>
-					<i class="icons icon-next icon-sm"></i>
-					<i class="icons icon-shuffle icon-sm"></i>
-					<i class="icons icon-repeat icon-sm"></i>
-				</div>
-
-				<div class="advanced-player-music-time-line">
-					<p>2:23</p>
-					<div class="advanced-music-progress-bar"></div>
-					<p>4:46</p>
-				</div>
-
-				<i class="icons icon-volume"></i>
-			</div>
-
-			<div class="advanced-player-icons">
-				<div class="wrapper-icons">
-					<i class="icons icon-hearth"></i>
-					<i class="icons icon-add-playlist"></i>
-				</div>
-				<a href="./now-playing-music-section.html"
-					><i class="icons icon-list"></i
-				></a>
-				<i class="icons icon-devices"></i>
-				<i class="icons icon-dots"></i>
-				<hr />
-				<i class="icons icon-player_blue_icon icon-md"></i>
-				<i class="icons icon-order icon-sm"></i>
-			</div>
-		</footer>
-		<script src="../assets/js/main.js"></script>
-	</body>
+  <script src="../assets/js/main.js"></script>
+</body>
 </html>
